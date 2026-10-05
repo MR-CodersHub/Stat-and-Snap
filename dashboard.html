@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>School Client Portal | Stat & Snap Athletics Dashboard</title>
+  <meta name="description" content="Manage school photo day schedules, roster sync, team package proofs, yearbook PSPA files, and invoice tracking.">
+  
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body style="background: var(--bg-main);">
+
+  <div class="dashboard-layout">
+
+    <!-- DASHBOARD SIDEBAR (16 MODULES) -->
+    <aside class="dashboard-sidebar">
+      <div class="sidebar-header">
+        <a href="index.html" class="brand-logo" style="font-size: 1.15rem;">
+          <div class="logo-badge" style="width: 32px; height: 32px; font-size: 0.9rem;"><i class="fa-solid fa-camera-retro"></i></div>
+          <span>STAT & <span class="gold-accent">SNAP</span></span>
+        </a>
+        <button class="icon-btn sidebar-toggle-btn" style="width: 30px; height: 30px; display: none;"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+
+      <div class="sidebar-menu">
+        <div class="sidebar-item active" data-module="overview">
+          <i class="fa-solid fa-chart-pie"></i> <span>Overview</span>
+        </div>
+        <div class="sidebar-item" data-module="schedule">
+          <i class="fa-solid fa-calendar-day"></i> <span>Photo Day Schedule</span>
+        </div>
+        <div class="sidebar-item" data-module="calendar">
+          <i class="fa-solid fa-calendar-days"></i> <span>Calendar</span>
+        </div>
+        <div class="sidebar-item" data-module="profile">
+          <i class="fa-solid fa-school"></i> <span>School Profile</span>
+        </div>
+        <div class="sidebar-item" data-module="rosters">
+          <i class="fa-solid fa-users"></i> <span>Teams & Rosters</span>
+        </div>
+        <div class="sidebar-item" data-module="individual-orders">
+          <i class="fa-solid fa-user-tag"></i> <span>Individual Orders</span>
+        </div>
+        <div class="sidebar-item" data-module="team-orders">
+          <i class="fa-solid fa-boxes-stacked"></i> <span>Team Package Orders</span>
+        </div>
+        <div class="sidebar-item" data-module="yearbook">
+          <i class="fa-solid fa-book-open"></i> <span>Yearbook Orders</span>
+        </div>
+        <div class="sidebar-item" data-module="bulk">
+          <i class="fa-solid fa-truck-ramp-box"></i> <span>Bulk Coordination</span>
+        </div>
+        <div class="sidebar-item" data-module="status">
+          <i class="fa-solid fa-list-check"></i> <span>Order Status Tracking</span>
+        </div>
+        <div class="sidebar-item" data-module="retakes">
+          <i class="fa-solid fa-rotate-left"></i> <span>Retake Requests</span>
+        </div>
+        <div class="sidebar-item" data-module="invoices">
+          <i class="fa-solid fa-file-invoice-dollar"></i> <span>Payment & Invoices</span>
+        </div>
+        <div class="sidebar-item" data-module="messages">
+          <i class="fa-solid fa-comments"></i> <span>Messages</span>
+        </div>
+        <div class="sidebar-item" data-module="notifications">
+          <i class="fa-solid fa-bell"></i> <span>Notifications</span>
+        </div>
+        <div class="sidebar-item" data-module="downloads">
+          <i class="fa-solid fa-cloud-arrow-down"></i> <span>Downloads & Galleries</span>
+        </div>
+        <div class="sidebar-item" data-module="settings">
+          <i class="fa-solid fa-gear"></i> <span>Account Settings</span>
+        </div>
+      </div>
+
+      <div style="padding: 1rem; border-top: 1px solid rgba(255,255,255,0.1);">
+        <a href="login.html" class="btn btn-sm btn-outline" style="width: 100%;"><i class="fa-solid fa-right-from-bracket"></i> Log Out</a>
+      </div>
+    </aside>
+
+    <!-- DASHBOARD MAIN CONTENT -->
+    <main class="dashboard-main">
+      
+      <!-- Topbar -->
+      <header class="dashboard-topbar">
+        <div class="flex-align gap-2">
+          <button class="icon-btn sidebar-toggle-btn" style="display: none;"><i class="fa-solid fa-bars"></i></button>
+          <div>
+            <h2 class="dash-page-title" style="font-size: 1.25rem;">Oakridge High Athletics Portal</h2>
+            <span style="font-size: 0.8rem; color: var(--text-muted);">Fall Athletic Season 2026-2027</span>
+          </div>
+        </div>
+
+        <div class="nav-actions">
+          <button class="icon-btn theme-toggle"><i class="fa-solid fa-sun"></i></button>
+          <button class="icon-btn dir-toggle"><span class="dir-toggle-label">RTL</span></button>
+          <div class="flex-align gap-2" style="background: var(--bg-surface-elevated); padding: 0.4rem 0.85rem; border-radius: var(--radius-full); border: 1px solid var(--border-subtle);">
+            <div style="width: 28px; height: 28px; border-radius: var(--radius-full); background: var(--color-crimson); color: white; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 0.8rem;">MV</div>
+            <span style="font-size: 0.85rem; font-weight: 700;">Marcus Vance (AD)</span>
+          </div>
+        </div>
+      </header>
+
+      <!-- Dashboard Body Views -->
+      <div class="dashboard-body">
+
+        <!-- MODULE 1: OVERVIEW -->
+        <div id="module-overview" class="dash-module">
+          
+          <!-- Summary Widgets (11 Indicators) -->
+          <div class="grid-4" style="margin-bottom: 2rem;">
+            
+            <div class="card-glass flex-align gap-2" style="padding: 1.25rem;">
+              <div style="width: 45px; height: 45px; border-radius: var(--radius-md); background: rgba(59, 130, 246, 0.15); color: #3B82F6; display: flex; align-items: center; justify-content: center; font-size: 1.3rem;"><i class="fa-solid fa-calendar-day"></i></div>
+              <div>
+                <span style="font-size: 0.75rem; color: var(--text-muted); font-weight: 700; text-transform: uppercase;">Upcoming Photo Days</span>
+                <div style="font-family: var(--font-heading); font-weight: 800; font-size: 1.5rem;">2 Dates</div>
+              </div>
+            </div>
+
+            <div class="card-glass flex-align gap-2" style="padding: 1.25rem;">
+              <div style="width: 45px; height: 45px; border-radius: var(--radius-md); background: rgba(245, 158, 11, 0.15); color: #F59E0B; display: flex; align-items: center; justify-content: center; font-size: 1.3rem;"><i class="fa-solid fa-clock"></i></div>
+              <div>
+                <span style="font-size: 0.75rem; color: var(--text-muted); font-weight: 700; text-transform: uppercase;">Today's Schedule</span>
+                <div style="font-family: var(--font-heading); font-weight: 800; font-size: 1.5rem;">4 Teams</div>
+              </div>
+            </div>
+
+            <div class="card-glass flex-align gap-2" style="padding: 1.25rem;">
+              <div style="width: 45px; height: 45px; border-radius: var(--radius-md); background: rgba(16, 185, 129, 0.15); color: #10B981; display: flex; align-items: center; justify-content: center; font-size: 1.3rem;"><i class="fa-solid fa-circle-check"></i></div>
+              <div>
+                <span style="font-size: 0.75rem; color: var(--text-muted); font-weight: 700; text-transform: uppercase;">Teams Completed</span>
+                <div style="font-family: var(--font-heading); font-weight: 800; font-size: 1.5rem;">14 / 18</div>
+              </div>
+            </div>
+
+            <div class="card-glass flex-align gap-2" style="padding: 1.25rem;">
+              <div style="width: 45px; height: 45px; border-radius: var(--radius-md); background: rgba(139, 92, 246, 0.15); color: #8B5CF6; display: flex; align-items: center; justify-content: center; font-size: 1.3rem;"><i class="fa-solid fa-box"></i></div>
+              <div>
+                <span style="font-size: 0.75rem; color: var(--text-muted); font-weight: 700; text-transform: uppercase;">Pending Orders</span>
+                <div style="font-family: var(--font-heading); font-weight: 800; font-size: 1.5rem;">32 Orders</div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Second Widget Row -->
+          <div class="grid-3" style="margin-bottom: 2rem;">
+            
+            <div class="card-glass" style="padding: 1.25rem;">
+              <span style="font-size: 0.8rem; color: var(--text-muted); font-weight: 700;">INDIVIDUAL PACKAGE ORDERS</span>
+              <div style="font-family: var(--font-heading); font-size: 2rem; font-weight: 800; color: var(--color-gold); margin: 0.25rem 0;">412 Packets</div>
+              <span class="badge badge-completed">92% Parent Participation</span>
+            </div>
+
+            <div class="card-glass" style="padding: 1.25rem;">
+              <span style="font-size: 0.8rem; color: var(--text-muted); font-weight: 700;">YEARBOOK PRODUCTION STATUS</span>
+              <div style="font-family: var(--font-heading); font-size: 2rem; font-weight: 800; color: #3B82F6; margin: 0.25rem 0;">PSPA Verified</div>
+              <span class="badge badge-processing">Sync Ready For Upload</span>
+            </div>
+
+            <div class="card-glass" style="padding: 1.25rem;">
+              <span style="font-size: 0.8rem; color: var(--text-muted); font-weight: 700;">BULK ORDER DISPATCH</span>
+              <div style="font-family: var(--font-heading); font-size: 2rem; font-weight: 800; color: #10B981; margin: 0.25rem 0;">Delivery Oct 18</div>
+              <span class="badge badge-delivered">Carrier: FedEx Express</span>
+            </div>
+
+          </div>
+
+          <!-- Order Tracking Data Table -->
+          <div class="card-glass" style="padding: 1.5rem;">
+            <div class="flex-between" style="margin-bottom: 1.5rem; flex-wrap: wrap; gap: 1rem;">
+              <h3 style="font-size: 1.2rem;"><i class="fa-solid fa-list-check" style="color: var(--color-gold);"></i> Recent Team Photo Status</h3>
+              <div class="flex-align gap-2">
+                <input type="text" class="form-control" placeholder="Search team or sport..." data-table-search="table-orders" style="width: 220px; padding: 0.5rem 0.85rem; font-size: 0.85rem;">
+                <select class="form-control" data-status-filter="table-orders" style="width: 160px; padding: 0.5rem 0.85rem; font-size: 0.85rem;">
+                  <option value="all">All Statuses</option>
+                  <option value="scheduled">Scheduled</option>
+                  <option value="in progress">In Progress</option>
+                  <option value="awaiting approval">Awaiting Approval</option>
+                  <option value="processing">Processing</option>
+                  <option value="completed">Completed</option>
+                  <option value="delivered">Delivered</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="table-responsive">
+              <table id="table-orders" class="data-table">
+                <thead>
+                  <tr>
+                    <th>Team Name</th>
+                    <th>Head Coach</th>
+                    <th>Photo Date</th>
+                    <th>Athletes</th>
+                    <th>Proof Status</th>
+                    <th>Status Badge</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>Varsity Football</strong></td>
+                    <td>Coach Miller</td>
+                    <td>Oct 01, 2026</td>
+                    <td>68 Players</td>
+                    <td>Proofs Approved</td>
+                    <td><span class="badge badge-completed">Completed</span></td>
+                    <td><button class="btn btn-sm btn-outline" onclick="showToast('Downloading Varsity Football ZIP package...', 'info')"><i class="fa-solid fa-download"></i> Zip</button></td>
+                  </tr>
+                  <tr>
+                    <td><strong>Varsity Girls Volleyball</strong></td>
+                    <td>Coach Vance</td>
+                    <td>Oct 01, 2026</td>
+                    <td>24 Players</td>
+                    <td>Proofs Approved</td>
+                    <td><span class="badge badge-delivered">Delivered</span></td>
+                    <td><button class="btn btn-sm btn-outline" onclick="showToast('Opening proof gallery...', 'info')"><i class="fa-solid fa-eye"></i> Proofs</button></td>
+                  </tr>
+                  <tr>
+                    <td><strong>Boys Varsity Basketball</strong></td>
+                    <td>Coach Sterling</td>
+                    <td>Oct 08, 2026</td>
+                    <td>18 Players</td>
+                    <td>Pending Shoot</td>
+                    <td><span class="badge badge-scheduled">Scheduled</span></td>
+                    <td><button class="btn btn-sm btn-secondary" onclick="showToast('Schedule confirmed for Oct 8 at 3:30 PM', 'info')"><i class="fa-solid fa-calendar"></i> Details</button></td>
+                  </tr>
+                  <tr>
+                    <td><strong>Junior Varsity Cheer</strong></td>
+                    <td>Coach Lin</td>
+                    <td>Oct 03, 2026</td>
+                    <td>30 Athletes</td>
+                    <td>Retake Requested</td>
+                    <td><span class="badge badge-approval">Awaiting Approval</span></td>
+                    <td><button class="btn btn-sm btn-gold" onclick="showToast('Retake request sent to photography crew', 'warning')"><i class="fa-solid fa-rotate-left"></i> Retake</button></td>
+                  </tr>
+                  <tr>
+                    <td><strong>Varsity Cross Country</strong></td>
+                    <td>Coach Baker</td>
+                    <td>Oct 02, 2026</td>
+                    <td>42 Runners</td>
+                    <td>Color Correction</td>
+                    <td><span class="badge badge-processing">Processing</span></td>
+                    <td><button class="btn btn-sm btn-outline" onclick="showToast('Processing estimated complete by 5 PM', 'info')"><i class="fa-solid fa-gear"></i> Track</button></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- MODULE 2: PHOTO DAY SCHEDULE -->
+        <div id="module-schedule" class="dash-module" style="display: none;">
+          <div class="card-glass" style="padding: 2rem;">
+            <div class="flex-between" style="margin-bottom: 1.5rem;">
+              <h3><i class="fa-solid fa-calendar-day" style="color: var(--color-gold);"></i> Upcoming Photo Day Schedule</h3>
+              <button class="btn btn-sm btn-gold" onclick="showToast('Opening time slot editor...', 'info')"><i class="fa-solid fa-plus"></i> Add Time Slot</button>
+            </div>
+            <div class="table-responsive">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>Time Slot</th>
+                    <th>Team</th>
+                    <th>Location</th>
+                    <th>Lead Photographer</th>
+                    <th>Status</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>3:15 PM - 3:30 PM</td>
+                    <td>Freshman Boys Basketball</td>
+                    <td>Main Gym Court A</td>
+                    <td>Marcus Sterling</td>
+                    <td><span class="badge badge-scheduled">Scheduled</span></td>
+                  </tr>
+                  <tr>
+                    <td>3:30 PM - 3:45 PM</td>
+                    <td>JV Boys Basketball</td>
+                    <td>Main Gym Court A</td>
+                    <td>Marcus Sterling</td>
+                    <td><span class="badge badge-scheduled">Scheduled</span></td>
+                  </tr>
+                  <tr>
+                    <td>3:45 PM - 4:15 PM</td>
+                    <td>Varsity Boys Basketball</td>
+                    <td>Main Gym Court A</td>
+                    <td>Elena Rostova</td>
+                    <td><span class="badge badge-scheduled">Scheduled</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <!-- MODULE 5: TEAMS & ROSTERS -->
+        <div id="module-rosters" class="dash-module" style="display: none;">
+          <div class="card-glass" style="padding: 2rem;">
+            <div class="flex-between" style="margin-bottom: 1.5rem;">
+              <h3><i class="fa-solid fa-users" style="color: var(--color-gold);"></i> Team Roster Manager</h3>
+              <button class="btn btn-sm btn-primary" onclick="showToast('CSV Roster Uploaded Successfully!', 'success')"><i class="fa-solid fa-file-csv"></i> Upload Roster CSV</button>
+            </div>
+            <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1.5rem;">Verify student ID numbers and jersey numbers for PSPA yearbook synchronization.</p>
+            <div class="table-responsive">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>Student ID</th>
+                    <th>Athlete Name</th>
+                    <th>Jersey #</th>
+                    <th>Sport</th>
+                    <th>Grade</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>#94821</td>
+                    <td>Jordan Vance</td>
+                    <td>#23</td>
+                    <td>Varsity Basketball</td>
+                    <td>Senior (12th)</td>
+                    <td><button class="btn btn-sm btn-outline"><i class="fa-solid fa-pen"></i> Edit</button></td>
+                  </tr>
+                  <tr>
+                    <td>#94822</td>
+                    <td>Tyler Ross</td>
+                    <td>#10</td>
+                    <td>Varsity Basketball</td>
+                    <td>Junior (11th)</td>
+                    <td><button class="btn btn-sm btn-outline"><i class="fa-solid fa-pen"></i> Edit</button></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <!-- OTHER MODULES PLACEHOLDER CARD -->
+        <div id="module-calendar" class="dash-module" style="display: none;">
+          <div class="card-glass text-center" style="padding: 4rem 2rem;">
+            <i class="fa-solid fa-calendar-days" style="font-size: 3rem; color: var(--color-gold); margin-bottom: 1rem;"></i>
+            <h3>Interactive Calendar Module</h3>
+            <p style="color: var(--text-muted);">View all seasonal sports media dates and delivery deadlines on a drag-and-drop calendar UI.</p>
+          </div>
+        </div>
+
+        <div id="module-yearbook" class="dash-module" style="display: none;">
+          <div class="card-glass text-center" style="padding: 4rem 2rem;">
+            <i class="fa-solid fa-book-open" style="font-size: 3rem; color: var(--color-crimson); margin-bottom: 1rem;"></i>
+            <h3>PSPA Yearbook Synchronization Module</h3>
+            <p style="color: var(--text-muted);">Download standardized 300DPI portraits formatted for Jostens, Walsworth, and Balfour yearbook software.</p>
+            <button class="btn btn-gold" style="margin-top: 1.5rem;" onclick="showToast('Downloading PSPA Roster ZIP package (450MB)...', 'info')"><i class="fa-solid fa-download"></i> Download Full PSPA Package</button>
+          </div>
+        </div>
+
+        <!-- Generic fallback for other modules -->
+        <div id="module-profile" class="dash-module" style="display: none;">
+          <div class="card-glass" style="padding: 2rem;">
+            <h3><i class="fa-solid fa-school" style="color: var(--color-gold);"></i> School Profile Settings</h3>
+            <p style="color: var(--text-muted); margin-top: 0.5rem;">Oakridge High School — Athletic Department ID: #OHS-8842</p>
+          </div>
+        </div>
+
+        <div id="module-individual-orders" class="dash-module" style="display: none;"><div class="card-glass" style="padding: 2rem;"><h3>Individual Orders Module</h3></div></div>
+        <div id="module-team-orders" class="dash-module" style="display: none;"><div class="card-glass" style="padding: 2rem;"><h3>Team Package Orders Module</h3></div></div>
+        <div id="module-bulk" class="dash-module" style="display: none;"><div class="card-glass" style="padding: 2rem;"><h3>Bulk Coordination Module</h3></div></div>
+        <div id="module-status" class="dash-module" style="display: none;"><div class="card-glass" style="padding: 2rem;"><h3>Order Status Tracking Module</h3></div></div>
+        <div id="module-retakes" class="dash-module" style="display: none;"><div class="card-glass" style="padding: 2rem;"><h3>Retake Requests Module</h3></div></div>
+        <div id="module-invoices" class="dash-module" style="display: none;"><div class="card-glass" style="padding: 2rem;"><h3>Payment & Invoices Module</h3></div></div>
+        <div id="module-messages" class="dash-module" style="display: none;"><div class="card-glass" style="padding: 2rem;"><h3>Messages Module</h3></div></div>
+        <div id="module-notifications" class="dash-module" style="display: none;"><div class="card-glass" style="padding: 2rem;"><h3>Notifications Module</h3></div></div>
+        <div id="module-downloads" class="dash-module" style="display: none;"><div class="card-glass" style="padding: 2rem;"><h3>Downloads & Galleries Module</h3></div></div>
+        <div id="module-settings" class="dash-module" style="display: none;"><div class="card-glass" style="padding: 2rem;"><h3>Account Settings Module</h3></div></div>
+
+      </div>
+    </main>
+  </div>
+
+  <script src="js/app.js"></script>
+  <script src="js/dashboard.js"></script>
+</body>
+</html>

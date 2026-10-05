@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sports Photography Blog & Tips | Stat & Snap</title>
+  <meta name="description" content="Expert insights on high school sports photography, photo day planning, athlete posing tips, and yearbook design best practices.">
+  
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- Sticky Navbar -->
+  <nav class="navbar">
+    <div class="container flex-between">
+      <a href="index.html" class="brand-logo">
+        <div class="logo-badge"><i class="fa-solid fa-camera-retro"></i></div>
+        <span>STAT & <span class="gold-accent">SNAP</span></span>
+      </a>
+
+      <div class="nav-links">
+        <a href="index.html" class="nav-link">Home 1</a>
+        <a href="home2.html" class="nav-link">Home 2 (Niche)</a>
+        <a href="about.html" class="nav-link">About Us</a>
+        <a href="services.html" class="nav-link">Services</a>
+        <a href="pricing.html" class="nav-link">Pricing</a>
+        <a href="blog.html" class="nav-link active">Blog</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+        <a href="dashboard.html" class="nav-link" style="color: var(--color-gold); font-weight: 700;">
+          <i class="fa-solid fa-grip"></i> Portal
+        </a>
+      </div>
+
+      <div class="nav-actions">
+        <button class="icon-btn theme-toggle"><i class="fa-solid fa-sun"></i></button>
+        <button class="icon-btn dir-toggle"><span class="dir-toggle-label">RTL</span></button>
+        <a href="login.html" class="btn btn-sm btn-primary">Client Login</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- SECTION 1: BLOG HERO -->
+  <section class="hero-section" style="min-height: 50vh;">
+    <div class="hero-bg-overlay" style="background-image: url('https://images.unsplash.com/photo-1517649763962-0c623266ddc0?q=80&w=1600&auto=format&fit=crop');"></div>
+    <div class="hero-gradient"></div>
+    <div class="container hero-content text-center">
+      <span class="section-tag"><i class="fa-solid fa-newspaper"></i> Athletics Media Insights</span>
+      <h1 class="hero-title">The Athletics Editorial Blog</h1>
+      <p class="hero-desc" style="margin: 0 auto;">Expert guides for Athletic Directors, coaches, yearbook advisors, and sports parents.</p>
+    </div>
+  </section>
+
+  <!-- SECTION 2: FEATURED LEAD ARTICLE HERO CARD -->
+  <section class="section-padding" style="background: var(--bg-main);">
+    <div class="container">
+      <div class="card-glass gold-border" style="padding: 0; overflow: hidden; display: grid; grid-template-columns: 1fr 1fr;">
+        <div style="height: 100%; min-height: 350px;">
+          <img src="https://images.unsplash.com/photo-1508098682722-e99c43a406b2?q=80&w=1000&auto=format&fit=crop" alt="Featured Football Article" style="width: 100%; height: 100%; object-fit: cover;">
+        </div>
+        <div style="padding: 2.5rem; display: flex; flex-direction: column; justify-content: center;">
+          <div class="blog-card-meta">
+            <span class="badge badge-approval">Featured Article</span>
+            <span><i class="fa-regular fa-calendar"></i> October 2, 2026</span>
+            <span><i class="fa-regular fa-clock"></i> 6 min read</span>
+          </div>
+          <h2 style="font-size: 2rem; margin: 0.75rem 0 1rem 0;">10 Essential Photo Day Tips Every Athletic Director Must Know</h2>
+          <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 1.5rem;">
+            Discover how top high school athletic departments streamline team photos, prevent roster bottlenecks, and eliminate parent order headaches.
+          </p>
+          <div>
+            <a href="blog-details.html" class="btn btn-gold">Read Full Article <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 3: CATEGORY FILTER TABS & SEARCH UI -->
+  <section class="section-padding" style="background: var(--bg-surface);" data-tab-container>
+    <div class="container">
+      <div class="flex-between" style="flex-wrap: wrap; gap: 1.5rem; margin-bottom: 2.5rem;">
+        <div class="tabs-nav" style="margin-bottom: 0; justify-content: flex-start;">
+          <button class="tab-btn active" data-tab="tab-all-posts">All Posts</button>
+          <button class="tab-btn" data-tab="tab-tips">Photo Day Tips</button>
+          <button class="tab-btn" data-tab="tab-yearbook">Yearbook Planning</button>
+          <button class="tab-btn" data-tab="tab-behind">Behind The Scenes</button>
+        </div>
+
+        <div style="position: relative; min-width: 280px;">
+          <input type="text" class="form-control" placeholder="Search sports articles..." style="padding-left: 2.5rem;">
+          <i class="fa-solid fa-magnifying-glass" style="position: absolute; left: 1rem; top: 50%; transform: translateY(-50%); color: var(--text-muted);"></i>
+        </div>
+      </div>
+
+      <!-- SECTION 4: ARTICLES GRID -->
+      <div id="tab-all-posts" class="tab-panel active">
+        <div class="grid-3">
+          <!-- Article 1 -->
+          <article class="blog-card">
+            <div class="blog-card-img">
+              <img src="https://images.unsplash.com/photo-1546519638-68e109498ffc?q=80&w=800&auto=format&fit=crop" alt="Basketball Portrait">
+            </div>
+            <div class="blog-card-body">
+              <div class="blog-card-meta">
+                <span>Athlete Portraits</span>
+                <span>Sep 28, 2026</span>
+              </div>
+              <h3 class="blog-card-title"><a href="blog-details.html">How Mobile Lighting Sets The Tone For Varsity Basketball Media Days</a></h3>
+              <p style="font-size: 0.88rem; color: var(--text-muted); margin-bottom: 1.25rem;">Learn how high-speed flash sync turns gymnasiums into stadium arenas.</p>
+              <a href="blog-details.html" class="btn btn-sm btn-secondary">Read Article</a>
+            </div>
+          </article>
+
+          <!-- Article 2 -->
+          <article class="blog-card">
+            <div class="blog-card-img">
+              <img src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?q=80&w=800&auto=format&fit=crop" alt="Yearbook Indexing">
+            </div>
+            <div class="blog-card-body">
+              <div class="blog-card-meta">
+                <span>Yearbook Planning</span>
+                <span>Sep 20, 2026</span>
+              </div>
+              <h3 class="blog-card-title"><a href="blog-details.html">Mastering PSPA Roster Tagging For Seamless Yearbook Publication</a></h3>
+              <p style="font-size: 0.88rem; color: var(--text-muted); margin-bottom: 1.25rem;">A step-by-step checklist for yearbook advisors to avoid mislabeled student names.</p>
+              <a href="blog-details.html" class="btn btn-sm btn-secondary">Read Article</a>
+            </div>
+          </article>
+
+          <!-- Article 3 -->
+          <article class="blog-card">
+            <div class="blog-card-img">
+              <img src="https://images.unsplash.com/photo-1566577739112-5180d4bf9390?q=80&w=800&auto=format&fit=crop" alt="Senior Banners">
+            </div>
+            <div class="blog-card-body">
+              <div class="blog-card-meta">
+                <span>School Photography</span>
+                <span>Sep 14, 2026</span>
+              </div>
+              <h3 class="blog-card-title"><a href="blog-details.html">Why Senior Athletic Banners Are The Ultimate High School Tradition</a></h3>
+              <p style="font-size: 0.88rem; color: var(--text-muted); margin-bottom: 1.25rem;">Explore how vinyl gym wall banners boost team morale and school spirit.</p>
+              <a href="blog-details.html" class="btn btn-sm btn-secondary">Read Article</a>
+            </div>
+          </article>
+
+          <!-- Article 4 -->
+          <article class="blog-card">
+            <div class="blog-card-img">
+              <img src="https://images.unsplash.com/photo-1530549387789-4c1017266635?q=80&w=800&auto=format&fit=crop" alt="Swimming Action">
+            </div>
+            <div class="blog-card-body">
+              <div class="blog-card-meta">
+                <span>Behind The Scenes</span>
+                <span>Sep 05, 2026</span>
+              </div>
+              <h3 class="blog-card-title"><a href="blog-details.html">Capturing High-Speed Water Splash Action In Aquatic Photography</a></h3>
+              <p style="font-size: 0.88rem; color: var(--text-muted); margin-bottom: 1.25rem;">Camera settings and lens choice for indoor pool lighting challenges.</p>
+              <a href="blog-details.html" class="btn btn-sm btn-secondary">Read Article</a>
+            </div>
+          </article>
+
+          <!-- Article 5 -->
+          <article class="blog-card">
+            <div class="blog-card-img">
+              <img src="https://images.unsplash.com/photo-1517649763962-0c623266ddc0?q=80&w=800&auto=format&fit=crop" alt="Track Athlete">
+            </div>
+            <div class="blog-card-body">
+              <div class="blog-card-meta">
+                <span>Athlete Portraits</span>
+                <span>Aug 29, 2026</span>
+              </div>
+              <h3 class="blog-card-title"><a href="blog-details.html">Posing Guide: 5 Dynamic Poses Every Student Athlete Should Master</a></h3>
+              <p style="font-size: 0.88rem; color: var(--text-muted); margin-bottom: 1.25rem;">Simple posture adjustments that dramatically improve sports portrait quality.</p>
+              <a href="blog-details.html" class="btn btn-sm btn-secondary">Read Article</a>
+            </div>
+          </article>
+
+          <!-- Article 6 -->
+          <article class="blog-card">
+            <div class="blog-card-img">
+              <img src="https://images.unsplash.com/photo-1526676037777-05a232554f77?q=80&w=800&auto=format&fit=crop" alt="Team Huddle">
+            </div>
+            <div class="blog-card-body">
+              <div class="blog-card-meta">
+                <span>Team Photography</span>
+                <span>Aug 18, 2026</span>
+              </div>
+              <h3 class="blog-card-title"><a href="blog-details.html">Composite Panoramas: Solving The Problem Of Missing Team Members</a></h3>
+              <p style="font-size: 0.88rem; color: var(--text-muted); margin-bottom: 1.25rem;">How digital composite group photos save the day during flu season.</p>
+              <a href="blog-details.html" class="btn btn-sm btn-secondary">Read Article</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 5: NEWSLETTER CTA -->
+  <section class="section-padding" style="background: var(--color-navy-dark);">
+    <div class="container text-center" style="max-width: 650px;">
+      <span class="section-tag"><i class="fa-regular fa-paper-plane"></i> Stay Updated</span>
+      <h2 class="section-title" style="color: #FFFFFF;">Get Photo Day Guides Delivered Monthly</h2>
+      <p class="section-desc" style="color: var(--color-slate-light); margin-bottom: 2rem;">
+        Subscribe to our Athletic Director newsletter for seasonal planning checklists and media tips.
+      </p>
+      <form data-validate data-success="Thank you for subscribing to Stat & Snap Insights!" class="flex-center gap-2" style="flex-wrap: wrap;">
+        <input type="email" class="form-control" placeholder="Enter your school email..." required style="max-width: 380px;">
+        <button type="submit" class="btn btn-gold">Subscribe Free</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container text-center" style="font-size: 0.9rem; color: var(--color-slate-light);">
+      &copy; 2026 Stat & Snap Athletics Media.
+    </div>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

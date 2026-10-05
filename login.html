@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>School Portal Login | Stat & Snap</title>
+  <meta name="description" content="Secure login portal for school athletic directors, yearbook advisors, and coaches.">
+  
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <div class="auth-wrapper">
+    <!-- Left Banner -->
+    <div class="auth-banner">
+      <div>
+        <a href="index.html" class="brand-logo" style="color: #FFFFFF;">
+          <div class="logo-badge"><i class="fa-solid fa-camera-retro"></i></div>
+          <span>STAT & <span class="gold-accent">SNAP</span></span>
+        </a>
+      </div>
+      <div>
+        <span class="section-tag" style="background: rgba(198, 164, 90, 0.2);"><i class="fa-solid fa-shield-halved"></i> Secure Portal</span>
+        <h1 style="font-size: 2.75rem; color: #FFFFFF; margin: 1rem 0;">Empowering High School Athletic Media</h1>
+        <p style="font-size: 1.1rem; color: var(--color-slate-light); max-width: 500px;">
+          Access your school's photo day schedules, download high-res PSPA yearbook rosters, and track parent package delivery status.
+        </p>
+      </div>
+      <div style="font-size: 0.85rem; color: var(--color-slate-light);">
+        &copy; 2026 Stat & Snap Athletics Photography. All Rights Reserved.
+      </div>
+    </div>
+
+    <!-- Right Login Form -->
+    <div class="auth-form-container">
+      <div class="auth-card">
+        <div style="margin-bottom: 2rem;">
+          <h2 style="font-size: 1.8rem; margin-bottom: 0.5rem;">Welcome Back</h2>
+          <p style="font-size: 0.9rem; color: var(--text-muted);">Log in with your official school administrator account.</p>
+        </div>
+
+        <form data-validate data-success="Logged in! Redirecting to Client Dashboard..." onsubmit="setTimeout(() => window.location.href='dashboard.html', 1200);">
+          <div class="form-group">
+            <label class="form-label">School Email Address</label>
+            <input type="email" class="form-control" placeholder="ad@school.edu" value="marcus.vance@oakridge.edu" required>
+          </div>
+
+          <div class="form-group">
+            <div class="flex-between" style="margin-bottom: 0.5rem;">
+              <label class="form-label" style="margin-bottom: 0;">Password</label>
+              <a href="#" style="font-size: 0.8rem; color: var(--color-gold);" onclick="showToast('Password reset link sent to your school email.', 'info')">Forgot password?</a>
+            </div>
+            <input type="password" class="form-control" value="••••••••••••" required>
+          </div>
+
+          <div class="form-group flex-align gap-2">
+            <input type="checkbox" id="rememberMe" checked>
+            <label for="rememberMe" style="font-size: 0.85rem; color: var(--text-muted);">Remember this browser for 30 days</label>
+          </div>
+
+          <button type="submit" class="btn btn-lg btn-primary" style="width: 100%; margin-bottom: 1.5rem;">
+            <i class="fa-solid fa-right-to-bracket"></i> Log In To Portal
+          </button>
+        </form>
+
+        <div style="text-align: center; border-top: 1px solid var(--border-subtle); padding-top: 1.5rem; font-size: 0.9rem; color: var(--text-muted);">
+          New school or athletic club? <a href="register.html" style="color: var(--color-gold); font-weight: 700;">Register Organization</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

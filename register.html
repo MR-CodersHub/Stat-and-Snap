@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register School Account | Stat & Snap</title>
+  <meta name="description" content="Register your high school, sports academy, or youth league with Stat & Snap to set up custom photo days and yearbook sync.">
+  
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <div class="auth-wrapper">
+    <!-- Left Banner -->
+    <div class="auth-banner" style="background-image: linear-gradient(135deg, rgba(17, 28, 45, 0.95), rgba(182, 61, 74, 0.85)), url('https://images.unsplash.com/photo-1508098682722-e99c43a406b2?q=80&w=1200&auto=format&fit=crop');">
+      <div>
+        <a href="index.html" class="brand-logo" style="color: #FFFFFF;">
+          <div class="logo-badge"><i class="fa-solid fa-camera-retro"></i></div>
+          <span>STAT & <span class="gold-accent">SNAP</span></span>
+        </a>
+      </div>
+      <div>
+        <span class="section-tag" style="background: rgba(198, 164, 90, 0.2);"><i class="fa-solid fa-graduation-cap"></i> School Onboarding</span>
+        <h1 style="font-size: 2.75rem; color: #FFFFFF; margin: 1rem 0;">Join 120+ Partner School Districts</h1>
+        <p style="font-size: 1.1rem; color: var(--color-slate-light); max-width: 500px;">
+          Set up your school portal in under 3 minutes. Gain instant access to roster management tools, automated PSPA exports, and direct parent print ordering.
+        </p>
+      </div>
+      <div style="font-size: 0.85rem; color: var(--color-slate-light);">
+        &copy; 2026 Stat & Snap Athletics Photography.
+      </div>
+    </div>
+
+    <!-- Right Register Form -->
+    <div class="auth-form-container">
+      <div class="auth-card" style="max-width: 540px;">
+        <div style="margin-bottom: 1.5rem;">
+          <h2 style="font-size: 1.8rem; margin-bottom: 0.35rem;">Register Your School / Organization</h2>
+          <p style="font-size: 0.9rem; color: var(--text-muted);">Create your official athletic department portal account.</p>
+        </div>
+
+        <form data-validate data-success="School registration complete! Welcome to Stat & Snap." onsubmit="setTimeout(() => window.location.href='dashboard.html', 1200);">
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label">School / Organization Name *</label>
+              <input type="text" class="form-control" placeholder="e.g. St. Jude Sports Academy" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Contact Person Name *</label>
+              <input type="text" class="form-control" placeholder="e.g. Sarah Lin" required>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label">Work Email *</label>
+              <input type="email" class="form-control" placeholder="slin@stjude.edu" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Phone Number *</label>
+              <input type="tel" class="form-control" placeholder="(555) 392-1049" required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Organization Type *</label>
+            <select class="form-control" required>
+              <option value="">Select Organization Type...</option>
+              <option>Public High School Athletics</option>
+              <option>Private Prep / Diocesan Academy</option>
+              <option>Middle School / Junior High</option>
+              <option>Youth Sports Club / AAU</option>
+            </select>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label">Create Password *</label>
+              <input type="password" class="form-control" placeholder="At least 8 characters" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Confirm Password *</label>
+              <input type="password" class="form-control" placeholder="Repeat password" required>
+            </div>
+          </div>
+
+          <div class="form-group flex-align gap-2">
+            <input type="checkbox" id="acceptTerms" required>
+            <label for="acceptTerms" style="font-size: 0.85rem; color: var(--text-muted);">
+              I accept the <a href="#" style="color: var(--color-gold);">Terms of Service</a> & FERPA student privacy policy.
+            </label>
+          </div>
+
+          <button type="submit" class="btn btn-lg btn-gold" style="width: 100%; margin-bottom: 1.5rem;">
+            <i class="fa-solid fa-user-plus"></i> Complete School Registration
+          </button>
+        </form>
+
+        <div style="text-align: center; border-top: 1px solid var(--border-subtle); padding-top: 1.5rem; font-size: 0.9rem; color: var(--text-muted);">
+          Already registered? <a href="login.html" style="color: var(--color-gold); font-weight: 700;">Log In to School Portal</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

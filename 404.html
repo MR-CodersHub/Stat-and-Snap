@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>404 Page Not Found | Stat & Snap</title>
+  <meta name="description" content="Out of bounds! The page you were looking for could not be found on Stat & Snap Athletics.">
+  
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- Sticky Navbar -->
+  <nav class="navbar">
+    <div class="container flex-between">
+      <a href="index.html" class="brand-logo">
+        <div class="logo-badge"><i class="fa-solid fa-camera-retro"></i></div>
+        <span>STAT & <span class="gold-accent">SNAP</span></span>
+      </a>
+
+      <div class="nav-links">
+        <a href="index.html" class="nav-link">Home 1</a>
+        <a href="home2.html" class="nav-link">Home 2 (Niche)</a>
+        <a href="services.html" class="nav-link">Services</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </div>
+
+      <div class="nav-actions">
+        <button class="icon-btn theme-toggle"><i class="fa-solid fa-sun"></i></button>
+        <button class="icon-btn dir-toggle"><span class="dir-toggle-label">RTL</span></button>
+        <a href="index.html" class="btn btn-sm btn-primary">Return Home</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- 404 ERROR CONTENT SECTION -->
+  <section class="error-page-container">
+    <div class="container">
+      <span class="section-tag crimson"><i class="fa-solid fa-whistle"></i> Referee Signal</span>
+      <div class="error-code">404</div>
+      <h1 style="font-size: 2.5rem; margin-bottom: 1rem;">Out Of Bounds! Page Not Found</h1>
+      <p style="font-size: 1.1rem; color: var(--text-muted); max-width: 600px; margin: 0 auto 2.5rem auto;">
+        The play was whistled dead. The link you followed might be broken or the sports page was moved.
+      </p>
+
+      <div class="flex-center gap-3" style="flex-wrap: wrap; margin-bottom: 3rem;">
+        <a href="index.html" class="btn btn-lg btn-gold"><i class="fa-solid fa-house"></i> Go To Homepage</a>
+        <a href="dashboard.html" class="btn btn-lg btn-outline"><i class="fa-solid fa-grip"></i> School Client Dashboard</a>
+        <a href="contact.html" class="btn btn-lg btn-secondary"><i class="fa-solid fa-headset"></i> Contact Support</a>
+      </div>
+
+      <!-- Quick Search Bar -->
+      <div class="card-glass" style="max-width: 500px; margin: 0 auto; padding: 1.5rem;">
+        <h4 style="font-size: 1rem; margin-bottom: 1rem;">Try Searching Stat & Snap:</h4>
+        <form onsubmit="event.preventDefault(); window.location.href='services.html';">
+          <div class="flex-align gap-2">
+            <input type="text" class="form-control" placeholder="Search services, team photos, pricing...">
+            <button type="submit" class="btn btn-primary"><i class="fa-solid fa-magnifying-glass"></i></button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container text-center" style="font-size: 0.9rem; color: var(--color-slate-light);">
+      &copy; 2026 Stat & Snap Athletics Photography.
+    </div>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

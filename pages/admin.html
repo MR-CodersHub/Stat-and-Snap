@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Studio Admin Portal | Stat & Snap — Manage Schools, Shoots & Revenue</title>
+  <meta name="description" content="Stat & Snap studio admin: manage school clients, photo day schedule, individual/team/bulk orders, yearbook PSPA, crew, retakes and payments.">
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body style="background: var(--bg-main);">
+<div class="dashboard-layout">
+  <aside class="dashboard-sidebar">
+    <div class="sidebar-header">
+      <a href="../index.html" class="brand-logo" style="font-size:1.1rem;">
+        <div class="logo-badge" style="width:32px;height:32px;font-size:0.9rem;background:var(--color-gold);color:#111;"><i class="fa-solid fa-user-shield"></i></div>
+        <span>STAT & <span class="gold-accent">SNAP</span></span>
+      </a>
+      <span class="badge badge-processing" style="font-size:0.65rem;">ADMIN</span>
+    </div>
+    <div class="sidebar-menu">
+      <div class="sidebar-item active" data-module="overview"><i class="fa-solid fa-gauge-high"></i><span>Studio Overview</span></div>
+      <div class="sidebar-item" data-module="schools"><i class="fa-solid fa-school"></i><span>Schools & Clients</span></div>
+      <div class="sidebar-item" data-module="schedule"><i class="fa-solid fa-calendar-day"></i><span>Photo Day Schedule</span></div>
+      <div class="sidebar-item" data-module="orders"><i class="fa-solid fa-boxes-stacked"></i><span>All Orders</span></div>
+      <div class="sidebar-item" data-module="bulk"><i class="fa-solid fa-truck-ramp-box"></i><span>Bulk Coordination</span></div>
+      <div class="sidebar-item" data-module="yearbook"><i class="fa-solid fa-book-open"></i><span>Yearbook PSPA</span></div>
+      <div class="sidebar-item" data-module="crew"><i class="fa-solid fa-camera"></i><span>Photographers & Crew</span></div>
+      <div class="sidebar-item" data-module="retakes"><i class="fa-solid fa-rotate-left"></i><span>Retake Approvals</span></div>
+      <div class="sidebar-item" data-module="payments"><i class="fa-solid fa-sack-dollar"></i><span>Revenue & Invoices</span></div>
+      <div class="sidebar-item" data-module="messages"><i class="fa-solid fa-comments"></i><span>Messages</span></div>
+      <div class="sidebar-item" data-module="settings"><i class="fa-solid fa-gear"></i><span>Studio Settings</span></div>
+    </div>
+    <div style="padding:1rem;border-top:1px solid rgba(255,255,255,0.1);display:flex;flex-direction:column;gap:0.5rem;">
+      <a href="dashboard.html" class="btn btn-sm btn-outline" style="width:100%;"><i class="fa-solid fa-grip"></i> View School Portal</a>
+      <a href="login.html" class="btn btn-sm btn-secondary" style="width:100%;"><i class="fa-solid fa-right-from-bracket"></i> Log Out</a>
+    </div>
+  </aside>
+
+  <main class="dashboard-main">
+    <header class="dashboard-topbar">
+      <div class="flex-align gap-2">
+        <button class="icon-btn sidebar-toggle-btn" style="display:none;"><i class="fa-solid fa-bars"></i></button>
+        <div><h2 class="dash-page-title" style="font-size:1.25rem;">Studio Overview</h2><span style="font-size:0.8rem;color:var(--text-muted);">Fall Season 2026-2027 — All school clients</span></div>
+      </div>
+      <div class="nav-actions">
+        <button class="icon-btn theme-toggle"><i class="fa-solid fa-sun"></i></button>
+        <button class="icon-btn dir-toggle"><span class="dir-toggle-label">RTL</span></button>
+        <div class="flex-align gap-2" style="background:var(--bg-surface-elevated);padding:0.4rem 0.85rem;border-radius:99px;border:1px solid var(--border-subtle);">
+          <div style="width:28px;height:28px;border-radius:99px;background:var(--color-gold);color:#111;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:0.8rem;">SA</div>
+          <span style="font-size:0.85rem;font-weight:700;">Studio Admin</span>
+        </div>
+      </div>
+    </header>
+
+    <div class="dashboard-body">
+      <!-- OVERVIEW -->
+      <div id="admin-overview" class="dash-module">
+        <div class="grid-4" style="margin-bottom:1.5rem;">
+          <div class="card-glass" style="padding:1.25rem;"><span style="font-size:0.75rem;color:var(--text-muted);font-weight:700;">TOTAL REVENUE (FALL)</span><div style="font-size:2rem;font-weight:800;color:var(--color-gold);">$84,250</div><span class="badge badge-completed">+18% vs last season</span></div>
+          <div class="card-glass" style="padding:1.25rem;"><span style="font-size:0.75rem;color:var(--text-muted);font-weight:700;">ACTIVE SCHOOLS</span><div style="font-size:2rem;font-weight:800;">45</div><span class="badge badge-scheduled">6 pending onboarding</span></div>
+          <div class="card-glass" style="padding:1.25rem;"><span style="font-size:0.75rem;color:var(--text-muted);font-weight:700;">ORDERS (IND + TEAM)</span><div style="font-size:2rem;font-weight:800;">3,842</div><span class="badge badge-processing">214 in lab now</span></div>
+          <div class="card-glass" style="padding:1.25rem;"><span style="font-size:0.75rem;color:var(--text-muted);font-weight:700;">PHOTO DAYS THIS MONTH</span><div style="font-size:2rem;font-weight:800;">28</div><span class="badge badge-approval">4 need crew</span></div>
+        </div>
+        <div class="grid-2" style="margin-bottom:1.5rem;">
+          <div class="card-glass" style="padding:1.5rem;">
+            <h3 style="margin-bottom:1rem;"><i class="fa-solid fa-chart-line" style="color:var(--color-gold);"></i> Revenue by Package</h3>
+            <div style="display:flex;flex-direction:column;gap:0.75rem;font-size:0.85rem;">
+              <div><div class="flex-between" style="margin-bottom:0.25rem;"><span>Individual packets (2,940 × avg $54)</span><strong>$58,800</strong></div><div style="background:var(--bg-surface-elevated);height:10px;border-radius:99px;"><div style="width:70%;height:100%;background:var(--color-gold);border-radius:99px;"></div></div></div>
+              <div><div class="flex-between" style="margin-bottom:0.25rem;"><span>Team packages & banners (310 teams)</span><strong>$18,450</strong></div><div style="background:var(--bg-surface-elevated);height:10px;border-radius:99px;"><div style="width:45%;height:100%;background:#8B5CF6;border-radius:99px;"></div></div></div>
+              <div><div class="flex-between" style="margin-bottom:0.25rem;"><span>Yearbook add-ons & rush fees</span><strong>$7,000</strong></div><div style="background:var(--bg-surface-elevated);height:10px;border-radius:99px;"><div style="width:22%;height:100%;background:#10B981;border-radius:99px;"></div></div></div>
+            </div>
+          </div>
+          <div class="card-glass" style="padding:1.5rem;">
+            <h3 style="margin-bottom:1rem;"><i class="fa-solid fa-triangle-exclamation" style="color:#F59E0B;"></i> Needs Attention (7)</h3>
+            <div style="display:flex;flex-direction:column;gap:0.6rem;font-size:0.88rem;">
+              <div style="padding:0.75rem;background:rgba(182,61,74,0.1);border-radius:8px;">🔁 <strong>12 retake requests</strong> awaiting approval <button class="btn btn-sm btn-gold" data-open-crew style="margin-left:0.5rem;" onclick="document.querySelector('[data-module=retakes]').click()">Review</button></div>
+              <div style="padding:0.75rem;background:rgba(245,158,11,0.1);border-radius:8px;">📸 <strong>4 photo days</strong> have no photographer assigned</div>
+              <div style="padding:0.75rem;background:rgba(59,130,246,0.1);border-radius:8px;">💰 <strong>$9,840</strong> in overdue school invoices</div>
+              <div style="padding:0.75rem;background:var(--bg-surface-elevated);border-radius:8px;">📚 <strong>3 schools</strong> PSPA files failed validation</div>
+            </div>
+          </div>
+        </div>
+        <div class="card-glass" style="padding:1.5rem;">
+          <h3 style="margin-bottom:1rem;"><i class="fa-solid fa-list-check" style="color:var(--color-gold);"></i> Latest Orders Across All Schools</h3>
+          <div class="table-responsive"><table id="admin-table-latest" class="data-table"><thead><tr><th>Order #</th><th>School</th><th>Type</th><th>Amount</th><th>Status</th></tr></thead>
+          <tbody>
+            <tr><td>#IND-8841</td><td>Oakridge High</td><td>Individual — Varsity Champion</td><td>$59</td><td><span class="badge badge-processing">Processing</span></td></tr>
+            <tr><td>#TEAM-341</td><td>St. Jude Academy</td><td>Team Panorama ×45</td><td>$720</td><td><span class="badge badge-completed">Completed</span></td></tr>
+            <tr><td>#BULK-WV26</td><td>Westview High</td><td>Bulk — 410 items</td><td>$6,200</td><td><span class="badge badge-delivered">Delivered</span></td></tr>
+            <tr><td>#IND-8839</td><td>Oakridge High</td><td>Individual — Starter</td><td>$29</td><td><span class="badge badge-approval">Awaiting Approval</span></td></tr>
+          </tbody></table></div>
+        </div>
+      </div>
+
+      <!-- SCHOOLS -->
+      <div id="admin-schools" class="dash-module" style="display:none;">
+        <div class="card-glass" style="padding:1.5rem;">
+          <div class="flex-between" style="margin-bottom:1.5rem;flex-wrap:wrap;gap:1rem;">
+            <h3><i class="fa-solid fa-school" style="color:var(--color-gold);"></i> Schools & Club Clients (45)</h3>
+            <div class="flex-align gap-2">
+              <input class="form-control" placeholder="Search school..." data-table-search="admin-table-schools" style="width:200px;padding:0.5rem 0.85rem;font-size:0.85rem;">
+              <select class="form-control" data-status-filter="admin-table-schools" style="width:150px;padding:0.5rem 0.85rem;font-size:0.85rem;"><option value="all">All</option><option value="completed">Active</option><option value="scheduled">Onboarding</option><option value="awaiting approval">Past due</option></select>
+              <button class="btn btn-sm btn-gold" onclick="showToast('New school onboarding form opened','info')"><i class="fa-solid fa-plus"></i> Add School</button>
+            </div>
+          </div>
+          <div class="table-responsive"><table id="admin-table-schools" class="data-table"><thead><tr><th>School</th><th>AD Contact</th><th>Teams</th><th>Athletes</th><th>Season Value</th><th>Status</th><th>Action</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Oakridge High</strong><br><span style="font-size:0.75rem;color:var(--text-muted);">#OHS-8842</span></td><td>Marcus Vance</td><td>18</td><td>448</td><td>$12,400</td><td><span class="badge badge-completed">Active</span></td><td><button class="btn btn-sm btn-outline" onclick="window.location.href='dashboard.html'">Open Portal</button></td></tr>
+            <tr><td><strong>St. Jude Academy</strong><br><span style="font-size:0.75rem;color:var(--text-muted);">#SJA-1120</span></td><td>Sarah Lin</td><td>12</td><td>310</td><td>$8,150</td><td><span class="badge badge-completed">Active</span></td><td><button class="btn btn-sm btn-outline" onclick="showToast('Opening St. Jude portal...','info')">Open Portal</button></td></tr>
+            <tr><td><strong>Westview High</strong><br><span style="font-size:0.75rem;color:var(--text-muted);">#WVH-4401</span></td><td>David Baker</td><td>15</td><td>390</td><td>$9,900</td><td><span class="badge badge-approval">Payment Past Due</span></td><td><button class="btn btn-sm btn-gold" onclick="showToast('Payment reminder sent!','warning')">Remind</button></td></tr>
+            <tr><td><strong>Northgate Youth Club</strong><br><span style="font-size:0.75rem;color:var(--text-muted);">#NGC-0091</span></td><td>Priya Nair</td><td>8</td><td>160</td><td>$3,200</td><td><span class="badge badge-scheduled">Onboarding</span></td><td><button class="btn btn-sm btn-secondary" onclick="showToast('Onboarding checklist opened','info')">Onboard</button></td></tr>
+          </tbody></table></div>
+        </div>
+      </div>
+
+      <!-- SCHEDULE -->
+      <div id="admin-schedule" class="dash-module" style="display:none;">
+        <div class="card-glass" style="padding:1.5rem;">
+          <div class="flex-between" style="margin-bottom:1rem;flex-wrap:wrap;gap:1rem;"><h3><i class="fa-solid fa-calendar-day" style="color:var(--color-gold);"></i> Master Photo Day Schedule — October</h3><button class="btn btn-sm btn-gold" onclick="showToast('New shoot slot created!','success')"><i class="fa-solid fa-plus"></i> Schedule Shoot</button></div>
+          <div class="table-responsive"><table id="admin-table-schedule" class="data-table"><thead><tr><th>Date</th><th>School</th><th>Teams</th><th>Crew</th><th>Status</th><th>Assign</th></tr></thead>
+          <tbody>
+            <tr><td>Oct 08, 3:15 PM</td><td>Oakridge High</td><td>Basketball ×3, Cheer</td><td>Elena R. + Marcus S.</td><td><span class="badge badge-scheduled">Scheduled</span></td><td><button class="btn btn-sm btn-outline" onclick="showToast('Crew reassigned','info')">Reassign</button></td></tr>
+            <tr><td>Oct 09, 10:00 AM</td><td>St. Jude Academy</td><td>Soccer ×2</td><td><em style="color:#F59E0B;">Unassigned</em></td><td><span class="badge badge-approval">Needs Crew</span></td><td><button class="btn btn-sm btn-gold" data-approve="Crew assigned">Auto-Assign</button></td></tr>
+            <tr><td>Oct 10, 4:00 PM</td><td>Westview High</td><td>Football, Track</td><td>James K. + Elena R.</td><td><span class="badge badge-processing">In Progress</span></td><td><button class="btn btn-sm btn-outline" onclick="showToast('Shoot brief opened','info')">Brief</button></td></tr>
+            <tr><td>Oct 22, 3:30 PM</td><td>Multi-school</td><td>Retake / Makeup</td><td>Marcus S.</td><td><span class="badge badge-scheduled">Scheduled</span></td><td><button class="btn btn-sm btn-outline" onclick="showToast('Retake roster: 34 athletes','info')">Roster</button></td></tr>
+          </tbody></table></div>
+        </div>
+      </div>
+
+      <!-- ORDERS -->
+      <div id="admin-orders" class="dash-module" style="display:none;">
+        <div class="grid-3" style="margin-bottom:1.5rem;">
+          <div class="card-glass" style="padding:1.25rem;text-align:center;"><div style="font-size:1.8rem;font-weight:800;color:var(--color-gold);">2,940</div><div style="font-size:0.8rem;color:var(--text-muted);">Individual packets</div></div>
+          <div class="card-glass" style="padding:1.25rem;text-align:center;"><div style="font-size:1.8rem;font-weight:800;color:#8B5CF6;">310</div><div style="font-size:0.8rem;color:var(--text-muted);">Team packages</div></div>
+          <div class="card-glass" style="padding:1.25rem;text-align:center;"><div style="font-size:1.8rem;font-weight:800;color:#10B981;">214</div><div style="font-size:0.8rem;color:var(--text-muted);">In lab right now</div></div>
+        </div>
+        <div class="card-glass" style="padding:1.5rem;">
+          <div class="flex-between" style="margin-bottom:1rem;flex-wrap:wrap;gap:1rem;"><h3><i class="fa-solid fa-boxes-stacked" style="color:var(--color-gold);"></i> All Individual + Team Orders</h3>
+          <div class="flex-align gap-2"><input class="form-control" placeholder="Search order / school..." data-table-search="admin-table-orders" style="width:200px;padding:0.5rem 0.85rem;font-size:0.85rem;"><select class="form-control" data-status-filter="admin-table-orders" style="width:150px;padding:0.5rem 0.85rem;font-size:0.85rem;"><option value="all">All</option><option value="processing">Processing</option><option value="completed">Completed</option><option value="delivered">Delivered</option><option value="awaiting approval">Awaiting Approval</option></select></div></div>
+          <div class="table-responsive"><table id="admin-table-orders" class="data-table"><thead><tr><th>Order #</th><th>School</th><th>Type / Package</th><th>Amount</th><th>Status</th><th>Update</th></tr></thead>
+          <tbody>
+            <tr><td>#IND-8841</td><td>Oakridge High</td><td>Individual — Champion $59</td><td>$59</td><td><span class="badge badge-processing">Processing</span></td><td><button class="btn btn-sm btn-outline" data-approve="Order marked completed">Complete</button></td></tr>
+            <tr><td>#TEAM-341</td><td>St. Jude</td><td>Team Panorama ×45</td><td>$720</td><td><span class="badge badge-completed">Completed</span></td><td><button class="btn btn-sm btn-outline" onclick="showToast('Marked shipped','info')">Ship</button></td></tr>
+            <tr><td>#IND-8839</td><td>Oakridge</td><td>Individual — Starter $29</td><td>$29</td><td><span class="badge badge-approval">Awaiting Approval</span></td><td><div style="display:flex;gap:0.35rem;"><button class="btn btn-sm btn-gold" data-approve="Proof approved">Approve</button><button class="btn btn-sm btn-outline" data-reject>Reject</button></div></td></tr>
+            <tr><td>#TEAM-338</td><td>Westview</td><td>Banners ×2 + Plaques</td><td>$410</td><td><span class="badge badge-delivered">Delivered</span></td><td><button class="btn btn-sm btn-outline" onclick="showToast('POD viewed','info')">POD</button></td></tr>
+          </tbody></table></div>
+        </div>
+      </div>
+
+      <!-- BULK -->
+      <div id="admin-bulk" class="dash-module" style="display:none;">
+        <div class="card-glass" style="padding:1.5rem;">
+          <div class="flex-between" style="margin-bottom:1rem;flex-wrap:wrap;gap:1rem;"><h3><i class="fa-solid fa-truck-ramp-box" style="color:var(--color-gold);"></i> Bulk Shipments — All Schools</h3><button class="btn btn-sm btn-gold" onclick="showToast('New bulk batch created!','success')"><i class="fa-solid fa-plus"></i> New Bulk Batch</button></div>
+          <div class="table-responsive"><table class="data-table"><thead><tr><th>Batch</th><th>School</th><th>Items</th><th>Carrier</th><th>ETA</th><th>Status</th></tr></thead>
+          <tbody>
+            <tr><td>#BULK-FALL26</td><td>Oakridge High</td><td>612</td><td>FedEx Express</td><td>Oct 18</td><td><span class="badge badge-processing">Processing</span></td></tr>
+            <tr><td>#BULK-WV26</td><td>Westview High</td><td>410</td><td>UPS Ground</td><td>Oct 16</td><td><span class="badge badge-delivered">Delivered</span></td></tr>
+            <tr><td>#BULK-SJ26</td><td>St. Jude Academy</td><td>355</td><td>FedEx Express</td><td>Oct 20</td><td><span class="badge badge-completed">Completed</span></td></tr>
+          </tbody></table></div>
+          <div style="margin-top:1rem;display:flex;gap:0.5rem;flex-wrap:wrap;">
+            <button class="btn btn-sm btn-outline" onclick="showToast('Packing slips printed (24 pages)','info')"><i class="fa-solid fa-print"></i> Print Packing Slips</button>
+            <button class="btn btn-sm btn-outline" onclick="showToast('Carrier labels generated','info')"><i class="fa-solid fa-barcode"></i> Generate Labels</button>
+            <button class="btn btn-sm btn-outline" onclick="showToast('Bulk tracking CSV exported','info')"><i class="fa-solid fa-file-csv"></i> Export Tracking CSV</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- YEARBOOK -->
+      <div id="admin-yearbook" class="dash-module" style="display:none;">
+        <div class="card-glass" style="padding:1.5rem;">
+          <h3 style="margin-bottom:1rem;"><i class="fa-solid fa-book-open" style="color:var(--color-crimson);"></i> Yearbook PSPA Validation Queue</h3>
+          <div class="table-responsive"><table class="data-table"><thead><tr><th>School</th><th>Portraits</th><th>Software</th><th>Validation</th><th>Action</th></tr></thead>
+          <tbody>
+            <tr><td>Oakridge High</td><td>448</td><td>Jostens</td><td><span class="badge badge-completed">Verified</span></td><td><button class="btn btn-sm btn-outline" onclick="showToast('PSPA ZIP released to advisor','info')">Release</button></td></tr>
+            <tr><td>St. Jude Academy</td><td>310</td><td>Walsworth</td><td><span class="badge badge-processing">Checking IDs</span></td><td><button class="btn btn-sm btn-gold" data-approve="PSPA approved">Approve</button></td></tr>
+            <tr><td>Westview High</td><td>390</td><td>Balfour</td><td><span class="badge badge-approval">3 ID mismatches</span></td><td><button class="btn btn-sm btn-outline" onclick="showToast('Mismatch report sent to school','warning')">Send Report</button></td></tr>
+          </tbody></table></div>
+        </div>
+      </div>
+
+      <!-- CREW -->
+      <div id="admin-crew" class="dash-module" style="display:none;">
+        <div class="card-glass" style="padding:1.5rem;">
+          <div class="flex-between" style="margin-bottom:1rem;flex-wrap:wrap;gap:1rem;"><h3><i class="fa-solid fa-camera" style="color:var(--color-gold);"></i> Photographers & Crew (8)</h3><button class="btn btn-sm btn-gold" onclick="showToast('Crew invite sent!','success')"><i class="fa-solid fa-plus"></i> Add Photographer</button></div>
+          <div class="table-responsive"><table class="data-table"><thead><tr><th>Crew</th><th>Role</th><th>Shoots (Oct)</th><th>Rating</th><th>Status</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Elena Rostova</strong></td><td>Lead — Portraits</td><td>12</td><td>⭐ 4.9</td><td><span class="badge badge-completed">On Shoot</span></td></tr>
+            <tr><td><strong>Marcus Sterling</strong></td><td>Lead — Teams</td><td>10</td><td>⭐ 4.8</td><td><span class="badge badge-completed">On Shoot</span></td></tr>
+            <tr><td><strong>James Keller</strong></td><td>Action / Sports</td><td>8</td><td>⭐ 4.7</td><td><span class="badge badge-scheduled">Available</span></td></tr>
+            <tr><td><strong>Ana Diaz</strong></td><td>Assistant / Lighting</td><td>9</td><td>⭐ 4.9</td><td><span class="badge badge-processing">Editing</span></td></tr>
+          </tbody></table></div>
+        </div>
+      </div>
+
+      <!-- RETAKES -->
+      <div id="admin-retakes" class="dash-module" style="display:none;">
+        <div class="card-glass" style="padding:1.5rem;">
+          <h3 style="margin-bottom:1rem;"><i class="fa-solid fa-rotate-left" style="color:var(--color-gold);"></i> Retake / Makeup Approvals (12)</h3>
+          <div class="table-responsive"><table class="data-table"><thead><tr><th>Athlete</th><th>School</th><th>Reason</th><th>Requested</th><th>Status</th><th>Decision</th></tr></thead>
+          <tbody>
+            <tr><td>Devon Carter #55</td><td>Oakridge High</td><td>Absent</td><td>Oct 04</td><td><span class="badge badge-approval">Awaiting Approval</span></td><td><div style="display:flex;gap:0.35rem;"><button class="btn btn-sm btn-gold" data-approve="Retake approved for Oct 22">Approve</button><button class="btn btn-sm btn-outline" data-reject>Decline</button></div></td></tr>
+            <tr><td>Jada Smith</td><td>Oakridge High</td><td>Blink</td><td>Oct 03</td><td><span class="badge badge-processing">Processing</span></td><td><button class="btn btn-sm btn-outline" onclick="showToast('Composite fix 80% done','info')">Check Fix</button></td></tr>
+            <tr><td>Ryan Okafor #11</td><td>Westview High</td><td>Uniform issue</td><td>Oct 05</td><td><span class="badge badge-approval">Awaiting Approval</span></td><td><div style="display:flex;gap:0.35rem;"><button class="btn btn-sm btn-gold" data-approve="Retake approved for Oct 22">Approve</button><button class="btn btn-sm btn-outline" data-reject>Decline</button></div></td></tr>
+          </tbody></table></div>
+        </div>
+      </div>
+
+      <!-- PAYMENTS -->
+      <div id="admin-payments" class="dash-module" style="display:none;">
+        <div class="grid-3" style="margin-bottom:1.5rem;">
+          <div class="card-glass" style="padding:1.25rem;text-align:center;"><div style="font-size:0.8rem;color:var(--text-muted);font-weight:700;">COLLECTED</div><div style="font-size:1.8rem;font-weight:800;color:#10B981;">$74,410</div></div>
+          <div class="card-glass" style="padding:1.25rem;text-align:center;"><div style="font-size:0.8rem;color:var(--text-muted);font-weight:700;">OUTSTANDING</div><div style="font-size:1.8rem;font-weight:800;color:var(--color-gold);">$9,840</div></div>
+          <div class="card-glass" style="padding:1.25rem;text-align:center;"><div style="font-size:0.8rem;color:var(--text-muted);font-weight:700;">SCHOOL REVENUE SHARE PAID</div><div style="font-size:1.8rem;font-weight:800;">$4,120</div></div>
+        </div>
+        <div class="card-glass" style="padding:1.5rem;">
+          <h3 style="margin-bottom:1rem;"><i class="fa-solid fa-sack-dollar" style="color:var(--color-gold);"></i> Invoices — All Schools</h3>
+          <div class="table-responsive"><table class="data-table"><thead><tr><th>Invoice</th><th>School</th><th>Amount</th><th>Due</th><th>Status</th><th>Action</th></tr></thead>
+          <tbody>
+            <tr><td>#INV-882</td><td>Oakridge High</td><td>$1,095</td><td>Oct 20</td><td><span class="badge badge-progress">Unpaid</span></td><td><button class="btn btn-sm btn-gold" onclick="showToast('Reminder + payment link sent','warning')">Remind</button></td></tr>
+            <tr><td>#INV-875</td><td>Westview High</td><td>$2,400</td><td>Oct 01 (overdue)</td><td><span class="badge badge-approval">Overdue</span></td><td><button class="btn btn-sm btn-gold" onclick="showToast('Escalation email sent to principal','warning')">Escalate</button></td></tr>
+            <tr><td>#INV-881</td><td>Oakridge High</td><td>$2,115</td><td>Oct 02</td><td><span class="badge badge-completed">Paid</span></td><td><button class="btn btn-sm btn-outline" onclick="showToast('Receipt opened','info')">Receipt</button></td></tr>
+          </tbody></table></div>
+        </div>
+      </div>
+
+      <!-- MESSAGES -->
+      <div id="admin-messages" class="dash-module" style="display:none;">
+        <div class="grid-2">
+          <div class="card-glass" style="padding:1.5rem;">
+            <h4>Inbox — School Requests</h4>
+            <div style="display:flex;flex-direction:column;gap:0.6rem;margin-top:1rem;font-size:0.88rem;">
+              <div style="padding:0.85rem;background:var(--bg-surface-elevated);border-radius:10px;"><strong>Oakridge (Marcus):</strong> Can we add a 4:30 slot for JV soccer?<br><button class="btn btn-sm btn-gold" style="margin-top:0.5rem;" onclick="showToast('Reply sent!','success')">Reply</button></div>
+              <div style="padding:0.85rem;background:var(--bg-surface-elevated);border-radius:10px;"><strong>Westview (Baker):</strong> Banner proof looks cropped — please check.<br><button class="btn btn-sm btn-outline" style="margin-top:0.5rem;" onclick="showToast('Reply sent!','success')">Reply</button></div>
+              <div style="padding:0.85rem;background:var(--bg-surface-elevated);border-radius:10px;"><strong>St. Jude (Sarah):</strong> PSPA file imported perfectly, thank you! 🎉</div>
+            </div>
+          </div>
+          <div class="card-glass" style="padding:1.5rem;">
+            <h4>Broadcast to All Schools</h4>
+            <form onsubmit="event.preventDefault(); showToast('Broadcast sent to 45 schools!', 'success'); this.reset();" style="margin-top:1rem;">
+              <div class="form-group"><label class="form-label">Message</label><textarea class="form-control" rows="4" placeholder="e.g. Holiday lab closure dates..." required></textarea></div>
+              <button class="btn btn-gold" style="width:100%;" type="submit"><i class="fa-solid fa-bullhorn"></i> Send Broadcast</button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <!-- SETTINGS -->
+      <div id="admin-settings" class="dash-module" style="display:none;">
+        <div class="grid-2">
+          <div class="card-glass" style="padding:1.5rem;">
+            <h3><i class="fa-solid fa-gear" style="color:var(--color-gold);"></i> Studio Settings</h3>
+            <form onsubmit="event.preventDefault(); showToast('Studio settings saved!', 'success');" style="margin-top:1rem;">
+              <div class="form-group"><label class="form-label">Studio Name</label><input class="form-control" value="Stat & Snap Athletics Photography"></div>
+              <div class="form-row"><div class="form-group"><label class="form-label">Lab Turnaround (days)</label><input type="number" class="form-control" value="7"></div><div class="form-group"><label class="form-label">Rush Fee ($)</label><input type="number" class="form-control" value="15"></div></div>
+              <div class="form-group"><label class="form-label">Default Revenue Share (%)</label><input type="number" class="form-control" value="10"></div>
+              <button class="btn btn-gold" style="width:100%;" type="submit">Save Studio Settings</button>
+            </form>
+          </div>
+          <div class="card-glass" style="padding:1.5rem;">
+            <h4>Packages & Pricing Control</h4>
+            <div class="table-responsive" style="margin-top:1rem;"><table class="data-table"><thead><tr><th>Package</th><th>Price</th><th>Active</th></tr></thead>
+            <tbody>
+              <tr><td>Starter</td><td>$29</td><td><span class="badge badge-completed">Live</span></td></tr>
+              <tr><td>Varsity Champion</td><td>$59</td><td><span class="badge badge-completed">Live</span></td></tr>
+              <tr><td>All-Star Senior</td><td>$99</td><td><span class="badge badge-completed">Live</span></td></tr>
+            </tbody></table></div>
+            <button class="btn btn-sm btn-outline" style="margin-top:1rem;width:100%;" onclick="showToast('Synced to Pricing page!','success')"><i class="fa-solid fa-arrows-rotate"></i> Push Prices to Website</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+</div>
+<script src="../js/app.js"></script>
+<script src="../js/admin.js"></script>
+</body>
+</html>

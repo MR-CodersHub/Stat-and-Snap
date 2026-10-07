@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>School Client Portal | Stat & Snap Athletics Dashboard</title>
   <meta name="description" content="Manage school photo day schedules, roster sync, team package proofs, yearbook PSPA files, and invoice tracking.">
-  
   <link rel="stylesheet" href="../css/styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
@@ -74,21 +73,22 @@
         </div>
       </div>
 
-      <div style="padding: 1rem; border-top: 1px solid rgba(255,255,255,0.1);">
+      <div style="padding: 1rem; border-top: 1px solid rgba(255,255,255,0.1); display:flex; flex-direction:column; gap:0.5rem;">
+        <a href="admin.html" class="btn btn-sm btn-secondary" style="width: 100%;"><i class="fa-solid fa-user-shield"></i> Studio Admin Portal</a>
         <a href="login.html" class="btn btn-sm btn-outline" style="width: 100%;"><i class="fa-solid fa-right-from-bracket"></i> Log Out</a>
       </div>
     </aside>
 
     <!-- DASHBOARD MAIN CONTENT -->
     <main class="dashboard-main">
-      
+
       <!-- Topbar -->
       <header class="dashboard-topbar">
         <div class="flex-align gap-2">
           <button class="icon-btn sidebar-toggle-btn" style="display: none;"><i class="fa-solid fa-bars"></i></button>
           <div>
-            <h2 class="dash-page-title" style="font-size: 1.25rem;">Oakridge High Athletics Portal</h2>
-            <span style="font-size: 0.8rem; color: var(--text-muted);">Fall Athletic Season 2026-2027</span>
+            <h2 class="dash-page-title" style="font-size: 1.25rem;">Overview</h2>
+            <span style="font-size: 0.8rem; color: var(--text-muted);">Oakridge High Athletics Portal — Fall 2026-2027</span>
           </div>
         </div>
 
@@ -107,68 +107,46 @@
 
         <!-- MODULE 1: OVERVIEW -->
         <div id="module-overview" class="dash-module">
-          
-          <!-- Summary Widgets (11 Indicators) -->
           <div class="grid-4" style="margin-bottom: 2rem;">
-            
             <div class="card-glass flex-align gap-2" style="padding: 1.25rem;">
               <div style="width: 45px; height: 45px; border-radius: var(--radius-md); background: rgba(59, 130, 246, 0.15); color: #3B82F6; display: flex; align-items: center; justify-content: center; font-size: 1.3rem;"><i class="fa-solid fa-calendar-day"></i></div>
-              <div>
-                <span style="font-size: 0.75rem; color: var(--text-muted); font-weight: 700; text-transform: uppercase;">Upcoming Photo Days</span>
-                <div style="font-family: var(--font-heading); font-weight: 800; font-size: 1.5rem;">2 Dates</div>
-              </div>
+              <div><span style="font-size: 0.75rem; color: var(--text-muted); font-weight: 700; text-transform: uppercase;">Upcoming Photo Days</span><div style="font-family: var(--font-heading); font-weight: 800; font-size: 1.5rem;">2 Dates</div></div>
             </div>
-
             <div class="card-glass flex-align gap-2" style="padding: 1.25rem;">
               <div style="width: 45px; height: 45px; border-radius: var(--radius-md); background: rgba(245, 158, 11, 0.15); color: #F59E0B; display: flex; align-items: center; justify-content: center; font-size: 1.3rem;"><i class="fa-solid fa-clock"></i></div>
-              <div>
-                <span style="font-size: 0.75rem; color: var(--text-muted); font-weight: 700; text-transform: uppercase;">Today's Schedule</span>
-                <div style="font-family: var(--font-heading); font-weight: 800; font-size: 1.5rem;">4 Teams</div>
-              </div>
+              <div><span style="font-size: 0.75rem; color: var(--text-muted); font-weight: 700; text-transform: uppercase;">Today's Schedule</span><div style="font-family: var(--font-heading); font-weight: 800; font-size: 1.5rem;">4 Teams</div></div>
             </div>
-
             <div class="card-glass flex-align gap-2" style="padding: 1.25rem;">
               <div style="width: 45px; height: 45px; border-radius: var(--radius-md); background: rgba(16, 185, 129, 0.15); color: #10B981; display: flex; align-items: center; justify-content: center; font-size: 1.3rem;"><i class="fa-solid fa-circle-check"></i></div>
-              <div>
-                <span style="font-size: 0.75rem; color: var(--text-muted); font-weight: 700; text-transform: uppercase;">Teams Completed</span>
-                <div style="font-family: var(--font-heading); font-weight: 800; font-size: 1.5rem;">14 / 18</div>
-              </div>
+              <div><span style="font-size: 0.75rem; color: var(--text-muted); font-weight: 700; text-transform: uppercase;">Teams Completed</span><div style="font-family: var(--font-heading); font-weight: 800; font-size: 1.5rem;">14 / 18</div></div>
             </div>
-
             <div class="card-glass flex-align gap-2" style="padding: 1.25rem;">
               <div style="width: 45px; height: 45px; border-radius: var(--radius-md); background: rgba(139, 92, 246, 0.15); color: #8B5CF6; display: flex; align-items: center; justify-content: center; font-size: 1.3rem;"><i class="fa-solid fa-box"></i></div>
-              <div>
-                <span style="font-size: 0.75rem; color: var(--text-muted); font-weight: 700; text-transform: uppercase;">Pending Orders</span>
-                <div style="font-family: var(--font-heading); font-weight: 800; font-size: 1.5rem;">32 Orders</div>
-              </div>
+              <div><span style="font-size: 0.75rem; color: var(--text-muted); font-weight: 700; text-transform: uppercase;">Pending Orders</span><div style="font-family: var(--font-heading); font-weight: 800; font-size: 1.5rem;">32 Orders</div></div>
             </div>
-
           </div>
 
-          <!-- Second Widget Row -->
           <div class="grid-3" style="margin-bottom: 2rem;">
-            
             <div class="card-glass" style="padding: 1.25rem;">
               <span style="font-size: 0.8rem; color: var(--text-muted); font-weight: 700;">INDIVIDUAL PACKAGE ORDERS</span>
               <div style="font-family: var(--font-heading); font-size: 2rem; font-weight: 800; color: var(--color-gold); margin: 0.25rem 0;">412 Packets</div>
               <span class="badge badge-completed">92% Parent Participation</span>
+              <div style="margin-top:1rem; background: var(--bg-surface-elevated); border-radius: var(--radius-full); height: 8px; overflow:hidden;"><div style="width:92%; height:100%; background: var(--color-gold);"></div></div>
             </div>
-
             <div class="card-glass" style="padding: 1.25rem;">
-              <span style="font-size: 0.8rem; color: var(--text-muted); font-weight: 700;">YEARBOOK PRODUCTION STATUS</span>
-              <div style="font-family: var(--font-heading); font-size: 2rem; font-weight: 800; color: #3B82F6; margin: 0.25rem 0;">PSPA Verified</div>
-              <span class="badge badge-processing">Sync Ready For Upload</span>
+              <span style="font-size: 0.8rem; color: var(--text-muted); font-weight: 700;">TEAM PACKAGES ORDERED</span>
+              <div style="font-family: var(--font-heading); font-size: 2rem; font-weight: 800; color: #8B5CF6; margin: 0.25rem 0;">18 Teams</div>
+              <span class="badge badge-processing">14 Approved / 4 Pending</span>
+              <div style="margin-top:1rem; background: var(--bg-surface-elevated); border-radius: var(--radius-full); height: 8px; overflow:hidden;"><div style="width:78%; height:100%; background: #8B5CF6;"></div></div>
             </div>
-
             <div class="card-glass" style="padding: 1.25rem;">
               <span style="font-size: 0.8rem; color: var(--text-muted); font-weight: 700;">BULK ORDER DISPATCH</span>
               <div style="font-family: var(--font-heading); font-size: 2rem; font-weight: 800; color: #10B981; margin: 0.25rem 0;">Delivery Oct 18</div>
               <span class="badge badge-delivered">Carrier: FedEx Express</span>
+              <div style="margin-top:1rem; background: var(--bg-surface-elevated); border-radius: var(--radius-full); height: 8px; overflow:hidden;"><div style="width:65%; height:100%; background: #10B981;"></div></div>
             </div>
-
           </div>
 
-          <!-- Order Tracking Data Table -->
           <div class="card-glass" style="padding: 1.5rem;">
             <div class="flex-between" style="margin-bottom: 1.5rem; flex-wrap: wrap; gap: 1rem;">
               <h3 style="font-size: 1.2rem;"><i class="fa-solid fa-list-check" style="color: var(--color-gold);"></i> Recent Team Photo Status</h3>
@@ -185,198 +163,447 @@
                 </select>
               </div>
             </div>
-
             <div class="table-responsive">
               <table id="table-orders" class="data-table">
-                <thead>
-                  <tr>
-                    <th>Team Name</th>
-                    <th>Head Coach</th>
-                    <th>Photo Date</th>
-                    <th>Athletes</th>
-                    <th>Proof Status</th>
-                    <th>Status Badge</th>
-                    <th>Action</th>
-                  </tr>
-                </thead>
+                <thead><tr><th>Team Name</th><th>Head Coach</th><th>Photo Date</th><th>Athletes</th><th>Proof Status</th><th>Status Badge</th><th>Action</th></tr></thead>
                 <tbody>
-                  <tr>
-                    <td><strong>Varsity Football</strong></td>
-                    <td>Coach Miller</td>
-                    <td>Oct 01, 2026</td>
-                    <td>68 Players</td>
-                    <td>Proofs Approved</td>
-                    <td><span class="badge badge-completed">Completed</span></td>
-                    <td><button class="btn btn-sm btn-outline" onclick="showToast('Downloading Varsity Football ZIP package...', 'info')"><i class="fa-solid fa-download"></i> Zip</button></td>
-                  </tr>
-                  <tr>
-                    <td><strong>Varsity Girls Volleyball</strong></td>
-                    <td>Coach Vance</td>
-                    <td>Oct 01, 2026</td>
-                    <td>24 Players</td>
-                    <td>Proofs Approved</td>
-                    <td><span class="badge badge-delivered">Delivered</span></td>
-                    <td><button class="btn btn-sm btn-outline" onclick="showToast('Opening proof gallery...', 'info')"><i class="fa-solid fa-eye"></i> Proofs</button></td>
-                  </tr>
-                  <tr>
-                    <td><strong>Boys Varsity Basketball</strong></td>
-                    <td>Coach Sterling</td>
-                    <td>Oct 08, 2026</td>
-                    <td>18 Players</td>
-                    <td>Pending Shoot</td>
-                    <td><span class="badge badge-scheduled">Scheduled</span></td>
-                    <td><button class="btn btn-sm btn-secondary" onclick="showToast('Schedule confirmed for Oct 8 at 3:30 PM', 'info')"><i class="fa-solid fa-calendar"></i> Details</button></td>
-                  </tr>
-                  <tr>
-                    <td><strong>Junior Varsity Cheer</strong></td>
-                    <td>Coach Lin</td>
-                    <td>Oct 03, 2026</td>
-                    <td>30 Athletes</td>
-                    <td>Retake Requested</td>
-                    <td><span class="badge badge-approval">Awaiting Approval</span></td>
-                    <td><button class="btn btn-sm btn-gold" onclick="showToast('Retake request sent to photography crew', 'warning')"><i class="fa-solid fa-rotate-left"></i> Retake</button></td>
-                  </tr>
-                  <tr>
-                    <td><strong>Varsity Cross Country</strong></td>
-                    <td>Coach Baker</td>
-                    <td>Oct 02, 2026</td>
-                    <td>42 Runners</td>
-                    <td>Color Correction</td>
-                    <td><span class="badge badge-processing">Processing</span></td>
-                    <td><button class="btn btn-sm btn-outline" onclick="showToast('Processing estimated complete by 5 PM', 'info')"><i class="fa-solid fa-gear"></i> Track</button></td>
-                  </tr>
+                  <tr><td><strong>Varsity Football</strong></td><td>Coach Miller</td><td>Oct 01, 2026</td><td>68 Players</td><td>Proofs Approved</td><td><span class="badge badge-completed">Completed</span></td><td><button class="btn btn-sm btn-outline" onclick="showToast('Downloading Varsity Football ZIP package...', 'info')"><i class="fa-solid fa-download"></i> Zip</button></td></tr>
+                  <tr><td><strong>Varsity Girls Volleyball</strong></td><td>Coach Vance</td><td>Oct 01, 2026</td><td>24 Players</td><td>Proofs Approved</td><td><span class="badge badge-delivered">Delivered</span></td><td><button class="btn btn-sm btn-outline" onclick="showToast('Opening proof gallery...', 'info')"><i class="fa-solid fa-eye"></i> Proofs</button></td></tr>
+                  <tr><td><strong>Boys Varsity Basketball</strong></td><td>Coach Sterling</td><td>Oct 08, 2026</td><td>18 Players</td><td>Pending Shoot</td><td><span class="badge badge-scheduled">Scheduled</span></td><td><button class="btn btn-sm btn-secondary" onclick="showToast('Schedule confirmed for Oct 8 at 3:30 PM', 'info')"><i class="fa-solid fa-calendar"></i> Details</button></td></tr>
+                  <tr><td><strong>Junior Varsity Cheer</strong></td><td>Coach Lin</td><td>Oct 03, 2026</td><td>30 Athletes</td><td>Retake Requested</td><td><span class="badge badge-approval">Awaiting Approval</span></td><td><button class="btn btn-sm btn-gold" onclick="showToast('Retake request sent to photography crew', 'warning')"><i class="fa-solid fa-rotate-left"></i> Retake</button></td></tr>
+                  <tr><td><strong>Varsity Cross Country</strong></td><td>Coach Baker</td><td>Oct 02, 2026</td><td>42 Runners</td><td>Color Correction</td><td><span class="badge badge-processing">Processing</span></td><td><button class="btn btn-sm btn-outline" onclick="showToast('Processing estimated complete by 5 PM', 'info')"><i class="fa-solid fa-gear"></i> Track</button></td></tr>
                 </tbody>
               </table>
             </div>
           </div>
-
         </div>
 
         <!-- MODULE 2: PHOTO DAY SCHEDULE -->
         <div id="module-schedule" class="dash-module" style="display: none;">
-          <div class="card-glass" style="padding: 2rem;">
-            <div class="flex-between" style="margin-bottom: 1.5rem;">
-              <h3><i class="fa-solid fa-calendar-day" style="color: var(--color-gold);"></i> Upcoming Photo Day Schedule</h3>
-              <button class="btn btn-sm btn-gold" onclick="showToast('Opening time slot editor...', 'info')"><i class="fa-solid fa-plus"></i> Add Time Slot</button>
+          <div class="grid-2" style="margin-bottom:1.5rem;">
+            <div class="card-glass" style="padding:1.5rem;">
+              <h3><i class="fa-solid fa-calendar-plus" style="color:var(--color-gold);"></i> Request New Photo Day</h3>
+              <p style="font-size:0.85rem;color:var(--text-muted);margin:0.5rem 0 1rem;">Pick a date, gym location & teams. Studio confirms within 24 hrs.</p>
+              <form onsubmit="event.preventDefault(); showToast('Photo day request sent! Studio will confirm shortly.', 'success'); this.reset();">
+                <div class="form-row">
+                  <div class="form-group"><label class="form-label">Preferred Date</label><input type="date" class="form-control" value="2026-10-15" required></div>
+                  <div class="form-group"><label class="form-label">Start Time</label><input type="time" class="form-control" value="15:30" required></div>
+                </div>
+                <div class="form-group"><label class="form-label">Location</label><select class="form-control"><option>Main Gym Court A</option><option>Football Stadium Field</option><option>Aux Gym Court B</option><option>Outdoor Track</option></select></div>
+                <div class="form-group"><label class="form-label">Teams To Photograph</label><div style="display:flex;gap:0.5rem;flex-wrap:wrap;font-size:0.85rem;"><label><input type="checkbox" checked> Varsity Basketball</label><label><input type="checkbox" checked> JV Basketball</label><label><input type="checkbox"> Freshman Basketball</label><label><input type="checkbox"> Cheer</label></div></div>
+                <button class="btn btn-gold" style="width:100%;" type="submit"><i class="fa-solid fa-paper-plane"></i> Submit Booking Request</button>
+              </form>
             </div>
-            <div class="table-responsive">
-              <table class="data-table">
-                <thead>
-                  <tr>
-                    <th>Time Slot</th>
-                    <th>Team</th>
-                    <th>Location</th>
-                    <th>Lead Photographer</th>
-                    <th>Status</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>3:15 PM - 3:30 PM</td>
-                    <td>Freshman Boys Basketball</td>
-                    <td>Main Gym Court A</td>
-                    <td>Marcus Sterling</td>
-                    <td><span class="badge badge-scheduled">Scheduled</span></td>
-                  </tr>
-                  <tr>
-                    <td>3:30 PM - 3:45 PM</td>
-                    <td>JV Boys Basketball</td>
-                    <td>Main Gym Court A</td>
-                    <td>Marcus Sterling</td>
-                    <td><span class="badge badge-scheduled">Scheduled</span></td>
-                  </tr>
-                  <tr>
-                    <td>3:45 PM - 4:15 PM</td>
-                    <td>Varsity Boys Basketball</td>
-                    <td>Main Gym Court A</td>
-                    <td>Elena Rostova</td>
-                    <td><span class="badge badge-scheduled">Scheduled</span></td>
-                  </tr>
-                </tbody>
-              </table>
+            <div class="card-glass" style="padding:1.5rem;">
+              <div class="flex-between" style="margin-bottom: 1rem;"><h3><i class="fa-solid fa-clock" style="color:var(--color-gold);"></i> Oct 08 — Time Slots</h3><span class="badge badge-scheduled">4 slots confirmed</span></div>
+              <div class="table-responsive"><table class="data-table"><thead><tr><th>Time</th><th>Team</th><th>Location</th><th>Photographer</th><th>Status</th></tr></thead>
+              <tbody>
+                <tr><td>3:15–3:30 PM</td><td>Freshman Boys Basketball</td><td>Main Gym A</td><td>Marcus Sterling</td><td><span class="badge badge-scheduled">Scheduled</span></td></tr>
+                <tr><td>3:30–3:45 PM</td><td>JV Boys Basketball</td><td>Main Gym A</td><td>Marcus Sterling</td><td><span class="badge badge-scheduled">Scheduled</span></td></tr>
+                <tr><td>3:45–4:15 PM</td><td>Varsity Boys Basketball</td><td>Main Gym A</td><td>Elena Rostova</td><td><span class="badge badge-scheduled">Scheduled</span></td></tr>
+                <tr><td>4:15–4:30 PM</td><td>Varsity Cheer</td><td>Main Gym A</td><td>Elena Rostova</td><td><span class="badge badge-progress">In Progress</span></td></tr>
+              </tbody></table></div>
+              <div style="display:flex;gap:0.5rem;margin-top:1rem;flex-wrap:wrap;">
+                <button class="btn btn-sm btn-gold" onclick="showToast('Opening time slot editor...', 'info')"><i class="fa-solid fa-plus"></i> Add Slot</button>
+                <button class="btn btn-sm btn-outline" onclick="showToast('Reschedule request sent to studio.', 'info')"><i class="fa-solid fa-calendar-xmark"></i> Reschedule</button>
+                <button class="btn btn-sm btn-outline" onclick="showToast('Photo day checklist downloaded.', 'info')"><i class="fa-solid fa-list-check"></i> Coach Checklist</button>
+              </div>
+            </div>
+          </div>
+          <div class="card-glass" style="padding:1.5rem;">
+            <h3 style="margin-bottom:1rem;"><i class="fa-solid fa-history" style="color:var(--color-gold);"></i> Past & Upcoming Photo Days</h3>
+            <div class="table-responsive"><table class="data-table"><thead><tr><th>Date</th><th>Season</th><th>Teams Covered</th><th>Athletes</th><th>Status</th><th>Report</th></tr></thead>
+            <tbody>
+              <tr><td>Oct 01, 2026</td><td>Fall Day 1</td><td>Football, Volleyball, Soccer</td><td>210</td><td><span class="badge badge-completed">Completed</span></td><td><button class="btn btn-sm btn-outline" onclick="showToast('Shoot report downloading...','info')">Report</button></td></tr>
+              <tr><td>Oct 08, 2026</td><td>Fall Day 2</td><td>Basketball x3, Cheer</td><td>96</td><td><span class="badge badge-scheduled">Scheduled</span></td><td><button class="btn btn-sm btn-outline" onclick="showToast('Roster sheet downloading...','info')">Rosters</button></td></tr>
+              <tr><td>Oct 22, 2026</td><td>Retake / Makeup</td><td>All absent athletes</td><td>~25</td><td><span class="badge badge-approval">Awaiting Approval</span></td><td><button class="btn btn-sm btn-gold" onclick="showToast('Retake day confirmed!','success')">Confirm</button></td></tr>
+            </tbody></table></div>
+          </div>
+        </div>
+
+        <!-- MODULE: CALENDAR -->
+        <div id="module-calendar" class="dash-module" style="display: none;">
+          <div class="card-glass" style="padding:2rem;">
+            <div class="flex-between" style="margin-bottom:1.5rem;flex-wrap:wrap;gap:1rem;">
+              <h3><i class="fa-solid fa-calendar-days" style="color:var(--color-gold);"></i> October 2026 — Season Calendar</h3>
+              <div class="flex-align gap-2">
+                <button class="btn btn-sm btn-outline" onclick="showToast('Previous month','info')"><i class="fa-solid fa-chevron-left"></i></button>
+                <span style="font-weight:800;">October 2026</span>
+                <button class="btn btn-sm btn-outline" onclick="showToast('Next month','info')"><i class="fa-solid fa-chevron-right"></i></button>
+              </div>
+            </div>
+            <div style="display:grid;grid-template-columns:repeat(7,1fr);gap:0.5rem;text-align:center;font-size:0.75rem;font-weight:800;color:var(--text-muted);margin-bottom:0.5rem;"><span>SUN</span><span>MON</span><span>TUE</span><span>WED</span><span>THU</span><span>FRI</span><span>SAT</span></div>
+            <div style="display:grid;grid-template-columns:repeat(7,1fr);gap:0.5rem;">
+              <div style="padding:0.75rem;border:1px solid var(--border-subtle);border-radius:8px;opacity:0.4;">28</div>
+              <div style="padding:0.75rem;border:1px solid var(--border-subtle);border-radius:8px;opacity:0.4;">29</div>
+              <div style="padding:0.75rem;border:1px solid var(--border-subtle);border-radius:8px;opacity:0.4;">30</div>
+              <div style="padding:0.75rem;border:2px solid #10B981;border-radius:8px;background:rgba(16,185,129,0.1);"><strong>01</strong><div style="font-size:0.7rem;margin-top:0.25rem;">📸 Fall Day 1</div></div>
+              <div style="padding:0.75rem;border:1px solid var(--border-subtle);border-radius:8px;"><strong>02</strong><div style="font-size:0.7rem;">Processing</div></div>
+              <div style="padding:0.75rem;border:1px solid var(--border-subtle);border-radius:8px;"><strong>03</strong></div>
+              <div style="padding:0.75rem;border:1px solid var(--border-subtle);border-radius:8px;"><strong>04</strong></div>
+              <div style="padding:0.75rem;border:1px solid var(--border-subtle);border-radius:8px;"><strong>05</strong></div>
+              <div style="padding:0.75rem;border:1px solid var(--border-subtle);border-radius:8px;"><strong>06</strong></div>
+              <div style="padding:0.75rem;border:1px solid var(--border-subtle);border-radius:8px;"><strong>07</strong><div style="font-size:0.7rem;">Proofs due</div></div>
+              <div style="padding:0.75rem;border:2px solid var(--color-gold);border-radius:8px;background:rgba(198,164,90,0.1);"><strong>08</strong><div style="font-size:0.7rem;">📸 Fall Day 2</div></div>
+              <div style="padding:0.75rem;border:1px solid var(--border-subtle);border-radius:8px;"><strong>09</strong></div>
+              <div style="padding:0.75rem;border:1px solid var(--border-subtle);border-radius:8px;"><strong>10</strong></div>
+              <div style="padding:0.75rem;border:1px solid var(--border-subtle);border-radius:8px;"><strong>11</strong></div>
+              <div style="padding:0.75rem;border:1px solid var(--border-subtle);border-radius:8px;"><strong>12</strong></div>
+              <div style="padding:0.75rem;border:1px solid var(--border-subtle);border-radius:8px;"><strong>13</strong></div>
+              <div style="padding:0.75rem;border:1px solid var(--border-subtle);border-radius:8px;"><strong>14</strong></div>
+              <div style="padding:0.75rem;border:1px solid var(--border-subtle);border-radius:8px;"><strong>15</strong></div>
+              <div style="padding:0.75rem;border:1px solid var(--border-subtle);border-radius:8px;"><strong>16</strong></div>
+              <div style="padding:0.75rem;border:1px solid var(--border-subtle);border-radius:8px;"><strong>17</strong></div>
+              <div style="padding:0.75rem;border:2px solid #3B82F6;border-radius:8px;background:rgba(59,130,246,0.1);"><strong>18</strong><div style="font-size:0.7rem;">🚚 Bulk delivery</div></div>
+              <div style="padding:0.75rem;border:1px solid var(--border-subtle);border-radius:8px;"><strong>19</strong></div>
+              <div style="padding:0.75rem;border:1px solid var(--border-subtle);border-radius:8px;"><strong>20</strong></div>
+              <div style="padding:0.75rem;border:1px solid var(--border-subtle);border-radius:8px;"><strong>21</strong></div>
+              <div style="padding:0.75rem;border:2px solid #8B5CF6;border-radius:8px;background:rgba(139,92,246,0.1);"><strong>22</strong><div style="font-size:0.7rem;">🔁 Retake day</div></div>
+              <div style="padding:0.75rem;border:1px solid var(--border-subtle);border-radius:8px;"><strong>23</strong></div>
+              <div style="padding:0.75rem;border:1px solid var(--border-subtle);border-radius:8px;"><strong>24</strong></div>
+              <div style="padding:0.75rem;border:1px solid var(--border-subtle);border-radius:8px;"><strong>25</strong></div>
+              <div style="padding:0.75rem;border:1px solid var(--border-subtle);border-radius:8px;"><strong>26</strong></div>
+              <div style="padding:0.75rem;border:1px solid var(--border-subtle);border-radius:8px;"><strong>27</strong></div>
+              <div style="padding:0.75rem;border:1px solid var(--border-subtle);border-radius:8px;"><strong>28</strong></div>
+              <div style="padding:0.75rem;border:1px solid var(--border-subtle);border-radius:8px;"><strong>29</strong></div>
+              <div style="padding:0.75rem;border:1px solid var(--border-subtle);border-radius:8px;"><strong>30</strong></div>
+              <div style="padding:0.75rem;border:1px solid var(--border-subtle);border-radius:8px;"><strong>31</strong><div style="font-size:0.7rem;">Yearbook deadline</div></div>
+            </div>
+            <div style="display:flex;gap:1rem;margin-top:1.5rem;flex-wrap:wrap;font-size:0.8rem;">
+              <span><span style="display:inline-block;width:12px;height:12px;background:#10B981;border-radius:3px;"></span> Completed shoot</span>
+              <span><span style="display:inline-block;width:12px;height:12px;background:var(--color-gold);border-radius:3px;"></span> Upcoming shoot</span>
+              <span><span style="display:inline-block;width:12px;height:12px;background:#3B82F6;border-radius:3px;"></span> Delivery</span>
+              <span><span style="display:inline-block;width:12px;height:12px;background:#8B5CF6;border-radius:3px;"></span> Retake</span>
             </div>
           </div>
         </div>
 
-        <!-- MODULE 5: TEAMS & ROSTERS -->
+        <!-- MODULE: SCHOOL PROFILE -->
+        <div id="module-profile" class="dash-module" style="display: none;">
+          <div class="grid-2">
+            <div class="card-glass" style="padding:2rem;">
+              <h3><i class="fa-solid fa-school" style="color: var(--color-gold);"></i> School Profile</h3>
+              <p style="color: var(--text-muted); margin:0.5rem 0 1.5rem;font-size:0.9rem;">Oakridge High School — Athletic Dept ID: #OHS-8842</p>
+              <form onsubmit="event.preventDefault(); showToast('School profile updated!', 'success');">
+                <div class="form-group"><label class="form-label">School / Club Name</label><input class="form-control" value="Oakridge High School"></div>
+                <div class="form-row">
+                  <div class="form-group"><label class="form-label">Athletic Director</label><input class="form-control" value="Marcus Vance"></div>
+                  <div class="form-group"><label class="form-label">Phone</label><input class="form-control" value="(555) 832-7627"></div>
+                </div>
+                <div class="form-group"><label class="form-label">School Email</label><input class="form-control" value="athletics@oakridge.edu"></div>
+                <div class="form-group"><label class="form-label">Shipping Address (Bulk Delivery)</label><textarea class="form-control" rows="2">742 Athletic Way, Main Office, Oakridge CA 90210</textarea></div>
+                <div class="form-row">
+                  <div class="form-group"><label class="form-label">Primary Color</label><input type="color" class="form-control" value="#B63D4A" style="height:45px;"></div>
+                  <div class="form-group"><label class="form-label">Mascot</label><input class="form-control" value="Timberwolves"></div>
+                </div>
+                <button class="btn btn-gold" style="width:100%;" type="submit">Save Profile</button>
+              </form>
+            </div>
+            <div>
+              <div class="card-glass" style="padding:1.5rem;margin-bottom:1.5rem;">
+                <h4><i class="fa-solid fa-users-gear" style="color:var(--color-gold);"></i> Staff & Coaches (6)</h4>
+                <div style="display:flex;flex-direction:column;gap:0.75rem;margin-top:1rem;font-size:0.9rem;">
+                  <div class="flex-between"><span><strong>Marcus Vance</strong> — Athletic Director</span><span class="badge badge-completed">Admin</span></div>
+                  <div class="flex-between"><span><strong>Sarah Lin</strong> — Yearbook Advisor</span><span class="badge badge-processing">Editor</span></div>
+                  <div class="flex-between"><span><strong>Coach Miller</strong> — Football</span><span class="badge badge-scheduled">Coach</span></div>
+                  <div class="flex-between"><span><strong>Coach Sterling</strong> — Basketball</span><span class="badge badge-scheduled">Coach</span></div>
+                </div>
+                <button class="btn btn-sm btn-outline" style="margin-top:1rem;width:100%;" onclick="showToast('Invite link copied to clipboard!', 'info')"><i class="fa-solid fa-user-plus"></i> Invite Coach / Staff</button>
+              </div>
+              <div class="card-glass" style="padding:1.5rem;">
+                <h4><i class="fa-solid fa-palette" style="color:var(--color-gold);"></i> Branding Kit</h4>
+                <p style="font-size:0.85rem;color:var(--text-muted);margin:0.5rem 0;">Crest, colors & banner templates used on all prints.</p>
+                <div style="display:flex;gap:0.5rem;"><div style="width:50px;height:50px;border-radius:10px;background:#B63D4A;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800;">OH</div><div style="width:50px;height:50px;border-radius:10px;background:#111C2D;border:1px solid var(--color-gold);display:flex;align-items:center;justify-content:center;color:var(--color-gold);font-weight:800;">TW</div><button class="btn btn-sm btn-outline" onclick="showToast('Logo upload dialog opened','info')"><i class="fa-solid fa-upload"></i> Upload Logo</button></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- MODULE: TEAMS & ROSTERS -->
         <div id="module-rosters" class="dash-module" style="display: none;">
           <div class="card-glass" style="padding: 2rem;">
-            <div class="flex-between" style="margin-bottom: 1.5rem;">
+            <div class="flex-between" style="margin-bottom: 1.5rem;flex-wrap:wrap;gap:1rem;">
               <h3><i class="fa-solid fa-users" style="color: var(--color-gold);"></i> Team Roster Manager</h3>
-              <button class="btn btn-sm btn-primary" onclick="showToast('CSV Roster Uploaded Successfully!', 'success')"><i class="fa-solid fa-file-csv"></i> Upload Roster CSV</button>
+              <div class="flex-align gap-2">
+                <input class="form-control" placeholder="Search athlete..." data-table-search="table-rosters" style="width:200px;padding:0.5rem 0.85rem;font-size:0.85rem;">
+                <button class="btn btn-sm btn-primary" onclick="showToast('CSV Roster Uploaded Successfully!', 'success')"><i class="fa-solid fa-file-csv"></i> Upload CSV</button>
+                <button class="btn btn-sm btn-gold" onclick="showToast('Add-athlete form opened', 'info')"><i class="fa-solid fa-plus"></i> Add Athlete</button>
+              </div>
             </div>
-            <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1.5rem;">Verify student ID numbers and jersey numbers for PSPA yearbook synchronization.</p>
+            <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1.5rem;">Verify student ID numbers and jersey numbers for PSPA yearbook synchronization. 448 athletes across 18 teams.</p>
             <div class="table-responsive">
-              <table class="data-table">
-                <thead>
-                  <tr>
-                    <th>Student ID</th>
-                    <th>Athlete Name</th>
-                    <th>Jersey #</th>
-                    <th>Sport</th>
-                    <th>Grade</th>
-                    <th>Action</th>
-                  </tr>
-                </thead>
+              <table id="table-rosters" class="data-table">
+                <thead><tr><th>Student ID</th><th>Athlete Name</th><th>Jersey #</th><th>Sport</th><th>Grade</th><th>Photo</th><th>Action</th></tr></thead>
                 <tbody>
-                  <tr>
-                    <td>#94821</td>
-                    <td>Jordan Vance</td>
-                    <td>#23</td>
-                    <td>Varsity Basketball</td>
-                    <td>Senior (12th)</td>
-                    <td><button class="btn btn-sm btn-outline"><i class="fa-solid fa-pen"></i> Edit</button></td>
-                  </tr>
-                  <tr>
-                    <td>#94822</td>
-                    <td>Tyler Ross</td>
-                    <td>#10</td>
-                    <td>Varsity Basketball</td>
-                    <td>Junior (11th)</td>
-                    <td><button class="btn btn-sm btn-outline"><i class="fa-solid fa-pen"></i> Edit</button></td>
-                  </tr>
+                  <tr><td>#94821</td><td>Jordan Vance</td><td>#23</td><td>Varsity Basketball</td><td>Senior (12th)</td><td><span class="badge badge-completed">Captured</span></td><td><button class="btn btn-sm btn-outline"><i class="fa-solid fa-pen"></i> Edit</button></td></tr>
+                  <tr><td>#94822</td><td>Tyler Ross</td><td>#10</td><td>Varsity Basketball</td><td>Junior (11th)</td><td><span class="badge badge-completed">Captured</span></td><td><button class="btn btn-sm btn-outline"><i class="fa-solid fa-pen"></i> Edit</button></td></tr>
+                  <tr><td>#95110</td><td>Maya Chen</td><td>#7</td><td>Varsity Volleyball</td><td>Senior (12th)</td><td><span class="badge badge-completed">Captured</span></td><td><button class="btn btn-sm btn-outline"><i class="fa-solid fa-pen"></i> Edit</button></td></tr>
+                  <tr><td>#95144</td><td>Devon Carter</td><td>#55</td><td>Varsity Football</td><td>Sophomore (10th)</td><td><span class="badge badge-progress">Absent</span></td><td><button class="btn btn-sm btn-gold" onclick="showToast('Added to retake list','warning')">Retake</button></td></tr>
+                  <tr><td>#95201</td><td>Alicia Gomez</td><td>#12</td><td>JV Cheer</td><td>Freshman (9th)</td><td><span class="badge badge-scheduled">Scheduled</span></td><td><button class="btn btn-sm btn-outline"><i class="fa-solid fa-pen"></i> Edit</button></td></tr>
                 </tbody>
               </table>
             </div>
           </div>
         </div>
 
-        <!-- OTHER MODULES PLACEHOLDER CARD -->
-        <div id="module-calendar" class="dash-module" style="display: none;">
-          <div class="card-glass text-center" style="padding: 4rem 2rem;">
-            <i class="fa-solid fa-calendar-days" style="font-size: 3rem; color: var(--color-gold); margin-bottom: 1rem;"></i>
-            <h3>Interactive Calendar Module</h3>
-            <p style="color: var(--text-muted);">View all seasonal sports media dates and delivery deadlines on a drag-and-drop calendar UI.</p>
+        <!-- MODULE: INDIVIDUAL ORDERS -->
+        <div id="module-individual-orders" class="dash-module" style="display: none;">
+          <div class="grid-3" style="margin-bottom:1.5rem;">
+            <div class="card-glass" style="padding:1.25rem;text-align:center;"><div style="font-size:2rem;font-weight:800;color:var(--color-gold);">412</div><div style="font-size:0.85rem;color:var(--text-muted);">Individual packets ordered</div></div>
+            <div class="card-glass" style="padding:1.25rem;text-align:center;"><div style="font-size:2rem;font-weight:800;color:#10B981;">92%</div><div style="font-size:0.85rem;color:var(--text-muted);">Parent participation rate</div></div>
+            <div class="card-glass" style="padding:1.25rem;text-align:center;"><div style="font-size:2rem;font-weight:800;color:#3B82F6;">$18.4k</div><div style="font-size:0.85rem;color:var(--text-muted);">Parent direct-pay revenue</div></div>
+          </div>
+          <div class="card-glass" style="padding:1.5rem;">
+            <div class="flex-between" style="margin-bottom:1.5rem;flex-wrap:wrap;gap:1rem;">
+              <h3><i class="fa-solid fa-user-tag" style="color:var(--color-gold);"></i> Individual Athlete Package Orders</h3>
+              <div class="flex-align gap-2">
+                <input class="form-control" placeholder="Search athlete / package..." data-table-search="table-individual" style="width:220px;padding:0.5rem 0.85rem;font-size:0.85rem;">
+                <select class="form-control" data-status-filter="table-individual" style="width:160px;padding:0.5rem 0.85rem;font-size:0.85rem;"><option value="all">All</option><option value="delivered">Delivered</option><option value="completed">Completed</option><option value="processing">Processing</option><option value="awaiting approval">Awaiting Approval</option></select>
+              </div>
+            </div>
+            <div class="table-responsive"><table id="table-individual" class="data-table">
+              <thead><tr><th>Order #</th><th>Athlete</th><th>Package</th><th>Parent</th><th>Amount</th><th>Status</th><th>Proof</th></tr></thead>
+              <tbody>
+                <tr><td>#IND-4101</td><td>Jordan Vance (#23)</td><td>Varsity Champion — $59</td><td>vance.family@mail.com</td><td>$59.00</td><td><span class="badge badge-delivered">Delivered</span></td><td><button class="btn btn-sm btn-outline" onclick="showToast('Proof gallery opened','info')">View</button></td></tr>
+                <tr><td>#IND-4102</td><td>Maya Chen (#7)</td><td>All-Star Senior — $99</td><td>chen@mail.com</td><td>$99.00</td><td><span class="badge badge-completed">Completed</span></td><td><button class="btn btn-sm btn-outline" onclick="showToast('Proof gallery opened','info')">View</button></td></tr>
+                <tr><td>#IND-4103</td><td>Tyler Ross (#10)</td><td>Starter — $29</td><td>ross@mail.com</td><td>$29.00</td><td><span class="badge badge-processing">Processing</span></td><td><button class="btn btn-sm btn-outline" onclick="showToast('Lab is printing...','info')">Track</button></td></tr>
+                <tr><td>#IND-4104</td><td>Devon Carter (#55)</td><td>Varsity Champion — $59</td><td>carter@mail.com</td><td>$59.00</td><td><span class="badge badge-approval">Awaiting Approval</span></td><td><button class="btn btn-sm btn-gold" onclick="showToast('Reminder sent to parent!','warning')">Remind</button></td></tr>
+              </tbody>
+            </table></div>
           </div>
         </div>
 
+        <!-- MODULE: TEAM ORDERS -->
+        <div id="module-team-orders" class="dash-module" style="display: none;">
+          <div class="card-glass" style="padding:1.5rem;">
+            <div class="flex-between" style="margin-bottom:1.5rem;flex-wrap:wrap;gap:1rem;">
+              <h3><i class="fa-solid fa-boxes-stacked" style="color:var(--color-gold);"></i> Team Package Orders (Bulk Prints, Banners, Plaques)</h3>
+              <button class="btn btn-sm btn-gold" onclick="showToast('New team package order started','info')"><i class="fa-solid fa-plus"></i> Order Team Package</button>
+            </div>
+            <div class="table-responsive"><table id="table-team-orders" class="data-table">
+              <thead><tr><th>Order #</th><th>Team</th><th>Items</th><th>Qty</th><th>Total</th><th>Status</th><th>Action</th></tr></thead>
+              <tbody>
+                <tr><td>#TEAM-201</td><td>Varsity Football</td><td>8x10 Team Print + Coach Plaques</td><td>75</td><td>$1,125</td><td><span class="badge badge-completed">Completed</span></td><td><button class="btn btn-sm btn-outline" onclick="showToast('Downloading team ZIP...','info')">Download</button></td></tr>
+                <tr><td>#TEAM-202</td><td>Varsity Volleyball</td><td>Championship Banner 3x6ft</td><td>2</td><td>$180</td><td><span class="badge badge-delivered">Delivered</span></td><td><button class="btn btn-sm btn-outline" onclick="showToast('Tracking: delivered Oct 05','info')">Track</button></td></tr>
+                <tr><td>#TEAM-203</td><td>Varsity Basketball</td><td>Memory Mates + Trader Cards</td><td>40</td><td>$860</td><td><span class="badge badge-processing">Processing</span></td><td><button class="btn btn-sm btn-outline" onclick="showToast('Lab ETA Oct 12','info')">Track</button></td></tr>
+                <tr><td>#TEAM-204</td><td>JV Cheer</td><td>Team Panorama Composite</td><td>35</td><td>$595</td><td><span class="badge badge-approval">Awaiting Approval</span></td><td><button class="btn btn-sm btn-gold" onclick="showToast('Proof approval requested','warning')">Approve Proof</button></td></tr>
+              </tbody>
+            </table></div>
+          </div>
+        </div>
+
+        <!-- MODULE: YEARBOOK -->
         <div id="module-yearbook" class="dash-module" style="display: none;">
-          <div class="card-glass text-center" style="padding: 4rem 2rem;">
-            <i class="fa-solid fa-book-open" style="font-size: 3rem; color: var(--color-crimson); margin-bottom: 1rem;"></i>
-            <h3>PSPA Yearbook Synchronization Module</h3>
-            <p style="color: var(--text-muted);">Download standardized 300DPI portraits formatted for Jostens, Walsworth, and Balfour yearbook software.</p>
-            <button class="btn btn-gold" style="margin-top: 1.5rem;" onclick="showToast('Downloading PSPA Roster ZIP package (450MB)...', 'info')"><i class="fa-solid fa-download"></i> Download Full PSPA Package</button>
+          <div class="grid-2" style="margin-bottom:1.5rem;">
+            <div class="card-glass" style="padding:2rem;text-align:center;">
+              <i class="fa-solid fa-book-open" style="font-size: 3rem; color: var(--color-crimson); margin-bottom: 1rem;"></i>
+              <h3>PSPA Yearbook Synchronization</h3>
+              <p style="color: var(--text-muted);font-size:0.9rem;margin:0.5rem 0 1rem;">Download standardized 300DPI portraits formatted for Jostens, Walsworth, and Balfour.</p>
+              <div style="display:flex;gap:0.5rem;justify-content:center;flex-wrap:wrap;">
+                <span class="badge badge-completed">448 Portraits Tagged</span>
+                <span class="badge badge-processing">PSPA Verified</span>
+              </div>
+              <button class="btn btn-gold" style="margin-top: 1.5rem;" onclick="showToast('Downloading PSPA Roster ZIP package (450MB)...', 'info')"><i class="fa-solid fa-download"></i> Download Full PSPA Package</button>
+            </div>
+            <div class="card-glass" style="padding:1.5rem;">
+              <h4 style="margin-bottom:1rem;">Yearbook Deadlines & Checklist</h4>
+              <div style="display:flex;flex-direction:column;gap:0.75rem;font-size:0.9rem;">
+                <div class="flex-between"><span><i class="fa-solid fa-circle-check" style="color:#10B981;"></i> Fall sports portraits tagged</span><span class="badge badge-completed">Done</span></div>
+                <div class="flex-between"><span><i class="fa-solid fa-circle-check" style="color:#10B981;"></i> Student ID cross-check</span><span class="badge badge-completed">Done</span></div>
+                <div class="flex-between"><span><i class="fa-solid fa-clock" style="color:#F59E0B;"></i> Winter sports upload (due Nov 15)</span><span class="badge badge-progress">In Progress</span></div>
+                <div class="flex-between"><span><i class="fa-solid fa-clock" style="color:var(--text-muted);"></i> Spring roster sync</span><span class="badge badge-scheduled">Scheduled</span></div>
+              </div>
+              <div class="form-group" style="margin-top:1.5rem;"><label class="form-label">Share With Yearbook Software</label><div style="display:flex;gap:0.5rem;flex-wrap:wrap;"><button class="btn btn-sm btn-outline" onclick="showToast('Synced to Jostens eDesign!','success')">Jostens</button><button class="btn btn-sm btn-outline" onclick="showToast('Synced to Walsworth!','success')">Walsworth</button><button class="btn btn-sm btn-outline" onclick="showToast('Synced to Balfour!','success')">Balfour</button></div></div>
+            </div>
+          </div>
+          <div class="card-glass" style="padding:1.5rem;">
+            <h4 style="margin-bottom:1rem;">Portrait Index Preview (PSPA format: Last_First_Grade_ID.jpg)</h4>
+            <div class="table-responsive"><table class="data-table"><thead><tr><th>Filename</th><th>Athlete</th><th>Resolution</th><th>Tag Status</th></tr></thead>
+            <tbody>
+              <tr><td>Vance_Jordan_12_94821.jpg</td><td>Jordan Vance</td><td>300 DPI</td><td><span class="badge badge-completed">Tagged</span></td></tr>
+              <tr><td>Chen_Maya_12_95110.jpg</td><td>Maya Chen</td><td>300 DPI</td><td><span class="badge badge-completed">Tagged</span></td></tr>
+              <tr><td>Carter_Devon_10_95144.jpg</td><td>Devon Carter</td><td>Pending retake</td><td><span class="badge badge-approval">Missing</span></td></tr>
+            </tbody></table></div>
           </div>
         </div>
 
-        <!-- Generic fallback for other modules -->
-        <div id="module-profile" class="dash-module" style="display: none;">
-          <div class="card-glass" style="padding: 2rem;">
-            <h3><i class="fa-solid fa-school" style="color: var(--color-gold);"></i> School Profile Settings</h3>
-            <p style="color: var(--text-muted); margin-top: 0.5rem;">Oakridge High School — Athletic Department ID: #OHS-8842</p>
+        <!-- MODULE: BULK COORDINATION -->
+        <div id="module-bulk" class="dash-module" style="display: none;">
+          <div class="grid-2" style="margin-bottom:1.5rem;">
+            <div class="card-glass" style="padding:1.5rem;">
+              <h3><i class="fa-solid fa-truck-ramp-box" style="color:var(--color-gold);"></i> Bulk Order #BULK-FALL26</h3>
+              <p style="font-size:0.85rem;color:var(--text-muted);margin:0.5rem 0 1rem;">All fall team prints consolidated into one shipment.</p>
+              <div style="font-size:0.9rem;display:flex;flex-direction:column;gap:0.75rem;">
+                <div><div class="flex-between" style="font-size:0.8rem;margin-bottom:0.25rem;"><span>Order collection</span><span>100%</span></div><div style="background:var(--bg-surface-elevated);height:8px;border-radius:99px;"><div style="width:100%;height:100%;background:#10B981;border-radius:99px;"></div></div></div>
+                <div><div class="flex-between" style="font-size:0.8rem;margin-bottom:0.25rem;"><span>Lab printing</span><span>78%</span></div><div style="background:var(--bg-surface-elevated);height:8px;border-radius:99px;"><div style="width:78%;height:100%;background:var(--color-gold);border-radius:99px;"></div></div></div>
+                <div><div class="flex-between" style="font-size:0.8rem;margin-bottom:0.25rem;"><span>Sorting & packing</span><span>45%</span></div><div style="background:var(--bg-surface-elevated);height:8px;border-radius:99px;"><div style="width:45%;height:100%;background:#3B82F6;border-radius:99px;"></div></div></div>
+              </div>
+              <div style="margin-top:1rem;padding:1rem;background:var(--bg-surface-elevated);border-radius:10px;font-size:0.85rem;">
+                <strong>🚚 FedEx Express — Tracking #784912556301</strong><br>Estimated delivery: <strong>Oct 18, 2026 by 3 PM</strong> → Main Office
+              </div>
+            </div>
+            <div class="card-glass" style="padding:1.5rem;">
+              <h4>Delivery Preferences</h4>
+              <form onsubmit="event.preventDefault(); showToast('Delivery preferences saved!', 'success');" style="margin-top:1rem;">
+                <div class="form-group"><label class="form-label">Fulfilment Method</label><select class="form-control"><option>Bulk delivery to school (FREE)</option><option>Direct-to-home shipping ($5.99/order)</option><option>Hybrid: bulk teams + home individuals</option></select></div>
+                <div class="form-group"><label class="form-label">Distribution Contact</label><input class="form-control" value="Front Office — Mrs. Alvarez"></div>
+                <div class="form-group"><label class="form-label">Sorting Instructions</label><textarea class="form-control" rows="2">Sort by team, then alphabetical. Rubber-band individual packets.</textarea></div>
+                <button class="btn btn-primary" style="width:100%;" type="submit">Save Coordination Settings</button>
+              </form>
+            </div>
+          </div>
+          <div class="card-glass" style="padding:1.5rem;">
+            <h4 style="margin-bottom:1rem;">Bulk Contents Breakdown (612 items)</h4>
+            <div class="table-responsive"><table class="data-table"><thead><tr><th>Team</th><th>Packets</th><th>Banners</th><th>Plaques</th><th>Box #</th></tr></thead>
+            <tbody>
+              <tr><td>Varsity Football</td><td>68</td><td>1</td><td>5</td><td>Box 1–3</td></tr>
+              <tr><td>Volleyball</td><td>24</td><td>1</td><td>2</td><td>Box 4</td></tr>
+              <tr><td>Cross Country</td><td>42</td><td>—</td><td>—</td><td>Box 5</td></tr>
+              <tr><td>Cheer</td><td>30</td><td>1</td><td>3</td><td>Box 6</td></tr>
+            </tbody></table></div>
           </div>
         </div>
 
-        <div id="module-individual-orders" class="dash-module" style="display: none;"><div class="card-glass" style="padding: 2rem;"><h3>Individual Orders Module</h3></div></div>
-        <div id="module-team-orders" class="dash-module" style="display: none;"><div class="card-glass" style="padding: 2rem;"><h3>Team Package Orders Module</h3></div></div>
-        <div id="module-bulk" class="dash-module" style="display: none;"><div class="card-glass" style="padding: 2rem;"><h3>Bulk Coordination Module</h3></div></div>
-        <div id="module-status" class="dash-module" style="display: none;"><div class="card-glass" style="padding: 2rem;"><h3>Order Status Tracking Module</h3></div></div>
-        <div id="module-retakes" class="dash-module" style="display: none;"><div class="card-glass" style="padding: 2rem;"><h3>Retake Requests Module</h3></div></div>
-        <div id="module-invoices" class="dash-module" style="display: none;"><div class="card-glass" style="padding: 2rem;"><h3>Payment & Invoices Module</h3></div></div>
-        <div id="module-messages" class="dash-module" style="display: none;"><div class="card-glass" style="padding: 2rem;"><h3>Messages Module</h3></div></div>
-        <div id="module-notifications" class="dash-module" style="display: none;"><div class="card-glass" style="padding: 2rem;"><h3>Notifications Module</h3></div></div>
-        <div id="module-downloads" class="dash-module" style="display: none;"><div class="card-glass" style="padding: 2rem;"><h3>Downloads & Galleries Module</h3></div></div>
-        <div id="module-settings" class="dash-module" style="display: none;"><div class="card-glass" style="padding: 2rem;"><h3>Account Settings Module</h3></div></div>
+        <!-- MODULE: ORDER STATUS TRACKING -->
+        <div id="module-status" class="dash-module" style="display: none;">
+          <div class="card-glass" style="padding:1.5rem;">
+            <div class="flex-between" style="margin-bottom:1.5rem;flex-wrap:wrap;gap:1rem;">
+              <h3><i class="fa-solid fa-truck-fast" style="color:var(--color-gold);"></i> Unified Order Status Tracking</h3>
+              <div class="flex-align gap-2">
+                <input class="form-control" placeholder="Search order #..." data-table-search="table-status" style="width:200px;padding:0.5rem 0.85rem;font-size:0.85rem;">
+                <select class="form-control" data-status-filter="table-status" style="width:160px;padding:0.5rem 0.85rem;font-size:0.85rem;"><option value="all">All Statuses</option><option value="scheduled">Scheduled</option><option value="processing">Processing</option><option value="completed">Completed</option><option value="delivered">Delivered</option><option value="awaiting approval">Awaiting Approval</option></select>
+              </div>
+            </div>
+            <div class="table-responsive"><table id="table-status" class="data-table">
+              <thead><tr><th>Order #</th><th>Type</th><th>Team / Athlete</th><th>Stage</th><th>ETA</th><th>Status</th></tr></thead>
+              <tbody>
+                <tr><td>#IND-4103</td><td>Individual</td><td>Tyler Ross</td><td>Lab printing</td><td>Oct 12</td><td><span class="badge badge-processing">Processing</span></td></tr>
+                <tr><td>#TEAM-203</td><td>Team</td><td>Varsity Basketball</td><td>Color correction</td><td>Oct 12</td><td><span class="badge badge-processing">Processing</span></td></tr>
+                <tr><td>#BULK-FALL26</td><td>Bulk</td><td>All fall teams (612 items)</td><td>In transit prep</td><td>Oct 18</td><td><span class="badge badge-completed">Completed</span></td></tr>
+                <tr><td>#YB-FALL26</td><td>Yearbook</td><td>PSPA export</td><td>Ready download</td><td>Now</td><td><span class="badge badge-delivered">Delivered</span></td></tr>
+                <tr><td>#IND-4104</td><td>Individual</td><td>Devon Carter</td><td>Waiting parent approval</td><td>—</td><td><span class="badge badge-approval">Awaiting Approval</span></td></tr>
+              </tbody>
+            </table></div>
+            <div style="margin-top:1.5rem;padding:1.25rem;background:var(--bg-surface-elevated);border-radius:12px;">
+              <strong style="font-size:0.9rem;">Sample timeline — #TEAM-203 Varsity Basketball:</strong>
+              <div style="display:flex;gap:0.5rem;margin-top:0.75rem;flex-wrap:wrap;font-size:0.75rem;">
+                <span class="badge badge-completed">✓ Shoot done</span> → <span class="badge badge-completed">✓ Proofs sent</span> → <span class="badge badge-completed">✓ Approved</span> → <span class="badge badge-processing">● Printing</span> → <span class="badge badge-scheduled">○ Shipping</span> → <span class="badge badge-scheduled">○ Delivered</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- MODULE: RETAKES -->
+        <div id="module-retakes" class="dash-module" style="display: none;">
+          <div class="grid-2">
+            <div class="card-glass" style="padding:1.5rem;">
+              <h3><i class="fa-solid fa-rotate-left" style="color:var(--color-gold);"></i> Request Retake / Makeup</h3>
+              <form onsubmit="event.preventDefault(); showToast('Retake request submitted for Oct 22!', 'success'); this.reset();" style="margin-top:1rem;">
+                <div class="form-group"><label class="form-label">Athlete Name</label><input class="form-control" placeholder="e.g. Devon Carter" required></div>
+                <div class="form-row">
+                  <div class="form-group"><label class="form-label">Team</label><select class="form-control"><option>Varsity Football</option><option>Varsity Basketball</option><option>JV Cheer</option><option>Volleyball</option></select></div>
+                  <div class="form-group"><label class="form-label">Reason</label><select class="form-control"><option>Absent on photo day</option><option>Eyes closed / blink</option><option>Uniform issue</option><option>Parent requested redo</option><option>Injury</option></select></div>
+                </div>
+                <div class="form-group"><label class="form-label">Notes</label><textarea class="form-control" rows="2" placeholder="Any details for photographer..."></textarea></div>
+                <button class="btn btn-gold" style="width:100%;" type="submit">Submit Retake Request</button>
+              </form>
+            </div>
+            <div class="card-glass" style="padding:1.5rem;">
+              <h4>Retake Queue (3)</h4>
+              <div style="display:flex;flex-direction:column;gap:0.75rem;margin-top:1rem;font-size:0.9rem;">
+                <div style="padding:1rem;background:var(--bg-surface-elevated);border-radius:10px;"><div class="flex-between"><strong>Devon Carter — Football #55</strong><span class="badge badge-approval">Awaiting Approval</span></div><div style="font-size:0.8rem;color:var(--text-muted);margin-top:0.25rem;">Absent Oct 01 → proposed Oct 22 makeup day</div></div>
+                <div style="padding:1rem;background:var(--bg-surface-elevated);border-radius:10px;"><div class="flex-between"><strong>Jada Smith — JV Cheer</strong><span class="badge badge-processing">Processing</span></div><div style="font-size:0.8rem;color:var(--text-muted);margin-top:0.25rem;">Blink in team photo → composite fix in progress</div></div>
+                <div style="padding:1rem;background:var(--bg-surface-elevated);border-radius:10px;"><div class="flex-between"><strong>Leo Park — Cross Country</strong><span class="badge badge-completed">Completed</span></div><div style="font-size:0.8rem;color:var(--text-muted);margin-top:0.25rem;">Re-shoot done Oct 03, proofs ready</div></div>
+              </div>
+              <div style="margin-top:1rem;padding:1rem;border:1px dashed var(--color-gold);border-radius:10px;font-size:0.85rem;">📅 <strong>Guaranteed makeup day:</strong> Oct 22, 3:30–5:00 PM, Aux Gym. No extra fee.</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- MODULE: INVOICES -->
+        <div id="module-invoices" class="dash-module" style="display: none;">
+          <div class="grid-3" style="margin-bottom:1.5rem;">
+            <div class="card-glass" style="padding:1.25rem;text-align:center;"><div style="font-size:0.8rem;color:var(--text-muted);font-weight:700;">TOTAL BILLED</div><div style="font-size:1.8rem;font-weight:800;">$4,210</div></div>
+            <div class="card-glass" style="padding:1.25rem;text-align:center;"><div style="font-size:0.8rem;color:var(--text-muted);font-weight:700;">PAID</div><div style="font-size:1.8rem;font-weight:800;color:#10B981;">$3,115</div></div>
+            <div class="card-glass" style="padding:1.25rem;text-align:center;"><div style="font-size:0.8rem;color:var(--text-muted);font-weight:700;">BALANCE DUE</div><div style="font-size:1.8rem;font-weight:800;color:var(--color-gold);">$1,095</div></div>
+          </div>
+          <div class="card-glass" style="padding:1.5rem;">
+            <div class="flex-between" style="margin-bottom:1rem;"><h3><i class="fa-solid fa-file-invoice-dollar" style="color:var(--color-gold);"></i> Invoices & Payments</h3><button class="btn btn-sm btn-primary" onclick="showToast('Payment portal opening...','info')"><i class="fa-solid fa-credit-card"></i> Pay Balance</button></div>
+            <div class="table-responsive"><table class="data-table"><thead><tr><th>Invoice</th><th>Description</th><th>Date</th><th>Amount</th><th>Status</th><th>Action</th></tr></thead>
+            <tbody>
+              <tr><td>#INV-881</td><td>Fall Day 1 — Team packages (3 teams)</td><td>Oct 02</td><td>$2,115</td><td><span class="badge badge-completed">Paid</span></td><td><button class="btn btn-sm btn-outline" onclick="showToast('Receipt downloaded','info')">Receipt</button></td></tr>
+              <tr><td>#INV-882</td><td>Gym banners x3 + plaques</td><td>Oct 04</td><td>$1,095</td><td><span class="badge badge-progress">Due Oct 20</span></td><td><button class="btn btn-sm btn-gold" onclick="showToast('Redirecting to secure checkout...','info')">Pay Now</button></td></tr>
+              <tr><td>#INV-879</td><td>Yearbook PSPA sync (included free)</td><td>Sep 28</td><td>$0.00</td><td><span class="badge badge-delivered">Waived</span></td><td><button class="btn btn-sm btn-outline" onclick="showToast('No charge','info')">View</button></td></tr>
+            </tbody></table></div>
+            <p style="font-size:0.8rem;color:var(--text-muted);margin-top:1rem;">💡 School pays $0 upfront option available — 100% parent direct-pay. Current plan: Hybrid (school covers banners, parents cover packets).</p>
+          </div>
+        </div>
+
+        <!-- MODULE: MESSAGES -->
+        <div id="module-messages" class="dash-module" style="display: none;">
+          <div class="card-glass" style="padding:1.5rem;max-width:800px;margin:0 auto;">
+            <h3 style="margin-bottom:1rem;"><i class="fa-solid fa-comments" style="color:var(--color-gold);"></i> Messages — Studio Support</h3>
+            <div style="display:flex;flex-direction:column;gap:0.75rem;margin-bottom:1.5rem;">
+              <div style="align-self:flex-start;background:var(--bg-surface-elevated);padding:0.85rem 1.1rem;border-radius:12px;max-width:75%;font-size:0.9rem;"><strong>Elena (Photographer):</strong> Hi Marcus! Basketball lighting test looks amazing — see attached sample. Ready for Oct 08?<br><span style="font-size:0.7rem;color:var(--text-muted);">Oct 06, 2:14 PM</span></div>
+              <div style="align-self:flex-end;background:var(--color-gold);color:#111;padding:0.85rem 1.1rem;border-radius:12px;max-width:75%;font-size:0.9rem;"><strong>You:</strong> Looks great! JV team will arrive 10 mins early.<br><span style="font-size:0.7rem;opacity:0.7;">Oct 06, 2:40 PM</span></div>
+              <div style="align-self:flex-start;background:var(--bg-surface-elevated);padding:0.85rem 1.1rem;border-radius:12px;max-width:75%;font-size:0.9rem;"><strong>Studio Lab:</strong> Volleyball prints shipped — tracking #784912556299.<br><span style="font-size:0.7rem;color:var(--text-muted);">Oct 05, 9:02 AM</span></div>
+            </div>
+            <form onsubmit="event.preventDefault(); showToast('Message sent to studio!', 'success'); this.reset();" style="display:flex;gap:0.5rem;"><input class="form-control" placeholder="Type a message to your photo crew..." required><button class="btn btn-gold" type="submit"><i class="fa-solid fa-paper-plane"></i></button></form>
+          </div>
+        </div>
+
+        <!-- MODULE: NOTIFICATIONS -->
+        <div id="module-notifications" class="dash-module" style="display: none;">
+          <div class="card-glass" style="padding:1.5rem;max-width:800px;margin:0 auto;">
+            <div class="flex-between" style="margin-bottom:1rem;"><h3><i class="fa-solid fa-bell" style="color:var(--color-gold);"></i> Notifications</h3><button class="btn btn-sm btn-outline" onclick="showToast('All marked as read','info')">Mark all read</button></div>
+            <div style="display:flex;flex-direction:column;gap:0.75rem;font-size:0.9rem;">
+              <div style="padding:1rem;background:rgba(16,185,129,0.08);border:1px solid rgba(16,185,129,0.3);border-radius:10px;">✅ <strong>Proofs ready:</strong> Cross Country color correction complete — approve by Oct 10.</div>
+              <div style="padding:1rem;background:rgba(198,164,90,0.08);border:1px solid rgba(198,164,90,0.3);border-radius:10px;">📸 <strong>Reminder:</strong> Fall Day 2 tomorrow (Oct 08) — 4 teams, Main Gym A, 3:15 PM.</div>
+              <div style="padding:1rem;background:rgba(59,130,246,0.08);border:1px solid rgba(59,130,246,0.3);border-radius:10px;">🚚 <strong>Shipment:</strong> Bulk order #BULK-FALL26 left the lab — ETA Oct 18.</div>
+              <div style="padding:1rem;background:var(--bg-surface-elevated);border-radius:10px;opacity:0.7;">📄 <strong>Invoice:</strong> #INV-882 ($1,095) due Oct 20.</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- MODULE: DOWNLOADS -->
+        <div id="module-downloads" class="dash-module" style="display: none;">
+          <div class="card-glass" style="padding:1.5rem;">
+            <div class="flex-between" style="margin-bottom:1.5rem;flex-wrap:wrap;gap:1rem;"><h3><i class="fa-solid fa-cloud-arrow-down" style="color:var(--color-gold);"></i> Downloads & Galleries</h3><button class="btn btn-sm btn-gold" onclick="showToast('Downloading all galleries as ZIP...','info')"><i class="fa-solid fa-download"></i> Download All</button></div>
+            <div class="grid-3">
+              <div class="card-glass" style="padding:1rem;text-align:center;"><img src="https://images.unsplash.com/photo-1508098682722-e99c43a406b2?q=80&w=600&auto=format&fit=crop" alt="Football" style="border-radius:8px;width:100%;"><h4 style="margin:0.75rem 0 0.25rem;">Varsity Football — Full Gallery</h4><div style="font-size:0.8rem;color:var(--text-muted);">142 photos • 2.1 GB</div><button class="btn btn-sm btn-outline" style="margin-top:0.75rem;width:100%;" onclick="showToast('Gallery ZIP downloading...','info')">Download ZIP</button></div>
+              <div class="card-glass" style="padding:1rem;text-align:center;"><img src="https://images.unsplash.com/photo-1546519638-68e109498ffc?q=80&w=600&auto=format&fit=crop" alt="Basketball" style="border-radius:8px;width:100%;"><h4 style="margin:0.75rem 0 0.25rem;">Volleyball — Proofs</h4><div style="font-size:0.8rem;color:var(--text-muted);">68 photos • 840 MB</div><button class="btn btn-sm btn-outline" style="margin-top:0.75rem;width:100%;" onclick="showToast('Gallery ZIP downloading...','info')">Download ZIP</button></div>
+              <div class="card-glass" style="padding:1rem;text-align:center;"><img src="https://images.unsplash.com/photo-1530549387789-4c1017266635?q=80&w=600&auto=format&fit=crop" alt="Swimming" style="border-radius:8px;width:100%;"><h4 style="margin:0.75rem 0 0.25rem;">PSPA Yearbook Export</h4><div style="font-size:0.8rem;color:var(--text-muted);">448 portraits • 450 MB</div><button class="btn btn-sm btn-gold" style="margin-top:0.75rem;width:100%;" onclick="showToast('PSPA ZIP downloading...','info')">Download PSPA</button></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- MODULE: SETTINGS -->
+        <div id="module-settings" class="dash-module" style="display: none;">
+          <div class="grid-2">
+            <div class="card-glass" style="padding:1.5rem;">
+              <h3><i class="fa-solid fa-user-gear" style="color:var(--color-gold);"></i> Account Settings</h3>
+              <form onsubmit="event.preventDefault(); showToast('Settings saved!', 'success');" style="margin-top:1rem;">
+                <div class="form-group"><label class="form-label">Display Name</label><input class="form-control" value="Marcus Vance"></div>
+                <div class="form-group"><label class="form-label">Email</label><input class="form-control" value="marcus.vance@oakridge.edu"></div>
+                <div class="form-group"><label class="form-label">New Password</label><input type="password" class="form-control" placeholder="••••••••"></div>
+                <div class="form-group"><label style="font-size:0.85rem;"><input type="checkbox" checked> Email me proof-ready alerts</label><br><label style="font-size:0.85rem;"><input type="checkbox" checked> SMS delivery updates</label><br><label style="font-size:0.85rem;"><input type="checkbox"> Weekly revenue summary</label></div>
+                <button class="btn btn-gold" style="width:100%;" type="submit">Save Settings</button>
+              </form>
+            </div>
+            <div class="card-glass" style="padding:1.5rem;">
+              <h4>Portal Preferences</h4>
+              <div style="display:flex;flex-direction:column;gap:0.75rem;margin-top:1rem;font-size:0.9rem;">
+                <div class="flex-between"><span><i class="fa-solid fa-sun"></i> Theme (Light / Dark)</span><button class="btn btn-sm btn-outline theme-toggle">Toggle</button></div>
+                <div class="flex-between"><span><i class="fa-solid fa-language"></i> Direction (LTR / RTL)</span><button class="btn btn-sm btn-outline dir-toggle">Toggle</button></div>
+                <div class="flex-between"><span><i class="fa-solid fa-file-export"></i> Export my school data</span><button class="btn btn-sm btn-outline" onclick="showToast('Data export emailed!','info')">Export</button></div>
+              </div>
+              <div style="margin-top:1.5rem;padding:1rem;border:1px solid rgba(182,61,74,0.5);border-radius:10px;font-size:0.85rem;">
+                <strong style="color:#B63D4A;">Danger zone:</strong> request account archival at season end.<br>
+                <button class="btn btn-sm btn-outline" style="margin-top:0.5rem;border-color:#B63D4A;color:#B63D4A;" onclick="showToast('Archival request sent','info')">Request Archive</button>
+              </div>
+            </div>
+          </div>
+        </div>
 
       </div>
     </main>

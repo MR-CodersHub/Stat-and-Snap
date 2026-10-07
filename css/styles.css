@@ -1508,3 +1508,40 @@ ul, ol {
   line-height: 1;
   text-shadow: 0 10px 30px rgba(182, 61, 74, 0.3);
 }
+
+/* Site Tagline */
+.site-tagline {
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-gold);
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 1rem;
+}
+
+.site-tagline::before {
+  content: "";
+  display: inline-block;
+  width: 32px;
+  height: 2px;
+  background: var(--color-gold);
+  border-radius: 2px;
+}
+
+.hero-section .site-tagline {
+  color: var(--color-gold);
+  margin-bottom: 1.1rem;
+  font-size: 0.95rem;
+}
+
+.footer-tagline {
+  font-size: 0.85rem;
+  font-style: italic;
+  color: var(--color-gold);
+  margin-top: 0.5rem;
+  font-weight: 600;
+}

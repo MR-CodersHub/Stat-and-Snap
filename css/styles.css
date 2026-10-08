@@ -431,6 +431,32 @@ ul, ol {
   white-space: normal;
 }
 
+/* Dashboard sidebar header: keep brand name + tagline on single lines */
+.dashboard-sidebar .sidebar-header {
+  gap: 0.6rem;
+}
+.dashboard-sidebar .sidebar-header .brand-logo {
+  min-width: 0;
+  flex: 1 1 auto;
+  gap: 0.6rem;
+  font-size: 1rem;
+}
+.dashboard-sidebar .sidebar-header .brand-text {
+  min-width: 0;
+}
+.dashboard-sidebar .sidebar-header .brand-text > span:first-child {
+  white-space: nowrap;
+}
+.dashboard-sidebar .sidebar-header .brand-tagline {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.dashboard-sidebar .sidebar-header .badge {
+  flex-shrink: 0;
+  margin-left: 0.5rem;
+}
+
 .nav-links {
   display: flex;
   align-items: center;

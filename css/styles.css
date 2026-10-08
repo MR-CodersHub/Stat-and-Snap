@@ -2743,3 +2743,130 @@ ul, ol {
 [dir="rtl"] .page-service-details .svc-d-chip-a { left: auto; right: 1.25rem; }
 [dir="rtl"] .page-service-details .svc-d-chip-b { right: auto; left: 1.25rem; }
 [dir="rtl"] .page-service-details .svc-d-rel-tag { left: auto; right: 0.7rem; }
+
+/* ==========================================================================
+   PRICING PAGE — PREMIUM (below Home2) + RESPONSIVE 1024/760/480/360/320
+   ========================================================================== */
+.page-pricing .pr-hero-grid { display: grid; grid-template-columns: 1.15fr 0.6fr; gap: 2.5rem; align-items: center; }
+.page-pricing .pr-crumb { display: flex; align-items: center; gap: 0.5rem; font-size: 0.82rem; font-weight: 700; color: var(--color-gold); margin-bottom: 0.9rem; }
+.page-pricing .pr-crumb a { color: var(--color-gold); opacity: 0.85; }
+.page-pricing .pr-crumb i { font-size: 0.65rem; opacity: 0.7; }
+.page-pricing .pr-crumb span { color: var(--color-slate-light); }
+.page-pricing .pr-hero .hero-title { font-size: clamp(2rem, 4.5vw, 3.4rem); }
+.page-pricing .pr-hero-cta { margin-top: 1.75rem; }
+.page-pricing .pr-trust { display: flex; flex-wrap: wrap; gap: 0.5rem 1.4rem; margin-top: 1.25rem; font-size: 0.85rem; color: var(--color-slate-light); }
+.page-pricing .pr-trust i { color: #10B981; margin-right: 0.35rem; }
+.page-pricing .pr-hero-panel { padding: 1.5rem; display: flex; flex-direction: column; gap: 0.5rem; }
+.page-pricing .pr-hero-panel-head { display: flex; align-items: center; justify-content: space-between; }
+.page-pricing .pr-hero-panel-no { font-size: 0.85rem; font-weight: 800; color: var(--color-gold); }
+.page-pricing .pr-hero-panel strong { font-family: var(--font-heading); font-size: 1.3rem; }
+.page-pricing .pr-hero-panel-sub { font-size: 0.85rem; color: var(--text-muted); }
+.page-pricing .pr-hero-meter { height: 6px; border-radius: 99px; background: var(--bg-surface-elevated); overflow: hidden; margin-top: 0.5rem; }
+.page-pricing .pr-hero-meter span { display: block; height: 100%; background: linear-gradient(90deg, var(--color-gold), #f3d27a); border-radius: 99px; }
+.page-pricing .pr-hero-meter-label { font-size: 0.75rem; color: var(--text-muted); }
+.page-pricing .pr-hero-panel .btn { margin-top: 0.6rem; }
+.page-pricing .pr-hero-stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; margin-top: 3rem; background: rgba(10, 17, 29, 0.55); border: 1px solid var(--border-gold); border-radius: var(--radius-lg); padding: 1.5rem 2rem; backdrop-filter: blur(8px); }
+.page-pricing .pr-hero-stats div { text-align: center; }
+.page-pricing .pr-hero-stats strong { display: block; font-family: var(--font-heading); font-size: 1.9rem; color: #fff; }
+.page-pricing .pr-hero-stats strong small { font-size: 1rem; color: var(--color-gold); }
+.page-pricing .pr-hero-stats span { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--color-slate-light); }
+
+.page-pricing .pr-section-head { display: flex; align-items: flex-end; justify-content: space-between; gap: 1.5rem; margin-bottom: 2.75rem; }
+.page-pricing .pr-section-sub { max-width: 440px; margin: 0; }
+.page-pricing .pr-toggle { display: inline-flex; background: var(--bg-surface-elevated); border: 1px solid var(--border-subtle); border-radius: var(--radius-full); padding: 0.3rem; gap: 0.25rem; flex-shrink: 0; }
+.page-pricing .pr-toggle button { border: 0; background: transparent; color: var(--text-muted); font-weight: 800; font-size: 0.82rem; padding: 0.6rem 1.3rem; border-radius: var(--radius-full); cursor: pointer; }
+.page-pricing .pr-toggle button.active { background: var(--color-gold); color: var(--color-navy); }
+.page-pricing .pr-grid { align-items: stretch; }
+.page-pricing .pr-card { display: flex; flex-direction: column; text-align: center; }
+.page-pricing .pr-medal { width: 54px; height: 54px; margin: 0 auto 1rem; border-radius: var(--radius-full); display: flex; align-items: center; justify-content: center; font-size: 1.4rem; color: var(--color-gold); background: rgba(198, 164, 90, 0.12); border: 1px solid var(--border-gold); }
+.page-pricing .pr-medal.gold { background: var(--color-gold); color: var(--color-navy); }
+.page-pricing .pr-sub { color: var(--text-muted); font-size: 0.85rem; margin-top: 0.35rem; }
+.page-pricing .pr-card .pricing-price { margin: 1rem 0; }
+.page-pricing .pr-card .pricing-features { text-align: left; flex: 1 1 auto; }
+.page-pricing .pr-btn { width: 100%; justify-content: center; margin-top: auto; }
+.page-pricing .pr-note { display: block; margin-top: 0.75rem; font-size: 0.78rem; color: var(--text-muted); }
+.page-pricing .pr-hot { border-color: var(--border-gold); }
+.page-pricing .pr-assurance { display: flex; justify-content: center; flex-wrap: wrap; gap: 0.75rem 2rem; margin-top: 2rem; font-size: 0.88rem; color: var(--text-muted); }
+.page-pricing .pr-assurance i { color: var(--color-gold); margin-right: 0.4rem; }
+
+.page-pricing .pr-addon-grid { align-items: stretch; }
+.page-pricing .pr-addon { display: flex; flex-direction: column; align-items: center; }
+.page-pricing .pr-addon-icon { width: 54px; height: 54px; border-radius: var(--radius-full); display: flex; align-items: center; justify-content: center; font-size: 1.4rem; color: var(--color-gold); background: rgba(198, 164, 90, 0.12); border: 1px solid var(--border-gold); margin-bottom: 0.75rem; }
+.page-pricing .pr-addon-icon.crimson { color: var(--color-crimson); background: rgba(200, 40, 70, 0.1); border-color: rgba(200, 40, 70, 0.35); }
+.page-pricing .pr-addon-icon.green { color: var(--color-evergreen-light); background: rgba(20, 140, 90, 0.1); border-color: rgba(20, 140, 90, 0.35); }
+.page-pricing .pr-addon h4 { font-size: 1rem; margin-bottom: 0.25rem; }
+.page-pricing .pr-addon p { font-size: 0.85rem; color: var(--text-muted); flex: 1 1 auto; }
+.page-pricing .pr-addon-price { font-family: var(--font-heading); font-weight: 800; font-size: 1.35rem; color: var(--color-gold); margin-top: 0.6rem; }
+.page-pricing .pr-addon-tag { margin-top: 0.4rem; font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: var(--text-muted); }
+
+.page-pricing .pr-est-grid { display: grid; grid-template-columns: 0.9fr 1.1fr; gap: 3rem; align-items: center; }
+.page-pricing .pr-checks { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 0.65rem; }
+.page-pricing .pr-checks li { display: flex; align-items: center; gap: 0.6rem; font-size: 0.92rem; }
+.page-pricing .pr-checks i { color: var(--color-gold); }
+.page-pricing .pr-est-card { padding: 2rem; }
+.page-pricing .pr-checkgrid { font-size: 0.9rem; }
+.page-pricing .pr-checkgrid label { display: flex; align-items: center; gap: 0.5rem; }
+.page-pricing .pr-est-total { background: var(--bg-surface-elevated); padding: 1.5rem; border-radius: var(--radius-md); text-align: center; margin-bottom: 1.5rem; }
+.page-pricing .pr-est-total-label { font-size: 0.85rem; color: var(--text-muted); text-transform: uppercase; }
+.page-pricing .pr-est-total-val { font-family: var(--font-heading); font-size: 3rem; font-weight: 800; color: #10B981; }
+.page-pricing .pr-est-total-note { font-size: 0.85rem; color: var(--color-gold); font-weight: 700; }
+
+.page-pricing .pr-faq-grid { display: grid; grid-template-columns: 1.4fr 0.8fr; gap: 2.5rem; align-items: start; }
+.page-pricing .pr-faq-side { padding: 1.75rem; display: flex; flex-direction: column; gap: 0.9rem; position: sticky; top: 6rem; }
+.page-pricing .pr-faq-side h3 { font-size: 1.25rem; }
+.page-pricing .pr-faq-side p { font-size: 0.88rem; color: var(--text-muted); }
+.page-pricing .pr-side-note { font-size: 0.78rem; color: var(--text-muted); text-align: center; }
+.page-pricing .pr-cta-btns { margin-top: 1.75rem; }
+.page-pricing .pr-assurance { display: flex; justify-content: center; flex-wrap: wrap; gap: 0.75rem 2rem; margin-top: 1.75rem; font-size: 0.88rem; color: var(--color-slate-light); }
+.page-pricing .pr-assurance i { color: #10B981; margin-right: 0.4rem; }
+
+/* ---- Pricing 1024px ---- */
+@media (max-width: 1024px) {
+  .page-pricing .pr-hero-grid { gap: 2rem; }
+  .page-pricing .pr-hero-stats { padding: 1.25rem 1.5rem; }
+  .page-pricing .pr-hero-stats strong { font-size: 1.6rem; }
+  .page-pricing .pr-section-head { flex-direction: column; align-items: flex-start; }
+  .page-pricing .pr-section-sub { max-width: 100%; }
+  .page-pricing .pr-est-grid { gap: 2rem; }
+  .page-pricing .pr-faq-grid { grid-template-columns: 1fr 0.9fr; gap: 2rem; }
+}
+/* ---- Pricing 760px ---- */
+@media (max-width: 760px) {
+  .page-pricing .pr-hero-grid { grid-template-columns: 1fr; }
+  .page-pricing .pr-hero-card { max-width: 560px; }
+  .page-pricing .pr-hero-stats { grid-template-columns: repeat(2, 1fr); gap: 1.25rem; }
+  .page-pricing .pr-est-grid { grid-template-columns: 1fr; }
+  .page-pricing .pr-faq-grid { grid-template-columns: 1fr; }
+  .page-pricing .pr-faq-side { position: static; }
+  .page-pricing .pr-addon-grid { grid-template-columns: 1fr 1fr; }
+}
+/* ---- Pricing 480px ---- */
+@media (max-width: 480px) {
+  .page-pricing .pr-hero-cta .btn-lg { width: 100%; justify-content: center; }
+  .page-pricing .pr-trust { gap: 0.4rem 1rem; font-size: 0.8rem; }
+  .page-pricing .pr-hero-stats { grid-template-columns: 1fr 1fr; padding: 1.15rem; gap: 1rem; margin-top: 2rem; }
+  .page-pricing .pr-hero-stats strong { font-size: 1.45rem; }
+  .page-pricing .pr-toggle { width: 100%; }
+  .page-pricing .pr-toggle button { flex: 1; }
+  .page-pricing .pr-addon-grid { grid-template-columns: 1fr; }
+  .page-pricing .pr-est-card { padding: 1.5rem 1.25rem; }
+  .page-pricing .pr-est-total-val { font-size: 2.4rem; }
+  .page-pricing .pr-cta-btns .btn-lg { width: 100%; justify-content: center; }
+  .page-pricing .pr-assurance { gap: 0.5rem 1.25rem; font-size: 0.8rem; }
+}
+/* ---- Pricing 360px ---- */
+@media (max-width: 360px) {
+  .page-pricing .pr-hero-panel { padding: 1.25rem 1.1rem; }
+  .page-pricing .pr-hero-stats { padding: 1rem; }
+  .page-pricing .pr-hero-stats strong { font-size: 1.3rem; }
+  .page-pricing .pr-toggle button { padding: 0.55rem 0.8rem; font-size: 0.76rem; }
+  .page-pricing .pr-faq-side { padding: 1.35rem 1.15rem; }
+}
+/* ---- Pricing 320px ---- */
+@media (max-width: 320px) {
+  .page-pricing .pr-hero-stats { gap: 0.85rem; }
+  .page-pricing .pr-hero-stats strong { font-size: 1.2rem; }
+  .page-pricing .pr-medal, .page-pricing .pr-addon-icon { width: 46px; height: 46px; font-size: 1.2rem; }
+  .page-pricing .pr-est-total-val { font-size: 2.1rem; }
+  .page-pricing .pr-crumb { font-size: 0.75rem; }
+}

@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="../css/styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
-<body>
+<body class="page-pricing">
 
   <!-- Sticky Navbar -->
   <nav class="navbar">
@@ -103,46 +103,88 @@
     </div>
   </div>
 
-  <!-- SECTION 1: HERO HEADER -->
-  <section class="hero-section" style="min-height: 55vh;">
-    <div class="hero-bg-overlay" style="background-image: url('https://images.unsplash.com/photo-1546519638-68e109498ffc?q=80&w=1600&auto=format&fit=crop');"></div>
+  <!-- SECTION 1: HERO HEADER (PREMIUM) -->
+  <section class="hero-section pr-hero" style="min-height: 60vh;">
+    <div class="hero-bg-overlay" style="background-image: url('https://i.pinimg.com/736x/5b/0d/91/5b0d91fe6ff6e5522ee0d291db7db95b.jpg');"></div>
     <div class="hero-gradient"></div>
-    <div class="container hero-content text-center">
-      <span class="section-tag"><i class="fa-solid fa-tags"></i> Transparent Pricing</span>
-      <h1 class="hero-title">Packages Built For Every Athlete & School</h1>
-      <p class="hero-desc" style="margin: 0 auto;">No hidden fees. Free coach prints included with every team photo booking.</p>
+    <div class="container hero-content">
+      <div class="pr-hero-grid">
+        <div>
+          <div class="pr-crumb"><a href="../index.html">Home</a><i class="fa-solid fa-chevron-right"></i><span>Pricing</span></div>
+          <span class="section-tag"><i class="fa-solid fa-tags"></i> Transparent Pricing</span>
+          <h1 class="hero-title">Packages Built For Every <span class="highlight">Athlete & School</span></h1>
+          <p class="hero-desc">No hidden fees. Free coach prints included with every team photo booking.</p>
+          <div class="flex-align gap-3 pr-hero-cta" style="flex-wrap: wrap;">
+            <a href="contact.html" class="btn btn-lg btn-gold"><i class="fa-solid fa-calendar-check"></i> Check Availability</a>
+            <a href="services.html" class="btn btn-lg btn-outline"><i class="fa-solid fa-list-check"></i> Browse Services</a>
+          </div>
+          <div class="pr-trust">
+            <span><i class="fa-solid fa-check"></i> $0 upfront school fees</span>
+            <span><i class="fa-solid fa-check"></i> 48-hour proofs</span>
+            <span><i class="fa-solid fa-check"></i> Free retake day</span>
+          </div>
+        </div>
+        <div class="pr-hero-card">
+          <div class="card-glass gold-border pr-hero-panel">
+            <div class="pr-hero-panel-head">
+              <span class="badge badge-approval"><i class="fa-solid fa-crown"></i> Best Value</span>
+              <span class="pr-hero-panel-no">$59 / athlete</span>
+            </div>
+            <strong>Varsity Champion</strong>
+            <span class="pr-hero-panel-sub">Portrait + 11×14 poster + digitals + bag tag</span>
+            <div class="pr-hero-meter"><span style="width: 92%;"></span></div>
+            <div class="pr-hero-meter-label">Chosen by 7 of 10 families</div>
+            <a href="contact.html" class="btn btn-gold" style="width: 100%;">Select Champion <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="pr-hero-stats">
+        <div><strong>$0</strong><span>Upfront school cost</span></div>
+        <div><strong>48<small>hr</small></strong><span>Proof delivery</span></div>
+        <div><strong>3</strong><span>Core bundles</span></div>
+        <div><strong>10<small>%</small></strong><span>Share back option</span></div>
+      </div>
     </div>
   </section>
 
-  <!-- SECTION 2: INDIVIDUAL ATHLETE & TEAM PACKAGES -->
-  <section class="section-padding" style="background: var(--bg-main);">
+  <!-- SECTION 2: PACKAGES (PREMIUM) -->
+  <section class="section-padding pr-plans" style="background: var(--bg-main);">
     <div class="container">
-      <div class="text-center" style="margin-bottom: 3.5rem;">
-        <span class="section-tag crimson"><i class="fa-solid fa-star"></i> Athlete & Team Packages</span>
-        <h2 class="section-title">Standard Sports Print & Digital Bundles</h2>
+      <div class="pr-section-head">
+        <div>
+          <span class="section-tag crimson"><i class="fa-solid fa-star"></i> Athlete & Team Packages</span>
+          <h2 class="section-title">Standard Sports Print & Digital Bundles</h2>
+        </div>
+        <div class="pr-toggle" role="tablist" aria-label="Billing period">
+          <button type="button" class="active" data-billing="athlete">Per Athlete</button>
+          <button type="button" data-billing="season">Per Team</button>
+        </div>
       </div>
 
-      <div class="grid-3">
+      <div class="grid-3 pr-grid">
         <!-- Package 1 -->
-        <div class="pricing-card">
+        <div class="pricing-card pr-card">
+          <div class="pr-medal"><i class="fa-solid fa-medal"></i></div>
           <h3 style="font-size: 1.4rem;">Starter Package</h3>
-          <p style="color: var(--text-muted); font-size: 0.85rem; margin-top: 0.35rem;">Essential keepsakes for parents.</p>
-          <div class="pricing-price">$29 <span>/ athlete</span></div>
+          <p class="pr-sub">Essential keepsakes for parents.</p>
+          <div class="pricing-price" data-athlete="$29" data-season="$299"><span class="pr-val">$29</span> <span class="pr-per">/ athlete</span></div>
           <ul class="pricing-features">
             <li><i class="fa-solid fa-check"></i> 8x10 Memory Mate Composite</li>
             <li><i class="fa-solid fa-check"></i> 2 - 5x7 Individual Prints</li>
             <li><i class="fa-solid fa-check"></i> 4 - Wallet Photos</li>
             <li><i class="fa-solid fa-check"></i> Web-Resolution Digital Copy</li>
           </ul>
-          <a href="contact.html" class="btn btn-secondary">Select Starter</a>
+          <a href="contact.html" class="btn btn-secondary pr-btn">Select Starter</a>
+          <span class="pr-note">No upfront school fees</span>
         </div>
 
         <!-- Package 2 -->
-        <div class="pricing-card popular">
+        <div class="pricing-card popular pr-card pr-hot">
           <span class="pricing-badge">Best Value</span>
+          <div class="pr-medal gold"><i class="fa-solid fa-trophy"></i></div>
           <h3 style="font-size: 1.4rem;">Varsity Champion</h3>
-          <p style="color: var(--text-muted); font-size: 0.85rem; margin-top: 0.35rem;">Complete portrait & poster combo.</p>
-          <div class="pricing-price">$59 <span>/ athlete</span></div>
+          <p class="pr-sub">Complete portrait & poster combo.</p>
+          <div class="pricing-price" data-athlete="$59" data-season="$599"><span class="pr-val">$59</span> <span class="pr-per">/ athlete</span></div>
           <ul class="pricing-features">
             <li><i class="fa-solid fa-check"></i> 8x10 Custom Team Print</li>
             <li><i class="fa-solid fa-check"></i> 11x14 Dynamic Action Poster</li>
@@ -150,75 +192,95 @@
             <li><i class="fa-solid fa-check"></i> High-Res Digital Download Rights</li>
             <li><i class="fa-solid fa-check"></i> Custom Acrylic Bag Tag</li>
           </ul>
-          <a href="contact.html" class="btn btn-gold">Select Champion</a>
+          <a href="contact.html" class="btn btn-gold pr-btn">Select Champion</a>
+          <span class="pr-note">Free retake day included</span>
         </div>
 
         <!-- Package 3 -->
-        <div class="pricing-card">
+        <div class="pricing-card pr-card">
+          <div class="pr-medal"><i class="fa-solid fa-building-columns"></i></div>
           <h3 style="font-size: 1.4rem;">All-Star Senior Tribute</h3>
-          <p style="color: var(--text-muted); font-size: 0.85rem; margin-top: 0.35rem;">Premium senior milestone package.</p>
-          <div class="pricing-price">$99 <span>/ athlete</span></div>
+          <p class="pr-sub">Premium senior milestone package.</p>
+          <div class="pricing-price" data-athlete="$99" data-season="$949"><span class="pr-val">$99</span> <span class="pr-per">/ athlete</span></div>
           <ul class="pricing-features">
             <li><i class="fa-solid fa-check"></i> 16x20 Heavyweight Metallic Wall Poster</li>
             <li><i class="fa-solid fa-check"></i> 2 - 8x10 Individual Prints</li>
             <li><i class="fa-solid fa-check"></i> 3ft Gym Wall Vinyl Banner</li>
             <li><i class="fa-solid fa-check"></i> Full Master Digital Portfolio</li>
           </ul>
-          <a href="contact.html" class="btn btn-primary">Select All-Star</a>
+          <a href="contact.html" class="btn btn-primary pr-btn">Select All-Star</a>
+          <span class="pr-note">Banner + portfolio included</span>
         </div>
+      </div>
+      <div class="pr-assurance">
+        <span><i class="fa-solid fa-sack-dollar"></i> $0 upfront school fees</span>
+        <span><i class="fa-solid fa-rotate-left"></i> Free retake day included</span>
+        <span><i class="fa-solid fa-handshake"></i> 10% revenue share option</span>
       </div>
     </div>
   </section>
 
-  <!-- SECTION 3: DIGITAL & PRINT ADD-ONS MATRIX -->
-  <section class="section-padding" style="background: var(--bg-surface);">
+  <!-- SECTION 3: ADD-ONS (PREMIUM) -->
+  <section class="section-padding pr-addons" style="background: var(--bg-surface);">
     <div class="container">
-      <div class="text-center" style="margin-bottom: 3rem;">
-        <span class="section-tag"><i class="fa-solid fa-puzzle-piece"></i> Custom Add-Ons</span>
-        <h2 class="section-title">Popular Add-On Items & Digital Releases</h2>
+      <div class="pr-section-head">
+        <div>
+          <span class="section-tag"><i class="fa-solid fa-puzzle-piece"></i> Custom Add-Ons</span>
+          <h2 class="section-title">Popular Add-On Items & Digital Releases</h2>
+        </div>
+        <p class="section-desc pr-section-sub">Mix and match wall art, digitals, and keepsakes onto any bundle.</p>
       </div>
 
-      <div class="grid-4 text-center">
-        <div class="card-glass">
-          <i class="fa-solid fa-flag" style="font-size: 2rem; color: var(--color-gold); margin-bottom: 0.75rem;"></i>
+      <div class="grid-4 text-center pr-addon-grid">
+        <div class="card-glass pr-addon">
+          <span class="pr-addon-icon"><i class="fa-solid fa-flag"></i></span>
           <h4>Senior Gym Wall Banner</h4>
-          <p style="font-size: 0.85rem; color: var(--text-muted);">Heavy duty grommeted vinyl</p>
-          <div style="font-family: var(--font-heading); font-weight: 800; font-size: 1.25rem; color: var(--color-gold); margin-top: 0.5rem;">$45</div>
+          <p>Heavy duty grommeted vinyl</p>
+          <div class="pr-addon-price">$45</div>
+          <span class="pr-addon-tag">Ships in 3 weeks</span>
         </div>
 
-        <div class="card-glass">
-          <i class="fa-solid fa-compact-disc" style="font-size: 2rem; color: var(--color-crimson); margin-bottom: 0.75rem;"></i>
+        <div class="card-glass pr-addon">
+          <span class="pr-addon-icon crimson"><i class="fa-solid fa-compact-disc"></i></span>
           <h4>Full Digital Release</h4>
-          <p style="font-size: 0.85rem; color: var(--text-muted);">Uncompressed high-res PNG/JPG</p>
-          <div style="font-family: var(--font-heading); font-weight: 800; font-size: 1.25rem; color: var(--color-gold); margin-top: 0.5rem;">$25</div>
+          <p>Uncompressed high-res PNG/JPG</p>
+          <div class="pr-addon-price">$25</div>
+          <span class="pr-addon-tag">Instant download</span>
         </div>
 
-        <div class="card-glass">
-          <i class="fa-solid fa-id-card" style="font-size: 2rem; color: var(--color-evergreen-light); margin-bottom: 0.75rem;"></i>
+        <div class="card-glass pr-addon">
+          <span class="pr-addon-icon green"><i class="fa-solid fa-id-card"></i></span>
           <h4>Custom Trader Cards</h4>
-          <p style="font-size: 0.85rem; color: var(--text-muted);">Pack of 16 laminated stats cards</p>
-          <div style="font-family: var(--font-heading); font-weight: 800; font-size: 1.25rem; color: var(--color-gold); margin-top: 0.5rem;">$22</div>
+          <p>Pack of 16 laminated stats cards</p>
+          <div class="pr-addon-price">$22</div>
+          <span class="pr-addon-tag">Team favorite</span>
         </div>
 
-        <div class="card-glass">
-          <i class="fa-solid fa-trophy" style="font-size: 2rem; color: var(--color-gold); margin-bottom: 0.75rem;"></i>
+        <div class="card-glass pr-addon">
+          <span class="pr-addon-icon"><i class="fa-solid fa-trophy"></i></span>
           <h4>Plaque Keepsake</h4>
-          <p style="font-size: 0.85rem; color: var(--text-muted);">8x10 Cherrywood wooden plaque</p>
-          <div style="font-family: var(--font-heading); font-weight: 800; font-size: 1.25rem; color: var(--color-gold); margin-top: 0.5rem;">$38</div>
+          <p>8x10 Cherrywood wooden plaque</p>
+          <div class="pr-addon-price">$38</div>
+          <span class="pr-addon-tag">Gift ready</span>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- SECTION 4: CUSTOM SCHOOL QUOTE CALCULATOR MOCK -->
-  <section class="section-padding" style="background: var(--bg-main);">
-    <div class="container" style="max-width: 800px;">
-      <div class="card-glass gold-border">
-        <div class="text-center" style="margin-bottom: 2rem;">
-          <span class="section-tag evergreen"><i class="fa-solid fa-calculator"></i> Quick Quote Estimator</span>
-          <h2 class="section-title">Estimate Your School's Department Proposal</h2>
-        </div>
-
+  <!-- SECTION 4: ESTIMATOR (PREMIUM) -->
+  <section class="section-padding pr-est" style="background: var(--bg-main);">
+    <div class="container pr-est-grid">
+      <div>
+        <span class="section-tag evergreen"><i class="fa-solid fa-calculator"></i> Quick Quote Estimator</span>
+        <h2 class="section-title">Estimate Your School's Department Proposal</h2>
+        <p class="section-desc" style="margin-bottom: 1.5rem;">Dial in teams and athletes — most schools qualify for $0 upfront with parent-direct pay.</p>
+        <ul class="pr-checks">
+          <li><i class="fa-solid fa-circle-check"></i> Free senior banners on 8+ teams</li>
+          <li><i class="fa-solid fa-circle-check"></i> PSPA export + coach prints included</li>
+          <li><i class="fa-solid fa-circle-check"></i> 10% revenue share on All-School plans</li>
+        </ul>
+      </div>
+      <div class="card-glass gold-border pr-est-card">
         <form onsubmit="event.preventDefault(); showToast('Estimate calculated! Proposal sent to email.', 'success');">
           <div class="form-row">
             <div class="form-group">
@@ -233,7 +295,7 @@
 
           <div class="form-group">
             <label class="form-label">Included Add-Ons</label>
-            <div class="grid-2 gap-2" style="font-size: 0.9rem;">
+            <div class="grid-2 gap-2 pr-checkgrid">
               <label><input type="checkbox" checked> Free Senior Banners</label>
               <label><input type="checkbox" checked> Yearbook PSPA Roster Export</label>
               <label><input type="checkbox" checked> Coach Office Prints</label>
@@ -241,10 +303,10 @@
             </div>
           </div>
 
-          <div style="background: var(--bg-surface-elevated); padding: 1.5rem; border-radius: var(--radius-md); text-align: center; margin-bottom: 1.5rem;">
-            <div style="font-size: 0.85rem; color: var(--text-muted); text-transform: uppercase;">Estimated Upfront Cost To School</div>
-            <div style="font-family: var(--font-heading); font-size: 3rem; font-weight: 800; color: #10B981;">$0.00</div>
-            <div style="font-size: 0.85rem; color: var(--color-gold); font-weight: 700;">100% Parent Direct Pay Option Selected</div>
+          <div class="pr-est-total">
+            <div class="pr-est-total-label">Estimated Upfront Cost To School</div>
+            <div class="pr-est-total-val">$0.00</div>
+            <div class="pr-est-total-note">100% Parent Direct Pay Option Selected</div>
           </div>
 
           <button type="submit" class="btn btn-lg btn-gold" style="width: 100%;">
@@ -255,23 +317,77 @@
     </div>
   </section>
 
-  <!-- SECTION 5: PRICING FAQ -->
-  <section class="section-padding" style="background: var(--bg-surface);">
-    <div class="container" style="max-width: 800px;">
-      <div class="text-center" style="margin-bottom: 2.5rem;">
-        <h2 class="section-title">Pricing FAQ</h2>
-      </div>
-
-      <div class="accordion-container">
-        <div class="accordion-item active">
-          <div class="accordion-header">
-            <span>Are there shipping charges for parent orders?</span>
-            <i class="fa-solid fa-chevron-down accordion-icon"></i>
+  <!-- SECTION 5: PRICING FAQ (PREMIUM) -->
+  <section class="section-padding pr-faq" style="background: var(--bg-surface);">
+    <div class="container pr-faq-grid">
+      <div>
+        <span class="section-tag"><i class="fa-solid fa-circle-question"></i> Pricing FAQ</span>
+        <h2 class="section-title">Pricing Questions, Answered</h2>
+        <p class="section-desc" style="margin-bottom: 2rem;">Shipping, retakes, and school costs — no surprises.</p>
+        <div class="accordion-container">
+          <div class="accordion-item active">
+            <div class="accordion-header">
+              <span>Are there shipping charges for parent orders?</span>
+              <i class="fa-solid fa-chevron-down accordion-icon"></i>
+            </div>
+            <div class="accordion-body">
+              Direct-to-home shipping is a flat $5.99 per order. If the school selects bulk school delivery, shipping is 100% free!
+            </div>
           </div>
-          <div class="accordion-body">
-            Direct-to-home shipping is a flat $5.99 per order. If the school selects bulk school delivery, shipping is 100% free!
+          <div class="accordion-item">
+            <div class="accordion-header">
+              <span>Does the school pay anything upfront?</span>
+              <i class="fa-solid fa-chevron-down accordion-icon"></i>
+            </div>
+            <div class="accordion-body">
+              No. Parent-direct pay covers everything, and All-School partners earn a 10% revenue share back to the athletic department.
+            </div>
+          </div>
+          <div class="accordion-item">
+            <div class="accordion-header">
+              <span>What if an athlete misses photo day?</span>
+              <i class="fa-solid fa-chevron-down accordion-icon"></i>
+            </div>
+            <div class="accordion-body">
+              A free retake day within 14 days is included. Absent athletes are composited into the team panorama at no charge.
+            </div>
+          </div>
+          <div class="accordion-item">
+            <div class="accordion-header">
+              <span>Can parents mix bundles and add-ons?</span>
+              <i class="fa-solid fa-chevron-down accordion-icon"></i>
+            </div>
+            <div class="accordion-body">
+              Yes — banners, digitals, trader cards, and plaques can be added to any bundle in the same checkout.
+            </div>
           </div>
         </div>
+      </div>
+      <aside class="card-glass gold-border pr-faq-side">
+        <span class="badge badge-approval"><i class="fa-solid fa-headset"></i> Free AD Consult</span>
+        <h3>Need a formal board-ready quote?</h3>
+        <p>Get seasonal pricing, banner counts, and revenue-share math in one PDF.</p>
+        <a href="contact.html" class="btn btn-gold" style="width: 100%;">Request Proposal <i class="fa-solid fa-arrow-right"></i></a>
+        <a href="service-details.html?service=bulk-contracts" class="btn btn-outline btn-sm" style="width: 100%;">All-School Details</a>
+        <span class="pr-side-note"><i class="fa-solid fa-clock"></i> Replies within 4 business hours</span>
+      </aside>
+    </div>
+  </section>
+
+  <!-- SECTION 6: CTA (PREMIUM) -->
+  <section class="section-padding pr-cta" style="background: var(--color-navy-dark);">
+    <div class="container text-center">
+      <span class="section-tag"><i class="fa-solid fa-rocket"></i> Reserve Your Season</span>
+      <h2 class="section-title" style="color: white;">Lock Fall & Winter Dates Before They Fill</h2>
+      <p class="section-desc" style="color: var(--color-slate-light);">4–6 week booking window · zero upfront fees · free retake day.</p>
+      <div class="flex-center gap-3 pr-cta-btns" style="flex-wrap: wrap;">
+        <a href="contact.html" class="btn btn-lg btn-gold"><i class="fa-solid fa-calendar-check"></i> Request Service Proposal</a>
+        <a href="services.html" class="btn btn-lg btn-outline"><i class="fa-solid fa-list-check"></i> Compare Services</a>
+      </div>
+      <div class="pr-assurance">
+        <span><i class="fa-solid fa-check"></i> $0 upfront school fees</span>
+        <span><i class="fa-solid fa-check"></i> 48-hour parent proofs</span>
+        <span><i class="fa-solid fa-check"></i> Free retake day</span>
       </div>
     </div>
   </section>
@@ -342,5 +458,22 @@
   </footer>
 
   <script src="../js/app.js"></script>
+  <script>
+    document.querySelectorAll('.pr-toggle button').forEach(function (b) {
+      b.addEventListener('click', function () {
+        var mode = b.dataset.billing;
+        document.querySelectorAll('.pr-toggle button').forEach(function (x) {
+          x.classList.toggle('active', x === b);
+        });
+        document.querySelectorAll('.pr-grid .pricing-price').forEach(function (p) {
+          var price = p.dataset[mode];
+          var val = p.querySelector('.pr-val');
+          var per = p.querySelector('.pr-per');
+          if (val && price) val.textContent = price;
+          if (per) per.textContent = mode === 'season' ? '/ team' : '/ athlete';
+        });
+      });
+    });
+  </script>
 </body>
 </html>

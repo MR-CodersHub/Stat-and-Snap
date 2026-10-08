@@ -1587,6 +1587,10 @@ ul, ol {
   line-height: 1.35;
 }
 
+.blog-card.is-hidden {
+  display: none;
+}
+
 /* Maintenance / 404 Layout */
 .error-page-container {
   min-height: 85vh;

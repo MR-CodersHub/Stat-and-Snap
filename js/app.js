@@ -13,6 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initFormValidation();
   initScrollAnimations();
   initBackToTop();
+  initBlogViewMore();
 });
 
 /* ==========================================================================
@@ -286,8 +287,43 @@ function initScrollAnimations() {
   });
 }
 
-function initBackToTop() {
-  const btn = document.querySelector('.back-to-top');
+/* ==========================================================================
+   8. Blog All-Posts View More Pagination (6 default, +3 per click)
+   ========================================================================== */
+function initBlogViewMore() {
+  const panel = document.getElementById('tab-all-posts');
+  const btn = document.getElementById('blogViewMoreBtn');
+  if (!panel || !btn) return;
+
+  const cards = Array.from(panel.querySelectorAll('.blog-card'));
+  const countLabel = document.getElementById('blogViewMoreCount');
+  const PAGE_SIZE = 3;
+  let visible = 6;
+
+  if (cards.length <= visible) {
+    btn.style.display = 'none';
+    return;
+  }
+
+  function render() {
+    cards.forEach((card, i) => card.classList.toggle('is-hidden', i >= visible));
+    if (countLabel) {
+      countLabel.textContent = `(Showing ${Math.min(visible, cards.length)} of ${cards.length})`;
+    }
+    if (visible >= cards.length) {
+      btn.style.display = 'none';
+    }
+  }
+
+  btn.addEventListener('click', () => {
+    visible += PAGE_SIZE;
+    render();
+  });
+
+  render();
+}
+
+function initBackToTop() {  const btn = document.querySelector('.back-to-top');
   if (!btn) return;
 
   window.addEventListener('scroll', () => {

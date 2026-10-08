@@ -6,7 +6,7 @@
   <title>School Client Portal | Stat & Snap Athletics Dashboard</title>
   <meta name="description" content="Manage school photo day schedules, roster sync, team package proofs, yearbook PSPA files, and invoice tracking.">
   <link rel="stylesheet" href="../css/styles.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 <body style="background: var(--bg-main);">
 
@@ -17,7 +17,10 @@
       <div class="sidebar-header">
         <a href="../index.html" class="brand-logo" style="font-size: 1.15rem;">
           <div class="logo-badge" style="width: 32px; height: 32px; font-size: 0.9rem;"><i class="fa-solid fa-camera-retro"></i></div>
-          <span>STAT & <span class="gold-accent">SNAP</span></span>
+          <span class="brand-text">
+            <span>STAT & <span class="gold-accent">SNAP</span></span>
+            <small class="brand-tagline">You Play. We Capture.</small>
+          </span>
         </a>
         <button class="icon-btn sidebar-toggle-btn" style="width: 30px; height: 30px; display: none;"><i class="fa-solid fa-xmark"></i></button>
       </div>
@@ -585,7 +588,7 @@
               <form onsubmit="event.preventDefault(); showToast('Settings saved!', 'success');" style="margin-top:1rem;">
                 <div class="form-group"><label class="form-label">Display Name</label><input class="form-control" value="Marcus Vance"></div>
                 <div class="form-group"><label class="form-label">Email</label><input class="form-control" value="marcus.vance@oakridge.edu"></div>
-                <div class="form-group"><label class="form-label">New Password</label><input type="password" class="form-control" placeholder="••••••••"></div>
+                <div class="form-group"><label class="form-label">New Password</label><div class="password-field"><input type="password" class="form-control" placeholder="••••••••"><button type="button" class="password-toggle" title="Show password" onclick="togglePasswordVisibility(this)"><i class="fa-solid fa-eye"></i></button></div></div>
                 <div class="form-group"><label style="font-size:0.85rem;"><input type="checkbox" checked> Email me proof-ready alerts</label><br><label style="font-size:0.85rem;"><input type="checkbox" checked> SMS delivery updates</label><br><label style="font-size:0.85rem;"><input type="checkbox"> Weekly revenue summary</label></div>
                 <button class="btn btn-gold" style="width:100%;" type="submit">Save Settings</button>
               </form>

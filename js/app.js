@@ -232,8 +232,18 @@ function initFormValidation() {
   });
 }
 
-function showToast(message, type = 'info') {
-  let container = document.querySelector('.toast-container');
+/* Password visibility eye-toggle (used by inline onclick handlers) */
+function togglePasswordVisibility(btn) {
+  const input = btn.parentElement.querySelector('input');
+  if (!input) return;
+  const show = input.type === 'password';
+  input.type = show ? 'text' : 'password';
+  const icon = btn.querySelector('i');
+  if (icon) icon.className = show ? 'fa-solid fa-eye-slash' : 'fa-solid fa-eye';
+  btn.setAttribute('title', show ? 'Hide password' : 'Show password');
+}
+
+function showToast(message, type = 'info') {  let container = document.querySelector('.toast-container');
   if (!container) {
     container = document.createElement('div');
     container.className = 'toast-container';

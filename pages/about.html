@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="../css/styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
-<body>
+<body class="page-about">
 
   <!-- Sticky Navbar -->
   <nav class="navbar">
@@ -139,8 +139,12 @@
           </div>
         </div>
 
-        <div>
-          <img src="https://i.pinimg.com/736x/8d/73/48/8d73486e599eefb5feadaa619e84855e.jpg" alt="Stat and Snap studio story" style="border-radius: var(--radius-lg); box-shadow: var(--shadow-lg); width: 100%; object-fit: cover;">
+        <div class="about-media">
+          <img src="https://i.pinimg.com/736x/8d/73/48/8d73486e599eefb5feadaa619e84855e.jpg" alt="Stat and Snap studio story">
+          <div class="about-badge">
+            <strong>14+</strong>
+            <span>Years behind<br>the lens</span>
+          </div>
         </div>
       </div>
     </div>
@@ -155,7 +159,7 @@
         <p class="section-desc">Passionate media creators dedicated to capturing peak athletic performance.</p>
       </div>
 
-      <div class="grid-3">
+      <div class="grid-3 about-team">
         <div class="card-glass text-center">
           <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=600&auto=format&fit=crop" alt="Elena Rostova" style="width: 140px; height: 140px; border-radius: var(--radius-full); object-fit: cover; margin: 0 auto 1.25rem auto; border: 3px solid var(--color-gold);">
           <h3 style="font-size: 1.25rem;">Elena Rostova</h3>
@@ -220,7 +224,7 @@
         <p class="section-desc">Protecting student identity and privacy is our top priority on every photo assignment.</p>
       </div>
 
-      <div class="grid-4">
+      <div class="grid-4 about-safe">
         <div class="card-glass text-center">
           <i class="fa-solid fa-fingerprint" style="font-size: 2.2rem; color: var(--color-gold); margin-bottom: 1rem;"></i>
           <h4 style="font-size: 1.1rem; margin-bottom: 0.5rem;">Background Checked</h4>
@@ -249,13 +253,18 @@
   </section>
 
   <!-- SECTION 6: CONSULTATION CTA -->
-  <section class="section-padding" style="background: var(--color-navy-dark);">
+  <section class="section-padding about-cta" style="background: var(--color-navy-dark);">
     <div class="container text-center">
+      <span class="section-tag"><i class="fa-solid fa-handshake"></i> Let's Work Together</span>
       <h2 class="section-title" style="color: #FFFFFF;">Want Stat & Snap At Your School Next Season?</h2>
       <p class="section-desc" style="color: var(--color-slate-light); margin: 0 auto 2rem auto;">
         Let’s discuss your athletic calendar and build a custom package for your teams.
       </p>
-      <a href="contact.html" class="btn btn-lg btn-gold"><i class="fa-solid fa-paper-plane"></i> Contact Our Studio</a>
+      <div class="flex-center gap-3" style="flex-wrap: wrap;">
+        <a href="contact.html" class="btn btn-lg btn-gold"><i class="fa-solid fa-paper-plane"></i> Contact Our Studio</a>
+        <a href="services.html" class="btn btn-lg btn-outline"><i class="fa-solid fa-list-check"></i> Browse Services</a>
+      </div>
+      <p class="about-cta-note"><i class="fa-solid fa-clock"></i> Replies within 4 business hours — no obligation quote</p>
     </div>
   </section>
 

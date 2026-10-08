@@ -14,6 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initScrollAnimations();
   initBackToTop();
   initBlogViewMore();
+  initStatCounters();
 });
 
 /* ==========================================================================
@@ -331,6 +332,52 @@ function initBlogViewMore() {
   });
 
   render();
+}
+
+/* ==========================================================================
+   9. Animated Stat Counters (data-count / data-suffix / data-decimals / data-comma)
+   ========================================================================== */
+function initStatCounters() {
+  const nums = document.querySelectorAll('.stat-number[data-count]');
+  if (!nums.length || !('IntersectionObserver' in window)) return;
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  function format(el, value) {
+    const decimals = parseInt(el.dataset.decimals || '0', 10);
+    let text = value.toFixed(decimals);
+    if (el.dataset.comma) {
+      text = Number(text).toLocaleString('en-US', { minimumFractionDigits: decimals, maximumFractionDigits: decimals });
+    }
+    return text + (el.dataset.suffix || '');
+  }
+
+  function run(el) {
+    const target = parseFloat(el.dataset.count);
+    if (reduceMotion || !(target > 0)) {
+      el.textContent = format(el, target);
+      return;
+    }
+    const duration = 1400;
+    const start = performance.now();
+    function tick(now) {
+      const progress = Math.min((now - start) / duration, 1);
+      const eased = 1 - Math.pow(1 - progress, 3);
+      el.textContent = format(el, target * eased);
+      if (progress < 1) requestAnimationFrame(tick);
+    }
+    requestAnimationFrame(tick);
+  }
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        run(entry.target);
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.4 });
+
+  nums.forEach((n) => observer.observe(n));
 }
 
 function initBackToTop() {  const btn = document.querySelector('.back-to-top');

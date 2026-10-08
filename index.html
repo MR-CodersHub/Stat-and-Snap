@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="css/styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
-<body>
+<body class="page-home">
 
   <!-- Sticky Navbar -->
   <nav class="navbar">
@@ -107,8 +107,8 @@
   </div>
 
   <!-- SECTION 1: HERO SECTION -->
-  <section class="hero-section">
-    <div class="hero-bg-overlay" style="background-image: url('https://images.unsplash.com/photo-1508098682722-e99c43a406b2?q=80&w=1600&auto=format&fit=crop');"></div>
+  <section class="hero-section home-hero">
+    <div class="hero-bg-overlay" style="background-image: url('https://i.pinimg.com/736x/9b/8c/1a/9b8c1ac482aa3fb8cc15578384998aa6.jpg');"></div>
     <div class="hero-gradient"></div>
     <div class="container hero-content">
       <div class="grid-2" style="align-items: center;">
@@ -129,11 +129,16 @@
               <i class="fa-solid fa-play"></i> Explore Services
             </a>
           </div>
+          <div class="home-trust">
+            <span><i class="fa-solid fa-star"></i> 4.9/5 parent rating</span>
+            <span><i class="fa-solid fa-tags"></i> PSPA sync included</span>
+            <span><i class="fa-solid fa-truck-fast"></i> 48-hr proofs</span>
+          </div>
         </div>
 
         <div style="position: relative; padding-bottom: 0.5rem;">
-          <div class="card-glass gold-border" style="padding: 1rem; border-radius: var(--radius-lg); overflow: hidden;">
-            <img src="https://i.pinimg.com/736x/71/4b/cc/714bccad769f23b3a64f5e13e35ed8b0.jpg" alt="High school basketball team portrait" style="border-radius: var(--radius-md); width: 100%; display: block; object-fit: cover;">
+          <div class="card-glass gold-border home-hero-card" style="padding: 1rem; border-radius: var(--radius-lg); overflow: hidden;">
+            <img src="https://i.pinimg.com/736x/71/4b/cc/714bccad769f23b3a64f5e13e35ed8b0.jpg" alt="High school basketball team portrait" class="hero-photo" style="border-radius: var(--radius-md); width: 100%; display: block; object-fit: cover;">
           </div>
           <div style="position: relative; z-index: 2; margin: -2.2rem 1.25rem 0 1.25rem; background: var(--bg-surface); padding: 1rem 1.5rem; border-radius: var(--radius-md); border: 1px solid var(--border-gold); box-shadow: var(--shadow-lg);" class="flex-align gap-2">
             <i class="fa-solid fa-medal" style="color: var(--color-gold); font-size: 1.8rem; flex-shrink: 0;"></i>
@@ -146,21 +151,21 @@
       </div>
 
       <!-- Stats Bar -->
-      <div class="stats-grid" style="margin-top: 4rem;">
+      <div class="stats-grid home-stats" style="margin-top: 4rem;">
         <div class="stat-item">
-          <div class="stat-number">120+</div>
+          <div class="stat-number" data-count="120" data-suffix="+">120+</div>
           <div class="stat-label">Schools & Clubs</div>
         </div>
         <div class="stat-item">
-          <div class="stat-number">45,000+</div>
+          <div class="stat-number" data-count="45000" data-suffix="+" data-comma="1">45,000+</div>
           <div class="stat-label">Athletes Photographed</div>
         </div>
         <div class="stat-item">
-          <div class="stat-number">99.4%</div>
+          <div class="stat-number" data-count="99.4" data-suffix="%" data-decimals="1">99.4%</div>
           <div class="stat-label">On-Time Delivery</div>
         </div>
         <div class="stat-item">
-          <div class="stat-number">150+</div>
+          <div class="stat-number" data-count="150" data-suffix="+">150+</div>
           <div class="stat-label">Custom Yearbooks</div>
         </div>
       </div>
@@ -206,7 +211,7 @@
         <p class="section-desc">Posed precision, seamless roster organization, and custom banner displays for your entire athletic program.</p>
       </div>
 
-      <div class="grid-3">
+      <div class="grid-3 home-team">
         <div class="card-glass">
           <img src="https://i.pinimg.com/1200x/d5/91/32/d59132fcdb3142c9bbff298066746c19.jpg" alt="Varsity Roster Banners" style="border-radius: var(--radius-md); margin-bottom: 1.25rem; width: 100%; height: 240px; object-fit: cover;">
           <h3 style="font-size: 1.3rem; margin-bottom: 0.5rem;">Varsity Roster Banners</h3>
@@ -370,7 +375,7 @@
         <p class="section-desc">A frictionless 4-step process designed to minimize class or practice disruption.</p>
       </div>
 
-      <div class="grid-4">
+      <div class="grid-4 home-process">
         <div class="process-step">
           <div class="process-number">1</div>
           <h3 style="font-size: 1.15rem; margin-bottom: 0.5rem;">Pre-Day Setup</h3>
@@ -406,7 +411,7 @@
         <h2 class="section-title">Trusted By Athletic Directors & Parents</h2>
       </div>
 
-      <div class="grid-3">
+      <div class="grid-3 home-quotes">
         <div class="card-glass">
           <div style="color: var(--color-gold); margin-bottom: 1rem;">
             <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
@@ -459,16 +464,21 @@
   </section>
 
   <!-- SECTION 8: FINAL CTA -->
-  <section class="section-padding" style="background: linear-gradient(135deg, var(--color-navy), #1A273D); border-top: 1px solid var(--border-gold);">
+  <section class="section-padding home-cta" style="background: linear-gradient(135deg, var(--color-navy), #1A273D); border-top: 1px solid var(--border-gold);">
     <div class="container text-center">
       <span class="section-tag"><i class="fa-solid fa-rocket"></i> Reserve Your Season</span>
-      <h2 class="section-title" style="color: #FFFFFF; font-size: 3rem;">Ready To Upgrade Your School's Sports Media?</h2>
+      <h2 class="section-title home-cta-title" style="color: #FFFFFF;">Ready To Upgrade Your School's Sports Media?</h2>
       <p class="section-desc" style="color: var(--color-slate-light); margin: 0 auto 2.5rem auto;">
         Slots for Fall & Winter athletic photo days fill up quickly. Lock in your dates today with zero upfront booking fees.
       </p>
       <div class="flex-center gap-3" style="flex-wrap: wrap;">
         <a href="pages/contact.html" class="btn btn-lg btn-gold"><i class="fa-solid fa-calendar-plus"></i> Schedule Free Consultation</a>
         <a href="pages/dashboard.html" class="btn btn-lg btn-outline"><i class="fa-solid fa-chart-line"></i> View Client Demo Portal</a>
+      </div>
+      <div class="home-cta-note">
+        <span><i class="fa-solid fa-check"></i> Zero upfront fees</span>
+        <span><i class="fa-solid fa-check"></i> 48-hour parent proofs</span>
+        <span><i class="fa-solid fa-check"></i> Free retake day</span>
       </div>
     </div>
   </section>

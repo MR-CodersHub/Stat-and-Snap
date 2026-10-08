@@ -94,10 +94,9 @@
     }
     function handlePortalLogin(e) {
       e.preventDefault();
-      const dest = loginRole === 'school' ? 'dashboard.html' : 'admin.html';
-      const msg = loginRole === 'school' ? 'Logged in! Redirecting to School Dashboard...' : 'Welcome Admin! Redirecting to Studio Portal...';
+      const msg = loginRole === 'school' ? 'Logged in! Redirecting to homepage...' : 'Welcome Admin! Redirecting to homepage...';
       showToast(msg, 'success');
-      setTimeout(() => window.location.href = dest, 1100);
+      setTimeout(() => window.location.href = '../index.html', 1100);
     }
   </script>
 </body>

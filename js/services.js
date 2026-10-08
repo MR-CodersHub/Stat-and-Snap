@@ -10,7 +10,7 @@ const SERVICES = [
     title: "Individual Athlete Portraits",
     excerpt: "Dramatic multi-light studio portraits with stadium backgrounds, smoke FX, and digital poster effects.",
     image: "https://i.pinimg.com/736x/85/cf/ac/85cfacfe0870f89a15524f31cb9d83fe.jpg",
-    hero: "https://i.pinimg.com/736x/d2/a1/a2/d2a1a2ae273484e74fd11aaa02672385.jpg",
+    hero: "https://i.pinimg.com/736x/a2/dc/ed/a2dced51b0e4d3343428a569971d461b.jpg",
     duration: "2–3 min / athlete",
     price: "From $35 / athlete",
     icon: "fa-user-ninja",
@@ -44,7 +44,7 @@ const SERVICES = [
     title: "Team & Group Photography",
     excerpt: "Symmetrical team lineups, composite panoramas, and gymnasium vinyl banners for the whole program.",
     image: "https://images.unsplash.com/photo-1526232761682-d26e03ac148e?q=80&w=800&auto=format&fit=crop",
-    hero: "https://i.pinimg.com/1200x/d5/91/32/d59132fcdb3142c9bbff298066746c19.jpg",
+    hero: "https://i.pinimg.com/736x/a2/dc/ed/a2dced51b0e4d3343428a569971d461b.jpg",
     duration: "15 min / team",
     price: "From $349 / team",
     icon: "fa-people-group",
@@ -78,7 +78,7 @@ const SERVICES = [
     title: "Action Game Coverage",
     excerpt: "High-speed sideline photography for Friday night lights, tournaments, and rivalry games.",
     image: "https://i.pinimg.com/1200x/b2/e5/70/b2e570ed9283e5cccd89dfa565efcaf0.jpg",
-    hero: "https://images.unsplash.com/photo-1508098682722-e99c43a406b2?q=80&w=1600&auto=format&fit=crop",
+    hero: "https://i.pinimg.com/736x/a2/dc/ed/a2dced51b0e4d3343428a569971d461b.jpg",
     duration: "Full game (2–3 hrs)",
     price: "From $499 / game",
     icon: "fa-bolt",
@@ -112,7 +112,7 @@ const SERVICES = [
     title: "Yearbook Photography & Sync",
     excerpt: "PSPA-compliant index exports, roster linking, and direct portal sync for advisors.",
     image: "https://i.pinimg.com/1200x/7b/ce/4b/7bce4b41b875c4c7d423a672801bf01f.jpg",
-    hero: "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?q=80&w=1600&auto=format&fit=crop",
+    hero: "https://i.pinimg.com/736x/a2/dc/ed/a2dced51b0e4d3343428a569971d461b.jpg",
     duration: "Season-long support",
     price: "Included in Varsity+",
     icon: "fa-book-open",
@@ -146,7 +146,7 @@ const SERVICES = [
     title: "Senior Athlete Portraits",
     excerpt: "Tribute sessions with varsity jackets, gear, trophies, and gym-wall banner art.",
     image: "https://i.pinimg.com/736x/6e/90/2f/6e902f225fb775185d5fcd5809545ab7.jpg",
-    hero: "https://i.pinimg.com/1200x/f5/d1/71/f5d171454f557a1d2420567e409fb9d8.jpg",
+    hero: "https://i.pinimg.com/736x/a2/dc/ed/a2dced51b0e4d3343428a569971d461b.jpg",
     duration: "20 min / senior",
     price: "From $89 / senior",
     icon: "fa-medal",
@@ -180,7 +180,7 @@ const SERVICES = [
     title: "School Sports Events & Galas",
     excerpt: "Banquets, signing days, championships, and athletic galas with red-carpet polish.",
     image: "https://i.pinimg.com/1200x/cf/8c/91/cf8c91f7ffcabc8dc21c51a1bc9156e2.jpg",
-    hero: "https://images.unsplash.com/photo-1511578314322-379afb476865?q=80&w=1600&auto=format&fit=crop",
+    hero: "https://i.pinimg.com/736x/a2/dc/ed/a2dced51b0e4d3343428a569971d461b.jpg",
     duration: "Half / full day",
     price: "From $749 / event",
     icon: "fa-champagne-glasses",
@@ -214,7 +214,7 @@ const SERVICES = [
     title: "Photo Retake & Makeup Days",
     excerpt: "Dedicated backup dates guaranteeing 100% team inclusion — free with every booking.",
     image: "https://i.pinimg.com/1200x/11/d4/23/11d423fe96193569a5849c988430af92.jpg",
-    hero: "https://images.unsplash.com/photo-1526232761682-d26e03ac148e?q=80&w=1600&auto=format&fit=crop",
+    hero: "https://i.pinimg.com/736x/a2/dc/ed/a2dced51b0e4d3343428a569971d461b.jpg",
     duration: "Within 14 days",
     price: "Free with booking",
     icon: "fa-rotate-left",
@@ -248,7 +248,7 @@ const SERVICES = [
     title: "Custom School Bulk Contracts",
     excerpt: "Season-long athletic department retainers with revenue share and priority dates.",
     image: "https://i.pinimg.com/1200x/fb/e2/40/fbe240a95b3f54be1e9a363c65d5b54c.jpg",
-    hero: "https://images.unsplash.com/photo-1431324155629-1a6deb1dec8d?q=80&w=1600&auto=format&fit=crop",
+    hero: "https://i.pinimg.com/736x/a2/dc/ed/a2dced51b0e4d3343428a569971d461b.jpg",
     duration: "Full season / year",
     price: "Custom + 10% share",
     icon: "fa-handshake",
@@ -282,7 +282,7 @@ const SERVICES = [
     title: "Tournament & Night-Game Coverage",
     excerpt: "Multi-day storytelling and floodlit playoff coverage for championship runs.",
     image: "https://images.unsplash.com/photo-1431324155629-1a6deb1dec8d?q=80&w=800&auto=format&fit=crop",
-    hero: "https://i.pinimg.com/736x/ba/3d/25/ba3d250059d112a852a2b1767d2297c5.jpg",
+    hero: "https://i.pinimg.com/736x/a2/dc/ed/a2dced51b0e4d3343428a569971d461b.jpg",
     duration: "Multi-day",
     price: "From $899 / weekend",
     icon: "fa-trophy",
@@ -332,7 +332,8 @@ function renderService() {
   if (heroBg) heroBg.style.backgroundImage = "url('" + svc.hero + "')";
   const set = (id, text) => { const el = document.getElementById(id); if (el) el.textContent = text; };
   set("serviceCrumb", svc.title);
-  set("serviceTag", svc.tag);
+  const tagEl = document.getElementById("serviceTag");
+  if (tagEl) tagEl.innerHTML = '<i class="fa-solid fa-star"></i> ' + escS(svc.tag);
   set("serviceTitle", svc.title);
   set("serviceDesc", svc.excerpt);
   set("serviceDuration", svc.duration);
@@ -348,16 +349,16 @@ function renderService() {
   const inc = document.getElementById("includesGrid");
   if (inc) {
     inc.innerHTML = svc.includes.map((f) =>
-      '<div class="card-glass"><i class="fa-solid ' + f.icon + '" style="font-size: 2rem; color: ' + f.color + '; margin-bottom: 1rem;"></i>'
-      + '<h3>' + escS(f.t) + '</h3><p style="font-size: 0.9rem; color: var(--text-muted); margin-top: 0.5rem;">' + escS(f.d) + '</p></div>'
+      '<div class="card-glass svc-d-inc"><span class="svc-d-inc-icon"><i class="fa-solid ' + f.icon + '"></i></span>'
+      + '<h3>' + escS(f.t) + '</h3><p>' + escS(f.d) + '</p></div>'
     ).join("");
   }
 
   const proc = document.getElementById("processGrid");
   if (proc) {
     proc.innerHTML = svc.steps.map((s, i) =>
-      '<div class="process-step"><div class="process-number">' + (i + 1) + '</div><h4>' + escS(s.t) + '</h4>'
-      + '<p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 0.5rem;">' + escS(s.d) + '</p></div>'
+      '<div class="process-step svc-d-step"><div class="process-number">' + (i + 1) + '</div><h4>' + escS(s.t) + '</h4>'
+      + '<p>' + escS(s.d) + '</p></div>'
     ).join("");
   }
 
@@ -390,10 +391,10 @@ function renderService() {
   if (rel) {
     const others = SERVICES.filter((s) => s.slug !== svc.slug).slice(0, 3);
     rel.innerHTML = others.map((s) =>
-      '<div class="card-glass"><img src="' + s.image + '" alt="' + escS(s.title) + '" style="border-radius: var(--radius-md); margin-bottom: 1rem; width: 100%; height: 160px; object-fit: cover;">'
-      + '<span class="section-tag" style="font-size: 0.7rem; padding: 0.25rem 0.7rem;">' + escS(s.tag) + '</span>'
-      + '<h3 style="font-size: 1.1rem; margin: 0.6rem 0 0.4rem 0;">' + escS(s.title) + '</h3>'
-      + '<p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 1rem;">' + escS(s.excerpt) + '</p>'
+      '<div class="card-glass svc-d-rel"><div class="svc-d-rel-img"><img src="' + s.image + '" alt="' + escS(s.title) + '" loading="lazy">'
+      + '<span class="section-tag svc-d-rel-tag">' + escS(s.tag) + '</span></div>'
+      + '<h3>' + escS(s.title) + '</h3>'
+      + '<p>' + escS(s.excerpt) + '</p>'
       + '<a href="service-details.html?service=' + s.slug + '" class="btn btn-sm btn-outline">Explore Details <i class="fa-solid fa-chevron-right"></i></a></div>'
     ).join("");
   }

@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="../css/styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
-<body>
+<body class="page-blog">
 
   <!-- Sticky Navbar -->
   <nav class="navbar">
@@ -103,47 +103,82 @@
     </div>
   </div>
 
-  <!-- SECTION 1: BLOG HERO -->
-  <section class="hero-section" style="min-height: 50vh;">
+  <!-- SECTION 1: BLOG HERO (PREMIUM) -->
+  <section class="hero-section bl-hero" style="min-height: 56vh;">
     <div class="hero-bg-overlay" style="background-image: url('https://i.pinimg.com/1200x/44/b4/85/44b48547e9b9bc11fc239b28ff127185.jpg');"></div>
     <div class="hero-gradient"></div>
-    <div class="container hero-content text-center">
-      <span class="section-tag"><i class="fa-solid fa-newspaper"></i> Athletics Media Insights</span>
-      <h1 class="hero-title">The Athletics Editorial Blog</h1>
-      <p class="hero-desc" style="margin: 0 auto;">Expert guides for Athletic Directors, coaches, yearbook advisors, and sports parents.</p>
+    <div class="container hero-content">
+      <div class="bl-hero-grid">
+        <div>
+          <div class="bl-crumb"><a href="../index.html">Home</a><i class="fa-solid fa-chevron-right"></i><span>Blog</span></div>
+          <span class="section-tag"><i class="fa-solid fa-newspaper"></i> Athletics Media Insights</span>
+          <h1 class="hero-title">The Athletics <span class="highlight">Editorial Blog</span></h1>
+          <p class="hero-desc">Expert guides for Athletic Directors, coaches, yearbook advisors, and sports parents.</p>
+          <div class="flex-align gap-3 bl-hero-cta" style="flex-wrap: wrap;">
+            <a href="#tab-all-posts" class="btn btn-lg btn-gold"><i class="fa-solid fa-layer-group"></i> Browse Articles</a>
+            <a href="contact.html" class="btn btn-lg btn-outline"><i class="fa-solid fa-calendar-check"></i> Book Photo Day</a>
+          </div>
+        </div>
+        <div class="bl-hero-card">
+          <div class="card-glass gold-border bl-hero-panel">
+            <div class="bl-hero-panel-head">
+              <span class="badge badge-approval"><i class="fa-solid fa-fire"></i> Featured</span>
+              <span class="bl-hero-panel-no">13 Guides</span>
+            </div>
+            <strong>10 Essential Photo Day Tips</strong>
+            <span class="bl-hero-panel-sub">The AD playbook — staggered slots, QR rosters, retake guarantees.</span>
+            <a href="blog-details.html?post=photo-day-tips-essential" class="btn btn-sm btn-gold">Read Featured <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="bl-hero-stats">
+        <div><strong>13</strong><span>Expert guides</span></div>
+        <div><strong>5</strong><span>Topic tracks</span></div>
+        <div><strong>48<small>hr</small></strong><span>Proof promise</span></div>
+        <div><strong>Monthly</strong><span>New playbooks</span></div>
+      </div>
     </div>
   </section>
 
-  <!-- SECTION 2: FEATURED LEAD ARTICLE HERO CARD -->
-  <section class="section-padding" style="background: var(--bg-main);">
+  <!-- SECTION 2: FEATURED LEAD ARTICLE (PREMIUM) -->
+  <section class="section-padding bl-featured" style="background: var(--bg-main);">
     <div class="container">
-      <div class="card-glass gold-border" style="padding: 0; overflow: hidden; display: grid; grid-template-columns: 1fr 1fr;">
-        <div style="height: 100%; min-height: 350px;">
-          <img src="https://i.pinimg.com/1200x/66/39/3c/66393c083acd8bd4885f33efb50bed35.jpg" alt="Featured Football Article" style="width: 100%; height: 100%; object-fit: cover;">
+      <div class="card-glass gold-border bl-feature-card">
+        <div class="bl-feature-media">
+          <img src="https://i.pinimg.com/1200x/66/39/3c/66393c083acd8bd4885f33efb50bed35.jpg" alt="Featured Football Article">
+          <span class="badge badge-approval bl-feature-badge"><i class="fa-solid fa-crown"></i> Featured Article</span>
         </div>
-        <div style="padding: 2.5rem; display: flex; flex-direction: column; justify-content: center;">
+        <div class="bl-feature-body">
           <div class="blog-card-meta">
-            <span class="badge badge-approval">Featured Article</span>
             <span><i class="fa-regular fa-calendar"></i> October 2, 2026</span>
             <span><i class="fa-regular fa-clock"></i> 6 min read</span>
+            <span><i class="fa-regular fa-user"></i> Elena Rostova</span>
           </div>
-          <h2 style="font-size: 2rem; margin: 0.75rem 0 1rem 0;">10 Essential Photo Day Tips Every Athletic Director Must Know</h2>
-          <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 1.5rem;">
+          <h2>10 Essential Photo Day Tips Every Athletic Director Must Know</h2>
+          <p>
             Discover how top high school athletic departments streamline team photos, prevent roster bottlenecks, and eliminate parent order headaches.
           </p>
-          <div>
+          <div class="bl-feature-cta">
             <a href="blog-details.html?post=photo-day-tips-essential" class="btn btn-gold">Read Full Article <i class="fa-solid fa-arrow-right"></i></a>
+            <span class="bl-feature-note"><i class="fa-solid fa-bolt"></i> 6-minute AD playbook</span>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- SECTION 3: CATEGORY FILTER TABS & SEARCH UI -->
-  <section class="section-padding" style="background: var(--bg-surface);" data-tab-container>
+  <!-- SECTION 3: FILTER TOOLBAR + ARTICLES (PREMIUM) -->
+  <section class="section-padding bl-browse" style="background: var(--bg-surface);" data-tab-container>
     <div class="container">
-      <div class="flex-between" style="flex-wrap: wrap; gap: 1.5rem; margin-bottom: 2.5rem;">
-        <div class="tabs-nav" style="margin-bottom: 0; justify-content: flex-start;">
+      <div class="bl-section-head">
+        <div>
+          <span class="section-tag"><i class="fa-solid fa-layer-group"></i> Browse By Topic</span>
+          <h2 class="section-title">Every Guide, One Click Away</h2>
+        </div>
+        <p class="section-desc bl-section-sub">Filter by track or search — each card opens its own full article.</p>
+      </div>
+      <div class="bl-toolbar">
+        <div class="tabs-nav bl-tabs">
           <button class="tab-btn active" data-tab="tab-all-posts">All Posts</button>
           <button class="tab-btn" data-tab="tab-tips">Photo Day Tips</button>
           <button class="tab-btn" data-tab="tab-yearbook">Yearbook Planning</button>
@@ -151,9 +186,9 @@
           <button class="tab-btn" data-tab="tab-seniors">Senior Spotlights</button>
         </div>
 
-        <div style="position: relative; min-width: 280px;">
-          <input type="text" class="form-control" placeholder="Search sports articles..." style="padding-left: 2.5rem;">
-          <i class="fa-solid fa-magnifying-glass" style="position: absolute; left: 1rem; top: 50%; transform: translateY(-50%); color: var(--text-muted);"></i>
+        <div class="bl-search">
+          <input type="text" class="form-control" placeholder="Search sports articles...">
+          <i class="fa-solid fa-magnifying-glass"></i>
         </div>
       </div>
 
@@ -387,6 +422,20 @@
               <a href="blog-details.html?post=bad-weather-plan" class="btn btn-sm btn-secondary">Read Article</a>
             </div>
           </article>
+          <article class="blog-card">
+            <div class="blog-card-img">
+              <img src="https://i.pinimg.com/1200x/66/39/3c/66393c083acd8bd4885f33efb50bed35.jpg" alt="Essential photo day tips">
+            </div>
+            <div class="blog-card-body">
+              <div class="blog-card-meta">
+                <span>Photo Day Tips</span>
+                <span>Oct 02, 2026</span>
+              </div>
+              <h3 class="blog-card-title"><a href="blog-details.html?post=photo-day-tips-essential">10 Essential Photo Day Tips Every Athletic Director Must Know</a></h3>
+              <p style="font-size: 0.88rem; color: var(--text-muted); margin-bottom: 1.25rem;">Staggered slots, QR rosters, and retake guarantees — the complete AD playbook.</p>
+              <a href="blog-details.html?post=photo-day-tips-essential" class="btn btn-sm btn-secondary">Read Article</a>
+            </div>
+          </article>
         </div>
       </div>
 
@@ -418,6 +467,20 @@
               <h3 class="blog-card-title"><a href="blog-details.html?post=dedication-pages">Senior Dedication Pages: A New Revenue Line for Yearbook Programs</a></h3>
               <p style="font-size: 0.88rem; color: var(--text-muted); margin-bottom: 1.25rem;">Pricing, templates, and parent messaging that fill dedication pages every year.</p>
               <a href="blog-details.html?post=dedication-pages" class="btn btn-sm btn-secondary">Read Article</a>
+            </div>
+          </article>
+          <article class="blog-card">
+            <div class="blog-card-img">
+              <img src="https://i.pinimg.com/736x/33/60/24/3360244063f78dee8cceb8e2892dd980.jpg" alt="PSPA roster tagging">
+            </div>
+            <div class="blog-card-body">
+              <div class="blog-card-meta">
+                <span>Yearbook Planning</span>
+                <span>Sep 20, 2026</span>
+              </div>
+              <h3 class="blog-card-title"><a href="blog-details.html?post=pspa-tagging">Mastering PSPA Roster Tagging For Seamless Yearbook Publication</a></h3>
+              <p style="font-size: 0.88rem; color: var(--text-muted); margin-bottom: 1.25rem;">A step-by-step checklist for yearbook advisors to avoid mislabeled student names.</p>
+              <a href="blog-details.html?post=pspa-tagging" class="btn btn-sm btn-secondary">Read Article</a>
             </div>
           </article>
         </div>
@@ -453,6 +516,20 @@
               <a href="blog-details.html?post=retouch-day" class="btn btn-sm btn-secondary">Read Article</a>
             </div>
           </article>
+          <article class="blog-card">
+            <div class="blog-card-img">
+              <img src="https://i.pinimg.com/1200x/07/57/8f/07578fbafb8bc6704ae97062143bf817.jpg" alt="Aquatic splash photography">
+            </div>
+            <div class="blog-card-body">
+              <div class="blog-card-meta">
+                <span>Behind The Scenes</span>
+                <span>Sep 05, 2026</span>
+              </div>
+              <h3 class="blog-card-title"><a href="blog-details.html?post=aquatic-splash">Capturing High-Speed Water Splash Action In Aquatic Photography</a></h3>
+              <p style="font-size: 0.88rem; color: var(--text-muted); margin-bottom: 1.25rem;">Camera settings and lens choice for indoor pool lighting challenges.</p>
+              <a href="blog-details.html?post=aquatic-splash" class="btn btn-sm btn-secondary">Read Article</a>
+            </div>
+          </article>
         </div>
       </div>
 
@@ -486,23 +563,49 @@
               <a href="blog-details.html?post=dedication-pages" class="btn btn-sm btn-secondary">Read Article</a>
             </div>
           </article>
+          <article class="blog-card">
+            <div class="blog-card-img">
+              <img src="https://i.pinimg.com/736x/8b/60/25/8b6025ececbc38fb558873e322113f38.jpg" alt="Senior posing guide">
+            </div>
+            <div class="blog-card-body">
+              <div class="blog-card-meta">
+                <span>Senior Spotlights</span>
+                <span>Aug 29, 2026</span>
+              </div>
+              <h3 class="blog-card-title"><a href="blog-details.html?post=posing-guide">Posing Guide: 5 Dynamic Poses Every Student Athlete Should Master</a></h3>
+              <p style="font-size: 0.88rem; color: var(--text-muted); margin-bottom: 1.25rem;">Simple posture adjustments that dramatically improve senior spotlight portraits.</p>
+              <a href="blog-details.html?post=posing-guide" class="btn btn-sm btn-secondary">Read Article</a>
+            </div>
+          </article>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- SECTION 5: NEWSLETTER CTA -->
-  <section class="section-padding" style="background: var(--color-navy-dark);">
-    <div class="container text-center" style="max-width: 650px;">
-      <span class="section-tag"><i class="fa-regular fa-paper-plane"></i> Stay Updated</span>
-      <h2 class="section-title" style="color: #FFFFFF;">Get Photo Day Guides Delivered Monthly</h2>
-      <p class="section-desc" style="color: var(--color-slate-light); margin-bottom: 2rem;">
-        Subscribe to our Athletic Director newsletter for seasonal planning checklists and media tips.
-      </p>
-      <form data-validate data-success="Thank you for subscribing to Stat & Snap Insights!" class="flex-center gap-2" style="flex-wrap: wrap;">
-        <input type="email" class="form-control" placeholder="Enter your school email..." required style="max-width: 380px;">
-        <button type="submit" class="btn btn-gold">Subscribe Free</button>
-      </form>
+  <!-- SECTION 5: NEWSLETTER CTA (PREMIUM) -->
+  <section class="section-padding bl-news" style="background: var(--color-navy-dark);">
+    <div class="container bl-news-grid">
+      <div>
+        <span class="section-tag"><i class="fa-regular fa-paper-plane"></i> Stay Updated</span>
+        <h2 class="section-title" style="color: #FFFFFF;">Get Photo Day Guides Delivered Monthly</h2>
+        <p class="section-desc" style="color: var(--color-slate-light);">
+          Seasonal planning checklists and media tips for ADs — no spam, unsubscribe anytime.
+        </p>
+        <ul class="bl-checks">
+          <li><i class="fa-solid fa-check"></i> 48-hour countdown checklists</li>
+          <li><i class="fa-solid fa-check"></i> Yearbook deadline calendars</li>
+          <li><i class="fa-solid fa-check"></i> Early season-slot alerts</li>
+        </ul>
+      </div>
+      <div class="card-glass bl-news-card">
+        <h3>Join 2,400+ athletic directors</h3>
+        <p>One concise email per month. Read in under 4 minutes.</p>
+        <form data-validate data-success="Thank you for subscribing to Stat & Snap Insights!" class="bl-news-form">
+          <input type="email" class="form-control" placeholder="Enter your school email..." required>
+          <button type="submit" class="btn btn-gold">Subscribe Free</button>
+        </form>
+        <span class="bl-news-note"><i class="fa-solid fa-lock"></i> School emails only · privacy respected</span>
+      </div>
     </div>
   </section>
 

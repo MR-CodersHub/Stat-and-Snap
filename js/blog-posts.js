@@ -321,11 +321,19 @@ function renderBlogPost() {
   if (heroBg) heroBg.style.backgroundImage = "url('" + post.image + "')";
   const set = (id, text) => { const el = document.getElementById(id); if (el) el.textContent = text; };
   set("postBadge", post.category);
+  set("postCrumb", post.title);
   set("postDate", post.date);
   set("postReadTime", post.readTime);
   set("postAuthor", "By " + author.name);
   set("postTitle", post.title);
   set("postExcerpt", post.excerpt);
+
+  const tags = document.getElementById("postTags");
+  if (tags) {
+    tags.innerHTML = '<span class="post-tag"><i class="fa-solid fa-tag"></i> ' + escHtml(post.category) + '</span>'
+      + '<span class="post-tag"><i class="fa-regular fa-clock"></i> ' + escHtml(post.readTime) + '</span>'
+      + '<span class="post-tag"><i class="fa-regular fa-calendar"></i> ' + escHtml(post.date) + '</span>';
+  }
 
   const takeaways = document.getElementById("postTakeaways");
   if (takeaways) {
@@ -337,20 +345,29 @@ function renderBlogPost() {
   const body = document.getElementById("postBody");
   if (body) {
     let html = "";
+    const tocTitles = [];
     post.sections.forEach((sec, i) => {
-      html += '<h2 style="font-size: 1.8rem; margin: 2rem 0 1rem 0;">' + escHtml(sec.h) + '</h2>';
-      sec.p.forEach((para) => { html += '<p style="margin-bottom: 1.5rem;">' + escHtml(para) + '</p>'; });
+      const anchor = "post-sec-" + i;
+      tocTitles.push({ anchor: anchor, title: sec.h });
+      html += '<h2 id="' + anchor + '" class="post-h2">' + escHtml(sec.h) + '</h2>';
+      sec.p.forEach((para) => { html += '<p class="post-p">' + escHtml(para) + '</p>'; });
       if (i === 0 && post.quote) {
-        html += '<blockquote style="border-left: 4px solid var(--color-crimson); padding: 1rem 1.5rem; margin: 2rem 0; font-style: italic; background: var(--bg-surface-elevated); border-radius: 0 var(--radius-md) var(--radius-md) 0;">"' + escHtml(post.quote) + '"</blockquote>';
+        html += '<blockquote class="post-quote">"' + escHtml(post.quote) + '"</blockquote>';
       }
       if (i === 1) {
-        html += '<div class="grid-2 gap-2" style="margin: 2.5rem 0;">'
-          + '<img src="' + post.image + '" alt="' + escHtml(post.title) + '" style="border-radius: var(--radius-md); width: 100%; height: 240px; object-fit: cover;">'
-          + '<img src="' + post.image + '" alt="' + escHtml(post.title) + ' detail" style="border-radius: var(--radius-md); width: 100%; height: 240px; object-fit: cover; object-position: bottom;">'
+        html += '<div class="post-imggrid">'
+          + '<img src="' + post.image + '" alt="' + escHtml(post.title) + '" loading="lazy">'
+          + '<img src="' + post.image + '" alt="' + escHtml(post.title) + ' detail" loading="lazy">'
           + '</div>';
       }
     });
     body.innerHTML = html;
+    const toc = document.getElementById("postToc");
+    if (toc) {
+      toc.innerHTML = tocTitles.map((t, i) =>
+        '<li><a href="#' + t.anchor + '"><span>' + (i + 1) + '</span> ' + escHtml(t.title) + '</a></li>'
+      ).join("");
+    }
   }
 
   const aImg = document.getElementById("postAuthorImg");
@@ -365,12 +382,26 @@ function renderBlogPost() {
     const sameCat = others.filter((p) => p.category === post.category);
     const picks = sameCat.concat(others.filter((p) => p.category !== post.category)).slice(0, 2);
     related.innerHTML = picks.map((p) =>
-      '<article class="blog-card"><div class="blog-card-img"><img src="' + p.image + '" alt="' + escHtml(p.title) + '"></div>'
-      + '<div class="blog-card-body"><div class="blog-card-meta"><span>' + escHtml(p.category) + '</span><span>' + escHtml(p.date) + '</span></div>'
+      '<article class="blog-card post-rel-card"><div class="blog-card-img"><img src="' + p.image + '" alt="' + escHtml(p.title) + '" loading="lazy">'
+      + '<span class="post-rel-badge">' + escHtml(p.category) + '</span></div>'
+      + '<div class="blog-card-body"><div class="blog-card-meta"><span><i class="fa-regular fa-calendar"></i> ' + escHtml(p.date) + '</span></div>'
       + '<h3 class="blog-card-title"><a href="blog-details.html?post=' + p.slug + '">' + escHtml(p.title) + '</a></h3>'
-      + '<p style="font-size: 0.88rem; color: var(--text-muted); margin-bottom: 1.25rem;">' + escHtml(p.excerpt) + '</p>'
-      + '<a href="blog-details.html?post=' + p.slug + '" class="btn btn-sm btn-secondary">Read Article</a></div></article>'
+      + '<p>' + escHtml(p.excerpt) + '</p>'
+      + '<a href="blog-details.html?post=' + p.slug + '" class="btn btn-sm btn-secondary">Read Article <i class="fa-solid fa-arrow-right"></i></a></div></article>'
     ).join("");
+  }
+
+  const progress = document.getElementById("postProgress");
+  if (progress && !window.__postProgressBound) {
+    window.__postProgressBound = true;
+    const onScroll = () => {
+      const h = document.documentElement;
+      const max = h.scrollHeight - h.clientHeight;
+      const pct = max > 0 ? Math.min(100, Math.max(0, (h.scrollTop / max) * 100)) : 0;
+      progress.style.width = pct + "%";
+    };
+    document.addEventListener("scroll", onScroll, { passive: true });
+    onScroll();
   }
 }
 

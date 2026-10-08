@@ -179,16 +179,20 @@ function initLightbox() {
   const modalImg = modal.querySelector('.lightbox-img');
   const closeBtn = modal.querySelector('.lightbox-close');
 
-  document.querySelectorAll('[data-lightbox]').forEach(card => {
-    card.addEventListener('click', () => {
-      const imgUrl = card.getAttribute('data-lightbox') || card.querySelector('img')?.src;
-      if (imgUrl && modalImg) {
-        modalImg.src = imgUrl;
-        modal.classList.add('active');
-        document.body.style.overflow = 'hidden';
-      }
-    });
+  // Delegated handler — works for static + dynamically injected [data-lightbox] cards
+  // (e.g. service-details gallery rendered by services.js).
+  document.addEventListener('click', (e) => {
+    const card = e.target.closest('[data-lightbox]');
+    if (!card || !modalImg) return;
+    // Only handle cards when the modal exists on this page
+    const imgUrl = card.getAttribute('data-lightbox') || card.querySelector('img')?.src;
+    if (imgUrl) {
+      modalImg.src = imgUrl;
+      modal.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
   });
+  window.__statSnapLightbox = function () { /* no-op: delegation covers dynamic cards */ };
 
   function closeLightbox() {
     modal.classList.remove('active');

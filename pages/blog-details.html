@@ -103,18 +103,22 @@
     </div>
   </div>
 
-  <!-- SECTION 1: ARTICLE HERO HEADER -->
+  <!-- SECTION 1: ARTICLE HERO HEADER (DYNAMIC — rendered per ?post=slug by blog-posts.js) -->
   <section class="hero-section" style="min-height: 60vh;">
-    <div class="hero-bg-overlay" style="background-image: url('https://images.unsplash.com/photo-1508098682722-e99c43a406b2?q=80&w=1600&auto=format&fit=crop');"></div>
+    <div id="postHeroBg" class="hero-bg-overlay" style="background-image: url('https://images.unsplash.com/photo-1508098682722-e99c43a406b2?q=80&w=1600&auto=format&fit=crop');"></div>
     <div class="hero-gradient"></div>
     <div class="container hero-content text-center" style="max-width: 900px;">
-      <div class="blog-card-meta" style="justify-content: center; margin-bottom: 1rem;">
-        <span class="badge badge-scheduled">Photo Day Tips</span>
-        <span style="color: var(--color-gold);"><i class="fa-regular fa-calendar"></i> October 2, 2026</span>
-        <span style="color: var(--color-slate-light);"><i class="fa-regular fa-user"></i> By Elena Rostova</span>
+      <div style="margin-bottom: 1rem;">
+        <a href="blog.html" class="btn btn-sm btn-outline" style="margin-bottom: 1rem;"><i class="fa-solid fa-arrow-left"></i> Back to All Articles</a>
       </div>
-      <h1 class="hero-title" style="font-size: 3rem;">10 Essential Photo Day Tips Every Athletic Director Must Know</h1>
-      <p class="hero-desc" style="margin: 0 auto;">Streamline your high school sports media schedule, maximize parent satisfaction, and guarantee 100% yearbook roster accuracy.</p>
+      <div class="blog-card-meta" style="justify-content: center; margin-bottom: 1rem;">
+        <span id="postBadge" class="badge badge-scheduled">Photo Day Tips</span>
+        <span style="color: var(--color-gold);"><i class="fa-regular fa-calendar"></i> <span id="postDate">October 2, 2026</span></span>
+        <span style="color: var(--color-slate-light);"><i class="fa-regular fa-clock"></i> <span id="postReadTime">6 min read</span></span>
+        <span style="color: var(--color-slate-light);"><i class="fa-regular fa-user"></i> <span id="postAuthor">By Elena Rostova</span></span>
+      </div>
+      <h1 id="postTitle" class="hero-title" style="font-size: 3rem;">10 Essential Photo Day Tips Every Athletic Director Must Know</h1>
+      <p id="postExcerpt" class="hero-desc" style="margin: 0 auto;">Streamline your high school sports media schedule, maximize parent satisfaction, and guarantee 100% yearbook roster accuracy.</p>
     </div>
   </section>
 
@@ -122,18 +126,18 @@
   <section class="section-padding" style="background: var(--bg-main);">
     <div class="container" style="max-width: 820px;">
       
-      <!-- Key Takeaways Box -->
+      <!-- Key Takeaways Box (DYNAMIC) -->
       <div class="card-glass gold-border" style="margin-bottom: 2.5rem; background: rgba(198, 164, 90, 0.08);">
         <h3 style="font-size: 1.15rem; color: var(--color-gold); margin-bottom: 0.75rem;"><i class="fa-solid fa-lightbulb"></i> Key Takeaways</h3>
-        <ul style="display: flex; flex-direction: column; gap: 0.5rem; font-size: 0.95rem;">
+        <ul id="postTakeaways" style="display: flex; flex-direction: column; gap: 0.5rem; font-size: 0.95rem;">
           <li><i class="fa-solid fa-angle-right" style="color: var(--color-gold); margin-right: 0.5rem;"></i> Pre-scheduling team time slots 3 weeks in advance prevents gym usage conflicts.</li>
           <li><i class="fa-solid fa-angle-right" style="color: var(--color-gold); margin-right: 0.5rem;"></i> Barcode registration eliminates manual data entry and spelling mistakes in parent galleries.</li>
           <li><i class="fa-solid fa-angle-right" style="color: var(--color-gold); margin-right: 0.5rem;"></i> Dedicated retake dates ensure absent student athletes are included in final team composite panoramas.</li>
         </ul>
       </div>
 
-      <!-- Rich Content -->
-      <div style="font-size: 1.1rem; line-height: 1.8; color: var(--text-main);">
+      <!-- Rich Content (DYNAMIC — replaced per article) -->
+      <div id="postBody" style="font-size: 1.1rem; line-height: 1.8; color: var(--text-main);">
         <p style="margin-bottom: 1.5rem;">
           High school athletic media days have evolved dramatically. Gone are the days when parents filled out paper order envelopes with cash or checks while coaches spent hours trying to line up 40 restless athletes in direct sunlight.
         </p>
@@ -174,13 +178,13 @@
         </div>
       </div>
 
-      <!-- SECTION 4: AUTHOR BIO -->
+      <!-- SECTION 4: AUTHOR BIO (DYNAMIC) -->
       <div class="card-glass flex-align gap-3" style="margin-bottom: 3.5rem;">
-        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=300&auto=format&fit=crop" alt="Elena Rostova" style="width: 80px; height: 80px; border-radius: var(--radius-full); object-fit: cover;">
+        <img id="postAuthorImg" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=300&auto=format&fit=crop" alt="Elena Rostova" style="width: 80px; height: 80px; border-radius: var(--radius-full); object-fit: cover;">
         <div>
-          <h4 style="font-size: 1.15rem; margin-bottom: 0.25rem;">Elena Rostova</h4>
-          <span style="font-size: 0.85rem; color: var(--color-gold); font-weight: 700;">Creative Director & Founder, Stat & Snap</span>
-          <p style="font-size: 0.88rem; color: var(--text-muted); margin-top: 0.5rem;">Elena has photographed over 400 high school athletic events and works directly with athletic boards on media strategy.</p>
+          <h4 id="postAuthorName" style="font-size: 1.15rem; margin-bottom: 0.25rem;">Elena Rostova</h4>
+          <span id="postAuthorRole" style="font-size: 0.85rem; color: var(--color-gold); font-weight: 700;">Creative Director & Founder, Stat & Snap</span>
+          <p id="postAuthorBio" style="font-size: 0.88rem; color: var(--text-muted); margin-top: 0.5rem;">Elena has photographed over 400 high school athletic events and works directly with athletic boards on media strategy.</p>
         </div>
       </div>
 
@@ -208,20 +212,22 @@
     </div>
   </section>
 
-  <!-- SECTION 6: RELATED ARTICLES -->
+  <!-- SECTION 6: RELATED ARTICLES (DYNAMIC — same-category first) -->
   <section class="section-padding" style="background: var(--bg-surface);">
     <div class="container">
       <div class="text-center" style="margin-bottom: 3rem;">
+        <span class="section-tag"><i class="fa-solid fa-layer-group"></i> Keep Reading</span>
         <h2 class="section-title">Related Articles</h2>
+        <p class="section-desc">More guides matched to this topic.</p>
       </div>
-      <div class="grid-2">
+      <div id="relatedGrid" class="grid-2">
         <article class="blog-card">
           <div class="blog-card-img">
             <img src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?q=80&w=800&auto=format&fit=crop" alt="Yearbook Roster">
           </div>
           <div class="blog-card-body">
-            <h3 class="blog-card-title"><a href="blog-details.html">Mastering PSPA Roster Tagging For Yearbook Publication</a></h3>
-            <a href="blog-details.html" class="btn btn-sm btn-secondary">Read Article</a>
+            <h3 class="blog-card-title"><a href="blog-details.html?post=pspa-tagging">Mastering PSPA Roster Tagging For Yearbook Publication</a></h3>
+            <a href="blog-details.html?post=pspa-tagging" class="btn btn-sm btn-secondary">Read Article</a>
           </div>
         </article>
 
@@ -230,10 +236,13 @@
             <img src="https://images.unsplash.com/photo-1566577739112-5180d4bf9390?q=80&w=800&auto=format&fit=crop" alt="Senior Banners">
           </div>
           <div class="blog-card-body">
-            <h3 class="blog-card-title"><a href="blog-details.html">Why Senior Athletic Banners Are The Ultimate High School Tradition</a></h3>
-            <a href="blog-details.html" class="btn btn-sm btn-secondary">Read Article</a>
+            <h3 class="blog-card-title"><a href="blog-details.html?post=senior-banners">Why Senior Athletic Banners Are The Ultimate High School Tradition</a></h3>
+            <a href="blog-details.html?post=senior-banners" class="btn btn-sm btn-secondary">Read Article</a>
           </div>
         </article>
+      </div>
+      <div class="text-center" style="margin-top: 2rem;">
+        <a href="blog.html" class="btn btn-outline"><i class="fa-solid fa-newspaper"></i> View All Articles</a>
       </div>
     </div>
   </section>
@@ -303,6 +312,7 @@
     </div>
   </footer>
 
+  <script src="../js/blog-posts.js"></script>
   <script src="../js/app.js"></script>
 </body>
 </html>

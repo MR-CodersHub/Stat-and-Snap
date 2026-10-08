@@ -103,50 +103,62 @@
     </div>
   </div>
 
-  <!-- SECTION 1: SERVICE HERO -->
+  <!-- SECTION 1: SERVICE HERO (DYNAMIC — rendered per ?service=slug by services.js) -->
   <section class="hero-section" style="min-height: 60vh;">
-    <div class="hero-bg-overlay" style="background-image: url('https://images.unsplash.com/photo-1508098682722-e99c43a406b2?q=80&w=1600&auto=format&fit=crop');"></div>
+    <div id="serviceHeroBg" class="hero-bg-overlay" style="background-image: url('https://images.unsplash.com/photo-1508098682722-e99c43a406b2?q=80&w=1600&auto=format&fit=crop');"></div>
     <div class="hero-gradient"></div>
     <div class="container hero-content">
-      <div style="font-size: 0.9rem; color: var(--color-gold); margin-bottom: 0.5rem; font-weight: 700;">
-        <a href="services.html">Services</a> &nbsp;/&nbsp; Varsity Team Photo Days
+      <div style="margin-bottom: 1rem;">
+        <a href="services.html" class="btn btn-sm btn-outline"><i class="fa-solid fa-arrow-left"></i> All Services</a>
       </div>
-      <h1 class="hero-title" style="font-size: 3.5rem;">Varsity Team & Individual Photo Days</h1>
-      <p class="hero-desc">High-impact mobile studio lighting, zero order envelope hassle, and guaranteed 48-hour parent galleries.</p>
+      <div style="font-size: 0.9rem; color: var(--color-gold); margin-bottom: 0.5rem; font-weight: 700;">
+        <a href="services.html">Services</a> &nbsp;/&nbsp; <span id="serviceCrumb">Varsity Team Photo Days</span>
+      </div>
+      <span id="serviceTag" class="section-tag"><i class="fa-solid fa-star"></i> Team Photo Days</span>
+      <h1 id="serviceTitle" class="hero-title" style="font-size: 3.5rem;">Varsity Team & Individual Photo Days</h1>
+      <p id="serviceDesc" class="hero-desc">High-impact mobile studio lighting, zero order envelope hassle, and guaranteed 48-hour parent galleries.</p>
+      <div class="flex-align gap-2" style="flex-wrap: wrap; margin-top: 1.5rem;">
+        <span class="badge badge-approval"><i class="fa-solid fa-clock"></i> <span id="serviceDuration">15 min / team</span></span>
+        <span class="badge badge-scheduled"><i class="fa-solid fa-tag"></i> <span id="servicePrice">From $349 / team</span></span>
+      </div>
     </div>
   </section>
 
-  <!-- SECTION 2: OVERVIEW & PHILOSOPHY -->
+  <!-- SECTION 2: OVERVIEW & PHILOSOPHY (DYNAMIC) -->
   <section class="section-padding" style="background: var(--bg-main);">
     <div class="container">
       <div class="grid-2" style="align-items: center;">
         <div>
           <span class="section-tag crimson"><i class="fa-solid fa-star"></i> Stadium Aesthetic</span>
-          <h2 class="section-title">The Ultimate High School Athletic Photo Day</h2>
-          <p class="section-desc" style="margin-bottom: 1.25rem;">
+          <h2 id="serviceOverviewTitle" class="section-title">The Ultimate High School Athletic Photo Day</h2>
+          <p id="serviceOverviewDesc" class="section-desc" style="margin-bottom: 1.25rem;">
             Our Varsity Team Photo Day service transforms your school gymnasium or stadium into a professional media day studio. We bring 4-point strobes, smoke machines, and custom background graphics to give student athletes the spotlight they deserve.
           </p>
-          <p style="color: var(--text-muted); font-size: 0.95rem;">
+          <p id="serviceOverviewExtra" style="color: var(--text-muted); font-size: 0.95rem;">
             Coaches spend zero time collecting money or forms. Athletes walk in, scan their personalized barcode, strike 3 high-energy poses, and return to practice in under 3 minutes per player.
           </p>
+          <div style="margin-top: 1.5rem;" class="flex-align gap-2">
+            <a href="contact.html" class="btn btn-gold"><i class="fa-solid fa-calendar-check"></i> Check Availability</a>
+            <a href="pricing.html" class="btn btn-outline">View Pricing</a>
+          </div>
         </div>
 
         <div>
-          <img src="https://images.unsplash.com/photo-1574680096145-d05b474e2155?q=80&w=1000&auto=format&fit=crop" alt="Athlete strength portrait" style="border-radius: var(--radius-lg); box-shadow: var(--shadow-lg); width: 100%; object-fit: cover;">
+          <img id="serviceImage" src="https://images.unsplash.com/photo-1574680096145-d05b474e2155?q=80&w=1000&auto=format&fit=crop" alt="Athlete strength portrait" style="border-radius: var(--radius-lg); box-shadow: var(--shadow-lg); width: 100%; height: 420px; max-height: 60vh; object-fit: cover; object-position: center top; display: block;">
         </div>
       </div>
     </div>
   </section>
 
-  <!-- SECTION 3: WHAT'S INCLUDED CHECKLIST -->
+  <!-- SECTION 3: WHAT'S INCLUDED CHECKLIST (DYNAMIC) -->
   <section class="section-padding" style="background: var(--bg-surface);">
     <div class="container">
       <div class="text-center" style="margin-bottom: 3.5rem;">
         <span class="section-tag"><i class="fa-solid fa-box-open"></i> Full Inclusion</span>
-        <h2 class="section-title">What's Included In Every Photo Day</h2>
+        <h2 class="section-title">What's Included In This Service</h2>
       </div>
 
-      <div class="grid-3">
+      <div id="includesGrid" class="grid-3">
         <div class="card-glass">
           <i class="fa-solid fa-camera-retro" style="font-size: 2rem; color: var(--color-gold); margin-bottom: 1rem;"></i>
           <h3>Mobile Studio Setup</h3>
@@ -168,15 +180,15 @@
     </div>
   </section>
 
-  <!-- SECTION 4: STEP-BY-STEP PHOTO DAY PROCESS -->
+  <!-- SECTION 4: STEP-BY-STEP PROCESS (DYNAMIC) -->
   <section class="section-padding" style="background: var(--bg-main);">
     <div class="container">
       <div class="text-center" style="margin-bottom: 3rem;">
         <span class="section-tag evergreen"><i class="fa-solid fa-list-ol"></i> Step-By-Step</span>
-        <h2 class="section-title">Photo Day Execution Plan</h2>
+        <h2 class="section-title">How This Service Runs</h2>
       </div>
 
-      <div class="grid-4">
+      <div id="processGrid" class="grid-4">
         <div class="process-step">
           <div class="process-number">1</div>
           <h4>Roster Sync</h4>
@@ -204,15 +216,15 @@
     </div>
   </section>
 
-  <!-- SECTION 5: GALLERY SHOWCASE -->
+  <!-- SECTION 5: GALLERY SHOWCASE (DYNAMIC) -->
   <section class="section-padding" style="background: var(--bg-surface);">
     <div class="container">
       <div class="text-center" style="margin-bottom: 3rem;">
         <span class="section-tag"><i class="fa-solid fa-photo-film"></i> Recent Work</span>
-        <h2 class="section-title">Varsity Photo Day Showcase</h2>
+        <h2 class="section-title">Service Showcase</h2>
       </div>
 
-      <div class="grid-3">
+      <div id="galleryGrid" class="grid-3">
         <div class="portfolio-card" data-lightbox="https://images.unsplash.com/photo-1587280501635-68a0e82cd5ff?q=80&w=1200&auto=format&fit=crop">
           <img src="https://images.unsplash.com/photo-1587280501635-68a0e82cd5ff?q=80&w=800&auto=format&fit=crop" alt="Tennis ball action freeze">
           <div class="portfolio-overlay">
@@ -240,14 +252,15 @@
     </div>
   </section>
 
-  <!-- SECTION 6: FAQ -->
+  <!-- SECTION 6: FAQ (DYNAMIC) -->
   <section class="section-padding" style="background: var(--bg-main);">
     <div class="container" style="max-width: 800px;">
       <div class="text-center" style="margin-bottom: 2.5rem;">
-        <h2 class="section-title">Photo Day FAQ</h2>
+        <span class="section-tag"><i class="fa-solid fa-circle-question"></i> Service FAQ</span>
+        <h2 class="section-title">Questions About This Service</h2>
       </div>
 
-      <div class="accordion-container">
+      <div id="faqContainer" class="accordion-container">
         <div class="accordion-item active">
           <div class="accordion-header">
             <span>Does the school pay anything upfront?</span>
@@ -270,10 +283,25 @@
     </div>
   </section>
 
-  <!-- SECTION 7: CTA -->
+  <!-- SECTION 6b: RELATED SERVICES (DYNAMIC) -->
+  <section class="section-padding" style="background: var(--bg-surface);">
+    <div class="container">
+      <div class="text-center" style="margin-bottom: 2.5rem;">
+        <span class="section-tag"><i class="fa-solid fa-cubes"></i> Keep Exploring</span>
+        <h2 class="section-title">Other Services You'll Need</h2>
+      </div>
+      <div id="relatedServices" class="grid-3"></div>
+      <div class="text-center" style="margin-top: 2rem;">
+        <a href="services.html" class="btn btn-outline"><i class="fa-solid fa-list-check"></i> Compare All Services</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 7: CTA (DYNAMIC TITLE) -->
   <section class="section-padding" style="background: var(--color-navy-dark);">
     <div class="container text-center">
-      <h2 class="section-title" style="color: white;">Book A Varsity Team Photo Day Now</h2>
+      <h2 id="serviceCtaTitle" class="section-title" style="color: white;">Book A Varsity Team Photo Day Now</h2>
+      <p class="section-desc" style="color: var(--color-slate-light); margin: 0 auto 1rem auto;">Zero upfront fees · 48-hour parent proofs · Free retake day included.</p>
       <a href="contact.html" class="btn btn-lg btn-gold" style="margin-top: 1rem;"><i class="fa-solid fa-calendar-plus"></i> Reserve Your Date</a>
     </div>
   </section>
@@ -343,6 +371,17 @@
     </div>
   </footer>
 
+  <!-- Lightbox Modal (for dynamic gallery) -->
+  <div id="lightboxModal" class="lightbox-modal">
+    <div class="lightbox-content">
+      <span class="lightbox-close">&times;</span>
+      <img src="" alt="Enlarged service gallery image" class="lightbox-img">
+    </div>
+  </div>
+
+  <button class="back-to-top" title="Back to Top"><i class="fa-solid fa-arrow-up"></i></button>
+
+  <script src="../js/services.js"></script>
   <script src="../js/app.js"></script>
 </body>
 </html>

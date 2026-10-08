@@ -1891,6 +1891,15 @@ ul, ol {
   border: 2px solid var(--color-gold);
   box-shadow: 0 0 0 6px rgba(198,164,90,0.12), 0 24px 60px rgba(0,0,0,0.55);
   transform: scale(1.04);
+  overflow: visible;
+}
+
+/* Dock the badge inside the card so it can never clip */
+.page-elite .elite-plans .pricing-badge {
+  top: 1.1rem;
+  right: 1.25rem;
+  z-index: 3;
+  box-shadow: 0 6px 18px rgba(198,164,90,0.5);
 }
 
 /* Framed portrait with spec chips */
@@ -1923,10 +1932,53 @@ ul, ol {
 
 /* Glow CTA panel */
 .page-elite .elite-cta .container {
+  position: relative;
+  overflow: hidden;
   background: radial-gradient(120% 160% at 50% 0%, #1c2c47 0%, #0A111D 60%);
   border: 1px solid rgba(198,164,90,0.4); border-radius: 28px;
   padding: 4rem 2rem; box-shadow: 0 30px 80px rgba(0,0,0,0.5);
 }
+.page-elite .elite-cta .container::before,
+.page-elite .elite-cta .container::after {
+  content: ""; position: absolute; border-radius: 50%;
+  border: 1px solid rgba(198,164,90,0.25); pointer-events: none;
+}
+.page-elite .elite-cta .container::before { width: 420px; height: 420px; top: -210px; right: -140px; }
+.page-elite .elite-cta .container::after { width: 300px; height: 300px; bottom: -150px; left: -100px; }
+.page-elite .elite-cta .container > * { position: relative; z-index: 1; }
+.page-elite .elite-cta-contact {
+  display: flex; align-items: center; justify-content: center; gap: 1rem; flex-wrap: wrap;
+  margin-top: 2rem; font-size: 0.9rem; color: var(--color-slate-light);
+}
+.page-elite .elite-cta-contact i { color: var(--color-gold); margin-right: 0.4rem; }
+.page-elite .elite-cta-contact a { color: var(--color-gold-light); font-weight: 700; }
+.page-elite .elite-dot { width: 5px; height: 5px; border-radius: 50%; background: var(--color-gold); }
+
+/* Elite showcase */
+.page-elite .elite-results {
+  display: flex; justify-content: center; gap: 3rem; flex-wrap: wrap;
+  margin-bottom: 2.75rem;
+}
+.page-elite .elite-results strong {
+  display: block; font-family: var(--font-heading); font-size: 2rem;
+  font-weight: 800; color: var(--color-gold); line-height: 1;
+}
+.page-elite .elite-results span { font-size: 0.8rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.06em; }
+.page-elite .elite-work { position: relative; }
+.page-elite .elite-work-num {
+  position: absolute; top: -1.1rem; left: 1.25rem; z-index: 2;
+  font-family: var(--font-heading); font-weight: 800; font-size: 0.8rem;
+  letter-spacing: 0.1em; color: var(--color-navy);
+  background: linear-gradient(135deg, var(--color-gold-light), var(--color-gold));
+  border-radius: var(--radius-full); padding: 0.3rem 0.9rem;
+  box-shadow: 0 8px 20px rgba(198,164,90,0.45);
+}
+.page-elite .elite-work .portfolio-card { border-color: rgba(198,164,90,0.35); }
+.page-elite .elite-work-meta {
+  display: flex; justify-content: space-between; align-items: center;
+  margin-top: 0.9rem; font-size: 0.85rem; font-weight: 600; color: var(--text-muted);
+}
+.page-elite .elite-work-meta span:last-child { color: var(--color-gold); }
 .page-elite .elite-cta .section-title { color: #fff; }
 .page-elite .elite-cta .section-desc { color: var(--color-slate-light); }
 
@@ -2070,6 +2122,8 @@ ul, ol {
   .page-elite .elite-plans .pricing-card.popular { transform: none; }
   .page-elite .elite-cta .container { padding: 3rem 1.5rem; border-radius: 20px; }
   .page-elite .elite-hero-media > img { aspect-ratio: 4 / 3; max-height: none; }
+  .page-elite .elite-results { gap: 1.5rem; }
+  .page-elite .elite-results strong { font-size: 1.6rem; }
   .page-elite .elite-frame > img { aspect-ratio: 16 / 11; max-height: 420px; }
 }
 @media (max-width: 480px) {

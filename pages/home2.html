@@ -16,12 +16,14 @@
     <div class="container flex-between">
       <a href="../index.html" class="brand-logo">
         <div class="logo-badge"><i class="fa-solid fa-camera-retro"></i></div>
-        <span>STAT & <span class="gold-accent">SNAP</span></span>
+        <span class="brand-text">
+          <span>STAT & <span class="gold-accent">SNAP</span></span>
+          <small class="brand-tagline">You Play. We Capture.</small>
+        </span>
       </a>
-
       <div class="nav-links">
         <a href="../index.html" class="nav-link">Home 1</a>
-        <a href="home2.html" class="nav-link active">Home 2 (Niche)</a>
+        <a href="home2.html" class="nav-link active">Home 2</a>
         <a href="about.html" class="nav-link">About Us</a>
         <div class="nav-dropdown">
           <a href="services.html" class="nav-link nav-dropdown-toggle">
@@ -33,13 +35,27 @@
             <a href="pricing.html" class="dropdown-item"><i class="fa-solid fa-tags"></i> Pricing & Packages</a>
           </div>
         </div>
-        <a href="blog.html" class="nav-link">Blog</a>
+        <div class="nav-dropdown">
+          <a href="blog.html" class="nav-link nav-dropdown-toggle">
+            Blog <i class="fa-solid fa-chevron-down" style="font-size: 0.75rem;"></i>
+          </a>
+          <div class="dropdown-menu">
+            <a href="blog.html" class="dropdown-item"><i class="fa-solid fa-newspaper"></i> Blog Grid</a>
+            <a href="blog-details.html" class="dropdown-item"><i class="fa-solid fa-file-lines"></i> Featured Article</a>
+          </div>
+        </div>
         <a href="contact.html" class="nav-link">Contact</a>
-        <a href="dashboard.html" class="nav-link" style="color: var(--color-gold); font-weight: 700;">
-          <i class="fa-solid fa-grip"></i> Portal
-        </a>
+        <div class="nav-dropdown">
+          <a href="dashboard.html" class="nav-link nav-dropdown-toggle" style="color: var(--color-gold); font-weight: 700;">
+            <i class="fa-solid fa-grip"></i> Portal <i class="fa-solid fa-chevron-down" style="font-size: 0.75rem;"></i>
+          </a>
+          <div class="dropdown-menu">
+            <a href="dashboard.html" class="dropdown-item"><i class="fa-solid fa-school"></i> School Dashboard</a>
+            <a href="admin.html" class="dropdown-item"><i class="fa-solid fa-user-shield"></i> Studio Admin Portal</a>
+            <a href="login.html" class="dropdown-item"><i class="fa-solid fa-right-to-bracket"></i> Login (Both Roles)</a>
+          </div>
+        </div>
       </div>
-
       <div class="nav-actions">
         <button class="icon-btn theme-toggle" title="Toggle Light/Dark Theme">
           <i class="fa-solid fa-sun"></i>
@@ -53,20 +69,23 @@
     </div>
   </nav>
 
-  <!-- Mobile Drawer -->
+  <!-- Mobile Navigation Drawer -->
   <div class="drawer-overlay"></div>
   <div class="mobile-drawer">
     <div>
       <div class="flex-between">
         <a href="../index.html" class="brand-logo">
           <div class="logo-badge"><i class="fa-solid fa-camera-retro"></i></div>
-          <span>STAT & <span class="gold-accent">SNAP</span></span>
+          <span class="brand-text">
+            <span>STAT & <span class="gold-accent">SNAP</span></span>
+            <small class="brand-tagline">You Play. We Capture.</small>
+          </span>
         </a>
         <button class="icon-btn drawer-close"><i class="fa-solid fa-xmark"></i></button>
       </div>
       <div class="drawer-nav">
-        <a href="../index.html">Home 1 – General</a>
-        <a href="home2.html">Home 2 – School Niche</a>
+        <a href="../index.html">Home 1</a>
+        <a href="home2.html">Home 2</a>
         <a href="about.html">About Us</a>
         <a href="services.html">Services Overview</a>
         <a href="service-details.html">Service Details</a>
@@ -74,7 +93,13 @@
         <a href="blog.html">Blog Articles</a>
         <a href="contact.html">Contact Us</a>
         <a href="dashboard.html" style="color: var(--color-gold);">Client Dashboard</a>
+        <a href="admin.html" style="color: var(--color-gold);">Studio Admin Portal</a>
+        <a href="login.html">Login</a>
+        <a href="register.html">Register School</a>
       </div>
+    </div>
+    <div style="margin-top: 2rem;">
+      <a href="contact.html" class="btn btn-gold" style="width: 100%;">Book Photo Day</a>
     </div>
   </div>
 
@@ -181,7 +206,7 @@
     <div class="container">
       <div class="grid-2" style="align-items: center;">
         <div>
-          <img src="https://images.unsplash.com/photo-1579952363873-27f3bade9f55?q=80&w=1000&auto=format&fit=crop" alt="Basketball Player" style="border-radius: var(--radius-lg); box-shadow: var(--shadow-lg);">
+          <img src="https://i.pinimg.com/1200x/b9/58/31/b95831624681a42da8e084fe84b7012d.jpg" alt="Individual athlete portrait with edge lighting" style="border-radius: var(--radius-lg); box-shadow: var(--shadow-lg); width: 100%; object-fit: cover;">
         </div>
         <div>
           <span class="section-tag crimson"><i class="fa-solid fa-bolt"></i> High-Energy Aesthetics</span>
@@ -293,24 +318,24 @@
       </div>
 
       <div class="grid-3">
-        <div class="portfolio-card" data-lightbox="https://images.unsplash.com/photo-1508098682722-e99c43a406b2?q=80&w=1200&auto=format&fit=crop">
-          <img src="https://images.unsplash.com/photo-1508098682722-e99c43a406b2?q=80&w=800&auto=format&fit=crop" alt="Oakridge Athletics">
+        <div class="portfolio-card" data-lightbox="https://i.pinimg.com/1200x/a1/8c/ed/a18cedaf330fcf263b6dc99aac6b6e78.jpg">
+          <img src="https://i.pinimg.com/1200x/a1/8c/ed/a18cedaf330fcf263b6dc99aac6b6e78.jpg" alt="Oakridge Athletics">
           <div class="portfolio-overlay">
             <span class="portfolio-tag">Oakridge High School</span>
             <h3 class="portfolio-title">18 Teams / 450 Athletes</h3>
           </div>
         </div>
 
-        <div class="portfolio-card" data-lightbox="https://images.unsplash.com/photo-1546519638-68e109498ffc?q=80&w=1200&auto=format&fit=crop">
-          <img src="https://images.unsplash.com/photo-1546519638-68e109498ffc?q=80&w=800&auto=format&fit=crop" alt="St. Jude Academy">
+        <div class="portfolio-card" data-lightbox="https://i.pinimg.com/1200x/1d/35/5e/1d355e395392fe5221bc4a457ddbc1e0.jpg">
+          <img src="https://i.pinimg.com/1200x/1d/35/5e/1d355e395392fe5221bc4a457ddbc1e0.jpg" alt="St. Jude Academy">
           <div class="portfolio-overlay">
             <span class="portfolio-tag">St. Jude Sports Academy</span>
             <h3 class="portfolio-title">Varsity & Junior Varsity Media</h3>
           </div>
         </div>
 
-        <div class="portfolio-card" data-lightbox="https://images.unsplash.com/photo-1517649763962-0c623266ddc0?q=80&w=1200&auto=format&fit=crop">
-          <img src="https://images.unsplash.com/photo-1517649763962-0c623266ddc0?q=80&w=800&auto=format&fit=crop" alt="Westview High">
+        <div class="portfolio-card" data-lightbox="https://i.pinimg.com/1200x/32/84/96/328496016454ce08e26adc36080f19cd.jpg">
+          <img src="https://i.pinimg.com/1200x/32/84/96/328496016454ce08e26adc36080f19cd.jpg" alt="Westview High">
           <div class="portfolio-overlay">
             <span class="portfolio-tag">Westview High Athletics</span>
             <h3 class="portfolio-title">Senior Banner Campaign</h3>
@@ -336,9 +361,65 @@
 
   <!-- Footer -->
   <footer class="footer">
-    <div class="container text-center" style="font-size: 0.9rem; color: var(--color-slate-light);">
-      <p class="footer-tagline" style="margin-bottom: 0.5rem;">"Every Team. Every Athlete. Every Legacy."</p>
-      &copy; 2026 Stat & Snap Sports Media Studio. Built with Vanilla Web Standards.
+    <div class="container">
+      <div class="footer-top">
+        <div>
+          <a href="../index.html" class="footer-logo">
+            <i class="fa-solid fa-camera-retro" style="color: var(--color-gold);"></i> STAT & SNAP
+          </a>
+          <p class="footer-desc">The premiere sports team photography and yearbook production studio for high schools, academies, and athletic leagues.</p>
+          <p class="footer-tagline">"Every Team. Every Athlete. Every Legacy."</p>
+          <div class="flex-align gap-2" style="margin-top: 1rem;">
+            <a href="#" class="icon-btn"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" class="icon-btn"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#" class="icon-btn"><i class="fa-brands fa-x-twitter"></i></a>
+          </div>
+        </div>
+        <div>
+          <h4 class="footer-title">Navigation</h4>
+          <div class="footer-links">
+            <a href="../index.html">Home 1</a>
+            <a href="home2.html">Home 2</a>
+            <a href="about.html">About Studio</a>
+            <a href="services.html">Services Matrix</a>
+            <a href="pricing.html">Pricing & Packages</a>
+          </div>
+        </div>
+        <div>
+          <h4 class="footer-title">Client Portal</h4>
+          <div class="footer-links">
+            <a href="login.html">School Portal Login</a>
+            <a href="register.html">Register Organization</a>
+            <a href="dashboard.html">Client Dashboard</a>
+            <a href="admin.html">Studio Admin Portal</a>
+            <a href="blog.html">Photo Day Tips</a>
+            <a href="404.html">404 Error Demo</a>
+          </div>
+        </div>
+        <div>
+          <h4 class="footer-title">Studio Contact</h4>
+          <div style="display: flex; flex-direction: column; gap: 0.85rem; font-size: 0.9rem; color: var(--color-slate-light);">
+            <div><i class="fa-solid fa-location-dot" style="color: var(--color-gold); margin-right: 0.5rem;"></i> 742 Athletic Way, Suite 300</div>
+            <div><i class="fa-solid fa-phone" style="color: var(--color-gold); margin-right: 0.5rem;"></i> (555) 832-7627</div>
+            <div><i class="fa-solid fa-envelope" style="color: var(--color-gold); margin-right: 0.5rem;"></i> info@statandsnap.com</div>
+          </div>
+          <div class="footer-newsletter">
+            <p><i class="fa-solid fa-envelope-open-text" style="color: var(--color-gold); margin-right: 0.4rem;"></i> Photo-day tips & season slots. No spam.</p>
+            <form class="newsletter-form" data-validate data-success="Subscribed! Welcome to the Stat & Snap newsletter.">
+              <input type="email" name="newsletter-email" placeholder="Parent / coach email" required aria-label="Email address">
+              <button type="submit" class="newsletter-btn" title="Subscribe"><i class="fa-solid fa-paper-plane"></i></button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>&copy; 2026 Stat & Snap Athletics Photography. All Rights Reserved.</div>
+        <div class="flex-align gap-3">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="coming-soon.html">Maintenance Mode</a>
+        </div>
+      </div>
     </div>
   </footer>
 

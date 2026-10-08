@@ -16,29 +16,92 @@
     <div class="container flex-between">
       <a href="../index.html" class="brand-logo">
         <div class="logo-badge"><i class="fa-solid fa-camera-retro"></i></div>
-        <span>STAT & <span class="gold-accent">SNAP</span></span>
+        <span class="brand-text">
+          <span>STAT & <span class="gold-accent">SNAP</span></span>
+          <small class="brand-tagline">You Play. We Capture.</small>
+        </span>
       </a>
-
       <div class="nav-links">
         <a href="../index.html" class="nav-link">Home 1</a>
-        <a href="home2.html" class="nav-link">Home 2 (Niche)</a>
+        <a href="home2.html" class="nav-link">Home 2</a>
         <a href="about.html" class="nav-link">About Us</a>
-        <a href="services.html" class="nav-link">Services</a>
-        <a href="pricing.html" class="nav-link">Pricing</a>
-        <a href="blog.html" class="nav-link active">Blog</a>
+        <div class="nav-dropdown">
+          <a href="services.html" class="nav-link nav-dropdown-toggle">
+            Services <i class="fa-solid fa-chevron-down" style="font-size: 0.75rem;"></i>
+          </a>
+          <div class="dropdown-menu">
+            <a href="services.html" class="dropdown-item"><i class="fa-solid fa-list-check"></i> All Services</a>
+            <a href="service-details.html" class="dropdown-item"><i class="fa-solid fa-users-viewfinder"></i> Varsity Team Photo Days</a>
+            <a href="pricing.html" class="dropdown-item"><i class="fa-solid fa-tags"></i> Pricing & Packages</a>
+          </div>
+        </div>
+        <div class="nav-dropdown">
+          <a href="blog.html" class="nav-link nav-dropdown-toggle active">
+            Blog <i class="fa-solid fa-chevron-down" style="font-size: 0.75rem;"></i>
+          </a>
+          <div class="dropdown-menu">
+            <a href="blog.html" class="dropdown-item"><i class="fa-solid fa-newspaper"></i> Blog Grid</a>
+            <a href="blog-details.html" class="dropdown-item"><i class="fa-solid fa-file-lines"></i> Featured Article</a>
+          </div>
+        </div>
         <a href="contact.html" class="nav-link">Contact</a>
-        <a href="dashboard.html" class="nav-link" style="color: var(--color-gold); font-weight: 700;">
-          <i class="fa-solid fa-grip"></i> Portal
-        </a>
+        <div class="nav-dropdown">
+          <a href="dashboard.html" class="nav-link nav-dropdown-toggle" style="color: var(--color-gold); font-weight: 700;">
+            <i class="fa-solid fa-grip"></i> Portal <i class="fa-solid fa-chevron-down" style="font-size: 0.75rem;"></i>
+          </a>
+          <div class="dropdown-menu">
+            <a href="dashboard.html" class="dropdown-item"><i class="fa-solid fa-school"></i> School Dashboard</a>
+            <a href="admin.html" class="dropdown-item"><i class="fa-solid fa-user-shield"></i> Studio Admin Portal</a>
+            <a href="login.html" class="dropdown-item"><i class="fa-solid fa-right-to-bracket"></i> Login (Both Roles)</a>
+          </div>
+        </div>
       </div>
-
       <div class="nav-actions">
-        <button class="icon-btn theme-toggle"><i class="fa-solid fa-sun"></i></button>
-        <button class="icon-btn dir-toggle"><span class="dir-toggle-label">RTL</span></button>
+        <button class="icon-btn theme-toggle" title="Toggle Light/Dark Theme">
+          <i class="fa-solid fa-sun"></i>
+        </button>
+        <button class="icon-btn dir-toggle" title="Toggle RTL/LTR">
+          <span class="dir-toggle-label" style="font-size: 0.75rem; font-weight: 800;">RTL</span>
+        </button>
         <a href="login.html" class="btn btn-sm btn-primary">Client Login</a>
+        <button class="icon-btn hamburger-btn"><i class="fa-solid fa-bars"></i></button>
       </div>
     </div>
   </nav>
+
+  <!-- Mobile Navigation Drawer -->
+  <div class="drawer-overlay"></div>
+  <div class="mobile-drawer">
+    <div>
+      <div class="flex-between">
+        <a href="../index.html" class="brand-logo">
+          <div class="logo-badge"><i class="fa-solid fa-camera-retro"></i></div>
+          <span class="brand-text">
+            <span>STAT & <span class="gold-accent">SNAP</span></span>
+            <small class="brand-tagline">You Play. We Capture.</small>
+          </span>
+        </a>
+        <button class="icon-btn drawer-close"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+      <div class="drawer-nav">
+        <a href="../index.html">Home 1</a>
+        <a href="home2.html">Home 2</a>
+        <a href="about.html">About Us</a>
+        <a href="services.html">Services Overview</a>
+        <a href="service-details.html">Service Details</a>
+        <a href="pricing.html">Pricing & Packages</a>
+        <a href="blog.html">Blog Articles</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="dashboard.html" style="color: var(--color-gold);">Client Dashboard</a>
+        <a href="admin.html" style="color: var(--color-gold);">Studio Admin Portal</a>
+        <a href="login.html">Login</a>
+        <a href="register.html">Register School</a>
+      </div>
+    </div>
+    <div style="margin-top: 2rem;">
+      <a href="contact.html" class="btn btn-gold" style="width: 100%;">Book Photo Day</a>
+    </div>
+  </div>
 
   <!-- SECTION 1: BLOG HERO -->
   <section class="hero-section" style="min-height: 50vh;">
@@ -56,7 +119,7 @@
     <div class="container">
       <div class="card-glass gold-border" style="padding: 0; overflow: hidden; display: grid; grid-template-columns: 1fr 1fr;">
         <div style="height: 100%; min-height: 350px;">
-          <img src="https://images.unsplash.com/photo-1508098682722-e99c43a406b2?q=80&w=1000&auto=format&fit=crop" alt="Featured Football Article" style="width: 100%; height: 100%; object-fit: cover;">
+          <img src="https://i.pinimg.com/1200x/66/39/3c/66393c083acd8bd4885f33efb50bed35.jpg" alt="Featured Football Article" style="width: 100%; height: 100%; object-fit: cover;">
         </div>
         <div style="padding: 2.5rem; display: flex; flex-direction: column; justify-content: center;">
           <div class="blog-card-meta">
@@ -99,7 +162,7 @@
           <!-- Article 1 -->
           <article class="blog-card">
             <div class="blog-card-img">
-              <img src="https://images.unsplash.com/photo-1546519638-68e109498ffc?q=80&w=800&auto=format&fit=crop" alt="Basketball Portrait">
+              <img src="https://i.pinimg.com/1200x/e5/ac/a3/e5aca34ba37440d824470d90a26fe78b.jpg" alt="Basketball Portrait">
             </div>
             <div class="blog-card-body">
               <div class="blog-card-meta">
@@ -115,7 +178,7 @@
           <!-- Article 2 -->
           <article class="blog-card">
             <div class="blog-card-img">
-              <img src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?q=80&w=800&auto=format&fit=crop" alt="Yearbook Indexing">
+              <img src="https://i.pinimg.com/736x/33/60/24/3360244063f78dee8cceb8e2892dd980.jpg" alt="Yearbook Indexing">
             </div>
             <div class="blog-card-body">
               <div class="blog-card-meta">
@@ -131,7 +194,7 @@
           <!-- Article 3 -->
           <article class="blog-card">
             <div class="blog-card-img">
-              <img src="https://images.unsplash.com/photo-1566577739112-5180d4bf9390?q=80&w=800&auto=format&fit=crop" alt="Senior Banners">
+              <img src="https://i.pinimg.com/1200x/f5/d1/71/f5d171454f557a1d2420567e409fb9d8.jpg" alt="Senior Banners">
             </div>
             <div class="blog-card-body">
               <div class="blog-card-meta">
@@ -147,7 +210,7 @@
           <!-- Article 4 -->
           <article class="blog-card">
             <div class="blog-card-img">
-              <img src="https://images.unsplash.com/photo-1530549387789-4c1017266635?q=80&w=800&auto=format&fit=crop" alt="Swimming Action">
+              <img src="https://i.pinimg.com/1200x/07/57/8f/07578fbafb8bc6704ae97062143bf817.jpg" alt="Swimming Action">
             </div>
             <div class="blog-card-body">
               <div class="blog-card-meta">
@@ -163,7 +226,7 @@
           <!-- Article 5 -->
           <article class="blog-card">
             <div class="blog-card-img">
-              <img src="https://images.unsplash.com/photo-1517649763962-0c623266ddc0?q=80&w=800&auto=format&fit=crop" alt="Track Athlete">
+              <img src="https://i.pinimg.com/736x/8b/60/25/8b6025ececbc38fb558873e322113f38.jpg" alt="Track Athlete">
             </div>
             <div class="blog-card-body">
               <div class="blog-card-meta">
@@ -179,7 +242,7 @@
           <!-- Article 6 -->
           <article class="blog-card">
             <div class="blog-card-img">
-              <img src="https://images.unsplash.com/photo-1526676037777-05a232554f77?q=80&w=800&auto=format&fit=crop" alt="Team Huddle">
+              <img src="https://i.pinimg.com/736x/6b/b9/4f/6bb94fa9a2e59d04dac1709f43915c1d.jpg" alt="Team Huddle">
             </div>
             <div class="blog-card-body">
               <div class="blog-card-meta">
@@ -188,6 +251,63 @@
               </div>
               <h3 class="blog-card-title"><a href="blog-details.html">Composite Panoramas: Solving The Problem Of Missing Team Members</a></h3>
               <p style="font-size: 0.88rem; color: var(--text-muted); margin-bottom: 1.25rem;">How digital composite group photos save the day during flu season.</p>
+              <a href="blog-details.html" class="btn btn-sm btn-secondary">Read Article</a>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <div id="tab-tips" class="tab-panel">
+        <div class="grid-3">
+          <article class="blog-card">
+            <div class="blog-card-img">
+              <img src="https://images.unsplash.com/photo-1493863641943-9b68992a8d07?q=80&w=800&auto=format&fit=crop" alt="Photographer on sideline">
+            </div>
+            <div class="blog-card-body">
+              <div class="blog-card-meta">
+                <span>Photo Day Tips</span>
+                <span>Aug 10, 2026</span>
+              </div>
+              <h3 class="blog-card-title"><a href="blog-details.html">The 48-Hour Photo Day Countdown: An AD's Final Checklist</a></h3>
+              <p style="font-size: 0.88rem; color: var(--text-muted); margin-bottom: 1.25rem;">Roster files, gym slots, parent links — the exact 48-hour sequence our crew runs before every shoot.</p>
+              <a href="blog-details.html" class="btn btn-sm btn-secondary">Read Article</a>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <div id="tab-yearbook" class="tab-panel">
+        <div class="grid-3">
+          <article class="blog-card">
+            <div class="blog-card-img">
+              <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=800&auto=format&fit=crop" alt="Yearbook planning session">
+            </div>
+            <div class="blog-card-body">
+              <div class="blog-card-meta">
+                <span>Yearbook Planning</span>
+                <span>Aug 02, 2026</span>
+              </div>
+              <h3 class="blog-card-title"><a href="blog-details.html">From Proofs to Print: Hitting Yearbook Deadlines Without Panic</a></h3>
+              <p style="font-size: 0.88rem; color: var(--text-muted); margin-bottom: 1.25rem;">How advisors sync PSPA exports, proof cycles, and printer dates into one calm timeline.</p>
+              <a href="blog-details.html" class="btn btn-sm btn-secondary">Read Article</a>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <div id="tab-behind" class="tab-panel">
+        <div class="grid-3">
+          <article class="blog-card">
+            <div class="blog-card-img">
+              <img src="https://images.unsplash.com/photo-1471341971476-ae15ff5dd4ea?q=80&w=800&auto=format&fit=crop" alt="Studio strobe setup">
+            </div>
+            <div class="blog-card-body">
+              <div class="blog-card-meta">
+                <span>Behind The Scenes</span>
+                <span>Jul 26, 2026</span>
+              </div>
+              <h3 class="blog-card-title"><a href="blog-details.html">Inside the Setup: How Our Mobile Studio Fits in One Van</a></h3>
+              <p style="font-size: 0.88rem; color: var(--text-muted); margin-bottom: 1.25rem;">Strobes, backdrops, smoke FX — the rig that turns any school gym into a pro arena.</p>
               <a href="blog-details.html" class="btn btn-sm btn-secondary">Read Article</a>
             </div>
           </article>
@@ -213,8 +333,65 @@
 
   <!-- Footer -->
   <footer class="footer">
-    <div class="container text-center" style="font-size: 0.9rem; color: var(--color-slate-light);">
-      &copy; 2026 Stat & Snap Athletics Media.
+    <div class="container">
+      <div class="footer-top">
+        <div>
+          <a href="../index.html" class="footer-logo">
+            <i class="fa-solid fa-camera-retro" style="color: var(--color-gold);"></i> STAT & SNAP
+          </a>
+          <p class="footer-desc">The premiere sports team photography and yearbook production studio for high schools, academies, and athletic leagues.</p>
+          <p class="footer-tagline">"Every Team. Every Athlete. Every Legacy."</p>
+          <div class="flex-align gap-2" style="margin-top: 1rem;">
+            <a href="#" class="icon-btn"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" class="icon-btn"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#" class="icon-btn"><i class="fa-brands fa-x-twitter"></i></a>
+          </div>
+        </div>
+        <div>
+          <h4 class="footer-title">Navigation</h4>
+          <div class="footer-links">
+            <a href="../index.html">Home 1</a>
+            <a href="home2.html">Home 2</a>
+            <a href="about.html">About Studio</a>
+            <a href="services.html">Services Matrix</a>
+            <a href="pricing.html">Pricing & Packages</a>
+          </div>
+        </div>
+        <div>
+          <h4 class="footer-title">Client Portal</h4>
+          <div class="footer-links">
+            <a href="login.html">School Portal Login</a>
+            <a href="register.html">Register Organization</a>
+            <a href="dashboard.html">Client Dashboard</a>
+            <a href="admin.html">Studio Admin Portal</a>
+            <a href="blog.html">Photo Day Tips</a>
+            <a href="404.html">404 Error Demo</a>
+          </div>
+        </div>
+        <div>
+          <h4 class="footer-title">Studio Contact</h4>
+          <div style="display: flex; flex-direction: column; gap: 0.85rem; font-size: 0.9rem; color: var(--color-slate-light);">
+            <div><i class="fa-solid fa-location-dot" style="color: var(--color-gold); margin-right: 0.5rem;"></i> 742 Athletic Way, Suite 300</div>
+            <div><i class="fa-solid fa-phone" style="color: var(--color-gold); margin-right: 0.5rem;"></i> (555) 832-7627</div>
+            <div><i class="fa-solid fa-envelope" style="color: var(--color-gold); margin-right: 0.5rem;"></i> info@statandsnap.com</div>
+          </div>
+          <div class="footer-newsletter">
+            <p><i class="fa-solid fa-envelope-open-text" style="color: var(--color-gold); margin-right: 0.4rem;"></i> Photo-day tips & season slots. No spam.</p>
+            <form class="newsletter-form" data-validate data-success="Subscribed! Welcome to the Stat & Snap newsletter.">
+              <input type="email" name="newsletter-email" placeholder="Parent / coach email" required aria-label="Email address">
+              <button type="submit" class="newsletter-btn" title="Subscribe"><i class="fa-solid fa-paper-plane"></i></button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>&copy; 2026 Stat & Snap Athletics Photography. All Rights Reserved.</div>
+        <div class="flex-align gap-3">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="coming-soon.html">Maintenance Mode</a>
+        </div>
+      </div>
     </div>
   </footer>
 

@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="../css/styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
-<body>
+<body class="page-contact">
 
   <!-- Sticky Navbar -->
   <nav class="navbar">
@@ -45,9 +45,11 @@
           </div>
         </div>
         <a href="contact.html" class="nav-link active">Contact</a>
-        <div class="nav-dropdown">
-          <a href="dashboard.html" class="nav-link nav-dropdown-toggle" style="color: var(--color-gold); font-weight: 700;">
-            <i class="fa-solid fa-grip"></i> Portal <i class="fa-solid fa-chevron-down" style="font-size: 0.75rem;"></i>
+      </div>
+      <div class="nav-actions">
+        <div class="nav-dropdown nav-profile">
+          <a href="dashboard.html" class="icon-btn nav-dropdown-toggle" title="Account portal" aria-label="Account portal">
+            <i class="fa-solid fa-circle-user"></i>
           </a>
           <div class="dropdown-menu">
             <a href="dashboard.html" class="dropdown-item"><i class="fa-solid fa-school"></i> School Dashboard</a>
@@ -55,8 +57,6 @@
             <a href="login.html" class="dropdown-item"><i class="fa-solid fa-right-to-bracket"></i> Login (Both Roles)</a>
           </div>
         </div>
-      </div>
-      <div class="nav-actions">
         <button class="icon-btn theme-toggle" title="Toggle Light/Dark Theme">
           <i class="fa-solid fa-sun"></i>
         </button>
@@ -103,26 +103,64 @@
     </div>
   </div>
 
-  <!-- SECTION 1: HERO HEADER -->
-  <section class="hero-section" style="min-height: 50vh;">
+  <!-- SECTION 1: HERO HEADER (PREMIUM) -->
+  <section class="hero-section ct-hero" style="min-height: 58vh;">
     <div class="hero-bg-overlay" style="background-image: url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=1600&auto=format&fit=crop');"></div>
     <div class="hero-gradient"></div>
-    <div class="container hero-content text-center">
-      <span class="section-tag"><i class="fa-solid fa-headset"></i> We're Here To Help</span>
-      <h1 class="hero-title">Contact Our Studio</h1>
-      <p class="hero-desc" style="margin: 0 auto;">Schedule a school media consultation, ask a photo day question, or request a custom proposal.</p>
+    <div class="container hero-content">
+      <div class="ct-hero-grid">
+        <div>
+          <div class="ct-crumb"><a href="../index.html">Home</a><i class="fa-solid fa-chevron-right"></i><span>Contact</span></div>
+          <span class="section-tag"><i class="fa-solid fa-headset"></i> We're Here To Help</span>
+          <h1 class="hero-title">Contact <span class="highlight">Our Studio</span></h1>
+          <p class="hero-desc">Schedule a school media consultation, ask a photo day question, or request a custom proposal.</p>
+          <div class="flex-align gap-3 ct-hero-cta" style="flex-wrap: wrap;">
+            <a href="#enquiry" class="btn btn-lg btn-gold"><i class="fa-solid fa-paper-plane"></i> Send Enquiry</a>
+            <a href="tel:+15558327627" class="btn btn-lg btn-outline"><i class="fa-solid fa-phone"></i> (555) 832-7627</a>
+          </div>
+          <div class="ct-trust">
+            <span><i class="fa-solid fa-clock"></i> 4-hr response time</span>
+            <span><i class="fa-solid fa-shield-halved"></i> Background-checked crew</span>
+            <span><i class="fa-solid fa-sack-dollar"></i> $0 upfront fees</span>
+          </div>
+        </div>
+        <div class="ct-hero-card">
+          <div class="card-glass gold-border ct-hero-panel">
+            <div class="ct-hero-panel-head">
+              <span class="badge badge-approval"><i class="fa-solid fa-bolt"></i> Fastest Route</span>
+              <span class="ct-hero-panel-no">15-min Zoom</span>
+            </div>
+            <strong>Book a live walkthrough</strong>
+            <span class="ct-hero-panel-sub">See galleries, banners, and PSPA exports on screen with our director.</span>
+            <a href="#booking" class="btn btn-gold" style="width: 100%;">Pick a Slot <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="ct-hero-stats">
+        <div><strong>4<small>hr</small></strong><span>Response promise</span></div>
+        <div><strong>120<small>+</small></strong><span>Schools served</span></div>
+        <div><strong>150<small>mi</small></strong><span>Coverage radius</span></div>
+        <div><strong>4.9<i class="fa-solid fa-star" style="font-size: 1rem;"></i></strong><span>Parent rating</span></div>
+      </div>
     </div>
   </section>
 
-  <!-- SECTION 2: ENQUIRY FORM & STUDIO DETAILS -->
-  <section class="section-padding" style="background: var(--bg-main);">
+  <!-- SECTION 2: ENQUIRY FORM & STUDIO DETAILS (PREMIUM) -->
+  <section id="enquiry" class="section-padding ct-enquiry" style="background: var(--bg-main);">
     <div class="container">
-      <div class="grid-2" style="gap: 3rem;">
+      <div class="ct-section-head">
+        <div>
+          <span class="section-tag crimson"><i class="fa-solid fa-paper-plane"></i> School & Club Enquiry</span>
+          <h2 class="section-title">Tell Us About Your Season</h2>
+          <p class="section-desc ct-section-sub" style="text-align: left; margin: 0;">An account manager replies within 4 business hours — no obligation.</p>
+        </div>
+      </div>
+      <div class="grid-2 ct-enquiry-grid">
         
         <!-- School Enquiry Form -->
-        <div class="card-glass gold-border">
-          <h2 style="font-size: 1.75rem; margin-bottom: 0.5rem;"><i class="fa-regular fa-paper-plane" style="color: var(--color-gold);"></i> School & Club Enquiry</h2>
-          <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 2rem;">Fill out the details below and an account manager will respond within 4 business hours.</p>
+        <div class="card-glass gold-border ct-form-card">
+          <h3><i class="fa-regular fa-paper-plane"></i> Enquiry Form</h3>
+          <p class="ct-form-sub">Fields marked * are required for roster-accurate quoting.</p>
 
           <form data-validate data-success="Your inquiry has been submitted! Our team will contact you shortly.">
             <div class="form-row">
@@ -175,6 +213,7 @@
             <button type="submit" class="btn btn-lg btn-primary" style="width: 100%;">
               <i class="fa-solid fa-paper-plane"></i> Send School Enquiry
             </button>
+            <span class="ct-form-note"><i class="fa-solid fa-lock"></i> FERPA-safe · roster data encrypted</span>
           </form>
         </div>
 
@@ -186,30 +225,39 @@
             Our main production studio handles gear prep, printing, frame assembly, and administrative client support.
           </p>
 
-          <div style="display: flex; flex-direction: column; gap: 1.5rem; margin-bottom: 2.5rem;">
-            <div class="card-glass flex-align gap-3" style="padding: 1.25rem;">
-              <i class="fa-solid fa-building" style="font-size: 1.75rem; color: var(--color-gold);"></i>
+          <div class="ct-info-list">
+            <a href="https://www.google.com/maps/search/?api=1&query=Athletic+Way+Suite+300+Metro+City" target="_blank" rel="noopener" class="card-glass ct-info-card">
+              <span class="ct-info-icon"><i class="fa-solid fa-building"></i></span>
               <div>
-                <strong style="display: block; font-size: 1.05rem;">Main Studio Office</strong>
-                <span style="font-size: 0.9rem; color: var(--text-muted);">742 Athletic Way, Suite 300, Metro City</span>
+                <strong>Main Studio Office</strong>
+                <span>742 Athletic Way, Suite 300, Metro City</span>
               </div>
-            </div>
+              <i class="fa-solid fa-arrow-up-right-from-square ct-info-go"></i>
+            </a>
 
-            <div class="card-glass flex-align gap-3" style="padding: 1.25rem;">
-              <i class="fa-solid fa-phone" style="font-size: 1.75rem; color: var(--color-crimson);"></i>
+            <a href="tel:+15558327627" class="card-glass ct-info-card">
+              <span class="ct-info-icon crimson"><i class="fa-solid fa-phone"></i></span>
               <div>
-                <strong style="display: block; font-size: 1.05rem;">Phone & Support Line</strong>
-                <span style="font-size: 0.9rem; color: var(--text-muted);">(555) 832-7627 — Mon-Fri 8am-6pm EST</span>
+                <strong>Phone & Support Line</strong>
+                <span>(555) 832-7627 — Mon-Fri 8am-6pm EST</span>
               </div>
-            </div>
+              <i class="fa-solid fa-arrow-up-right-from-square ct-info-go"></i>
+            </a>
 
-            <div class="card-glass flex-align gap-3" style="padding: 1.25rem;">
-              <i class="fa-solid fa-envelope" style="font-size: 1.75rem; color: var(--color-evergreen-light);"></i>
+            <a href="mailto:info@statandsnap.com" class="card-glass ct-info-card">
+              <span class="ct-info-icon green"><i class="fa-solid fa-envelope"></i></span>
               <div>
-                <strong style="display: block; font-size: 1.05rem;">Direct Email Enquiries</strong>
-                <span style="font-size: 0.9rem; color: var(--text-muted);">info@statandsnap.com / ad-support@statandsnap.com</span>
+                <strong>Direct Email Enquiries</strong>
+                <span>info@statandsnap.com / ad-support@statandsnap.com</span>
               </div>
-            </div>
+              <i class="fa-solid fa-arrow-up-right-from-square ct-info-go"></i>
+            </a>
+          </div>
+
+          <div class="card-glass ct-hours">
+            <div class="ct-hours-row"><span><i class="fa-solid fa-clock"></i> Mon – Fri</span><strong>8:00 AM – 6:00 PM EST</strong></div>
+            <div class="ct-hours-row"><span><i class="fa-solid fa-camera"></i> Shoot days</span><strong>On-site from 7:00 AM</strong></div>
+            <div class="ct-hours-row"><span><i class="fa-solid fa-bolt"></i> Emergency line</span><strong>Game-day support till 9 PM</strong></div>
           </div>
         </div>
 
@@ -217,87 +265,142 @@
     </div>
   </section>
 
-  <!-- SECTION 3: CONSULTATION BOOKING SCHEDULER UI -->
-  <section class="section-padding" style="background: var(--bg-surface);">
-    <div class="container text-center" style="max-width: 900px;">
-      <span class="section-tag"><i class="fa-regular fa-calendar-check"></i> Interactive Booking</span>
-      <h2 class="section-title">Schedule A 15-Minute Zoom Presentation</h2>
-      <p class="section-desc" style="margin-bottom: 2.5rem;">Select an available date below to speak live with our Athletic Services Director.</p>
-
-      <div class="card-glass" style="padding: 2rem;">
-        <div class="grid-3 gap-2" style="margin-bottom: 1.5rem;">
-          <button class="btn btn-outline active" onclick="showToast('Selected Monday Oct 12 at 10:00 AM', 'info')">Mon Oct 12 — 10:00 AM</button>
-          <button class="btn btn-outline" onclick="showToast('Selected Tuesday Oct 13 at 2:00 PM', 'info')">Tue Oct 13 — 2:00 PM</button>
-          <button class="btn btn-outline" onclick="showToast('Selected Wednesday Oct 14 at 11:30 AM', 'info')">Wed Oct 14 — 11:30 AM</button>
+  <!-- SECTION 3: BOOKING SCHEDULER (PREMIUM) -->
+  <section id="booking" class="section-padding ct-book" style="background: var(--bg-surface);">
+    <div class="container">
+      <div class="ct-section-head">
+        <div>
+          <span class="section-tag"><i class="fa-regular fa-calendar-check"></i> Interactive Booking</span>
+          <h2 class="section-title">Schedule A 15-Minute Zoom Presentation</h2>
         </div>
-        <button class="btn btn-gold" onclick="showToast('Consultation slot reserved! Confirmation sent to email.', 'success')">
-          <i class="fa-solid fa-check"></i> Confirm Selected Slot
-        </button>
+        <p class="section-desc ct-section-sub">Pick a slot — speak live with our Athletic Services Director.</p>
+      </div>
+
+      <div class="card-glass ct-slot-card">
+        <div class="grid-3 gap-2 ct-slots">
+          <button class="btn btn-outline ct-slot active" onclick="showToast('Selected Monday Oct 12 at 10:00 AM', 'info')"><span>Mon Oct 12</span><strong>10:00 AM</strong></button>
+          <button class="btn btn-outline ct-slot" onclick="showToast('Selected Tuesday Oct 13 at 2:00 PM', 'info')"><span>Tue Oct 13</span><strong>2:00 PM</strong></button>
+          <button class="btn btn-outline ct-slot" onclick="showToast('Selected Wednesday Oct 14 at 11:30 AM', 'info')"><span>Wed Oct 14</span><strong>11:30 AM</strong></button>
+        </div>
+        <div class="ct-slot-foot">
+          <span class="ct-slot-note"><i class="fa-solid fa-video"></i> Zoom link + agenda emailed instantly</span>
+          <button class="btn btn-gold" onclick="showToast('Consultation slot reserved! Confirmation sent to email.', 'success')">
+            <i class="fa-solid fa-check"></i> Confirm Selected Slot
+          </button>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- SECTION 4: SERVICE AREA MAP & DISTRICTS COVERED -->
-  <section class="section-padding" style="background: var(--bg-main);">
+  <!-- SECTION 4: MAP & DISTRICTS (PREMIUM) -->
+  <section class="section-padding ct-area" style="background: var(--bg-main);">
     <div class="container">
-      <div class="text-center" style="margin-bottom: 3rem;">
-        <span class="section-tag evergreen"><i class="fa-solid fa-map-location-dot"></i> Coverage Zone</span>
-        <h2 class="section-title">Service Areas & Regional Athletic Leagues</h2>
-        <p class="section-desc">We dispatch mobile photography units across a 150-mile regional radius.</p>
+      <div class="ct-section-head">
+        <div>
+          <span class="section-tag evergreen"><i class="fa-solid fa-map-location-dot"></i> Coverage Zone</span>
+          <h2 class="section-title">Service Areas & Regional Athletic Leagues</h2>
+        </div>
+        <p class="section-desc ct-section-sub">Mobile units dispatched across a 150-mile regional radius.</p>
       </div>
 
-      <div class="card-glass" style="padding: 0.75rem; margin-bottom: 2rem;">
-        <iframe title="Stat & Snap studio location map" src="https://www.google.com/maps?q=Athletic+Way+Suite+300+Metro+City&output=embed" style="width: 100%; height: 380px; border: 0; border-radius: var(--radius-md); display: block;" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
-        <div class="flex-between" style="flex-wrap: wrap; gap: 1rem; padding: 1rem 0.5rem 0.5rem 0.5rem;">
-          <span style="font-size: 0.9rem; color: var(--text-muted);"><i class="fa-solid fa-location-dot" style="color: var(--color-gold); margin-right: 0.4rem;"></i> 742 Athletic Way, Suite 300, Metro City</span>
+      <div class="card-glass ct-map-card">
+        <iframe title="Stat & Snap studio location map" src="https://www.google.com/maps?q=Athletic+Way+Suite+300+Metro+City&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+        <div class="ct-map-foot">
+          <span><i class="fa-solid fa-location-dot"></i> 742 Athletic Way, Suite 300, Metro City</span>
           <a href="https://www.google.com/maps/search/?api=1&query=Athletic+Way+Suite+300+Metro+City" target="_blank" rel="noopener" class="btn btn-sm btn-outline">Get Directions <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
         </div>
       </div>
 
-      <div class="grid-4 text-center">
-        <div class="card-glass">
-          <i class="fa-solid fa-school" style="font-size: 2rem; color: var(--color-gold); margin-bottom: 0.5rem;"></i>
+      <div class="grid-4 text-center ct-districts">
+        <div class="card-glass ct-district">
+          <span class="ct-district-icon"><i class="fa-solid fa-school"></i></span>
           <h4>Metro Public Schools</h4>
-          <span style="font-size: 0.85rem; color: var(--text-muted);">28 High Schools Covered</span>
+          <span>28 High Schools Covered</span>
         </div>
 
-        <div class="card-glass">
-          <div style="font-size: 2rem; color: var(--color-crimson); margin-bottom: 0.5rem;"><i class="fa-solid fa-building-columns"></i></div>
+        <div class="card-glass ct-district">
+          <span class="ct-district-icon crimson"><i class="fa-solid fa-building-columns"></i></span>
           <h4>Diocesan & Private Academies</h4>
-          <span style="font-size: 0.85rem; color: var(--text-muted);">16 Private Schools Covered</span>
+          <span>16 Private Schools Covered</span>
         </div>
 
-        <div class="card-glass">
-          <div style="font-size: 2rem; color: var(--color-evergreen-light); margin-bottom: 0.5rem;"><i class="fa-solid fa-baseball-bat-ball"></i></div>
+        <div class="card-glass ct-district">
+          <span class="ct-district-icon green"><i class="fa-solid fa-baseball-bat-ball"></i></span>
           <h4>Regional Youth Leagues</h4>
-          <span style="font-size: 0.85rem; color: var(--text-muted);">35 Little Leagues & Soccer Clubs</span>
+          <span>35 Little Leagues & Soccer Clubs</span>
         </div>
 
-        <div class="card-glass">
-          <div style="font-size: 2rem; color: var(--color-gold); margin-bottom: 0.5rem;"><i class="fa-solid fa-basketball"></i></div>
+        <div class="card-glass ct-district">
+          <span class="ct-district-icon"><i class="fa-solid fa-basketball"></i></span>
           <h4>Travel AAU Associations</h4>
-          <span style="font-size: 0.85rem; color: var(--text-muted);">12 Regional AAU Programs</span>
+          <span>12 Regional AAU Programs</span>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- SECTION 5: FAQ -->
-  <section class="section-padding" style="background: var(--bg-surface);">
-    <div class="container" style="max-width: 800px;">
-      <div class="text-center" style="margin-bottom: 2.5rem;">
-        <h2 class="section-title">Contact FAQ</h2>
-      </div>
-      <div class="accordion-container">
-        <div class="accordion-item active">
-          <div class="accordion-header">
-            <span>What is the response time for new school inquiries?</span>
-            <i class="fa-solid fa-chevron-down accordion-icon"></i>
+  <!-- SECTION 5: FAQ (PREMIUM) -->
+  <section class="section-padding ct-faq" style="background: var(--bg-surface);">
+    <div class="container ct-faq-grid">
+      <div>
+        <span class="section-tag"><i class="fa-solid fa-circle-question"></i> Contact FAQ</span>
+        <h2 class="section-title">Questions Before You Reach Out</h2>
+        <p class="section-desc" style="margin-bottom: 2rem;">Response times, booking windows, and what to include.</p>
+        <div class="accordion-container">
+          <div class="accordion-item active">
+            <div class="accordion-header">
+              <span>What is the response time for new school inquiries?</span>
+              <i class="fa-solid fa-chevron-down accordion-icon"></i>
+            </div>
+            <div class="accordion-body">
+              All submitted inquiry forms are reviewed within 4 business hours. You will receive a direct email and call from an Account Director.
+            </div>
           </div>
-          <div class="accordion-body">
-            All submitted inquiry forms are reviewed within 4 business hours. You will receive a direct email and call from an Account Director.
+          <div class="accordion-item">
+            <div class="accordion-header">
+              <span>How early should we lock a photo-day date?</span>
+              <i class="fa-solid fa-chevron-down accordion-icon"></i>
+            </div>
+            <div class="accordion-body">
+              Book 4–6 weeks before the season. Fall and winter slots fill first — early holds cost nothing and are fully movable once.
+            </div>
+          </div>
+          <div class="accordion-item">
+            <div class="accordion-header">
+              <span>Does the school pay anything to book?</span>
+              <i class="fa-solid fa-chevron-down accordion-icon"></i>
+            </div>
+            <div class="accordion-body">
+              No upfront fees. Parents order direct, and All-School partners earn a 10% revenue share back to the athletic department.
+            </div>
           </div>
         </div>
+      </div>
+      <aside class="card-glass gold-border ct-faq-side">
+        <span class="badge badge-approval"><i class="fa-solid fa-bolt"></i> Fastest Reply</span>
+        <h3>Need an answer today?</h3>
+        <p>Call the support line Mon–Fri 8am–6pm EST, or grab a 15-minute Zoom above.</p>
+        <a href="tel:+15558327627" class="btn btn-gold" style="width: 100%;"><i class="fa-solid fa-phone"></i> (555) 832-7627</a>
+        <a href="mailto:info@statandsnap.com" class="btn btn-outline btn-sm" style="width: 100%;">Email the Studio</a>
+        <span class="ct-side-note"><i class="fa-solid fa-clock"></i> Game-day support till 9 PM</span>
+      </aside>
+    </div>
+  </section>
+
+  <!-- SECTION 6: CTA (PREMIUM) -->
+  <section class="section-padding ct-cta" style="background: var(--color-navy-dark);">
+    <div class="container text-center">
+      <span class="section-tag"><i class="fa-solid fa-rocket"></i> Reserve Your Season</span>
+      <h2 class="section-title" style="color: white;">Ready To Lock Your Photo-Day Date?</h2>
+      <p class="section-desc" style="color: var(--color-slate-light);">Send the enquiry or grab a Zoom slot — we reply within 4 business hours.</p>
+      <div class="flex-center gap-3 ct-cta-btns" style="flex-wrap: wrap;">
+        <a href="#enquiry" class="btn btn-lg btn-gold"><i class="fa-solid fa-paper-plane"></i> Send Enquiry</a>
+        <a href="pricing.html" class="btn btn-lg btn-outline"><i class="fa-solid fa-tags"></i> View Pricing</a>
+      </div>
+      <div class="ct-assurance">
+        <span><i class="fa-solid fa-check"></i> $0 upfront school fees</span>
+        <span><i class="fa-solid fa-check"></i> 48-hour parent proofs</span>
+        <span><i class="fa-solid fa-check"></i> Free retake day</span>
       </div>
     </div>
   </section>
@@ -359,8 +462,8 @@
       <div class="footer-bottom">
         <div>&copy; 2026 Stat & Snap Athletics Photography. All Rights Reserved.</div>
         <div class="flex-align gap-3">
-          <a href="#">Privacy Policy</a>
-          <a href="#">Terms of Service</a>
+          <a href="privacy.html">Privacy Policy</a>
+          <a href="terms.html">Terms of Service</a>
           <a href="coming-soon.html">Maintenance Mode</a>
         </div>
       </div>

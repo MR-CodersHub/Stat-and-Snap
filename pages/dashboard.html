@@ -8,12 +8,13 @@
   <link rel="stylesheet" href="../css/styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
-<body style="background: var(--bg-main);">
+<body class="page-dash" style="background: var(--bg-main);">
 
   <div class="dashboard-layout">
+  <div class="dash-overlay"></div>
 
     <!-- DASHBOARD SIDEBAR (16 MODULES) -->
-    <aside class="dashboard-sidebar">
+    <aside class="dashboard-sidebar dsh-sidebar">
       <div class="sidebar-header">
         <a href="../index.html" class="brand-logo" style="font-size: 1.15rem;">
           <div class="logo-badge" style="width: 32px; height: 32px; font-size: 0.9rem;"><i class="fa-solid fa-camera-retro"></i></div>
@@ -22,15 +23,16 @@
             <small class="brand-tagline">You Play. We Capture.</small>
           </span>
         </a>
-        <button class="icon-btn sidebar-toggle-btn" style="width: 30px; height: 30px; display: none;"><i class="fa-solid fa-xmark"></i></button>
+        <span class="badge badge-approval" style="font-size:0.65rem;">SCHOOL</span>
       </div>
 
       <div class="sidebar-menu">
+        <div class="dsh-label">Season</div>
         <div class="sidebar-item active" data-module="overview">
           <i class="fa-solid fa-chart-pie"></i> <span>Overview</span>
         </div>
         <div class="sidebar-item" data-module="schedule">
-          <i class="fa-solid fa-calendar-day"></i> <span>Photo Day Schedule</span>
+          <i class="fa-solid fa-calendar-day"></i> <span>Photo Day Schedule</span><span class="dsh-count">4</span>
         </div>
         <div class="sidebar-item" data-module="calendar">
           <i class="fa-solid fa-calendar-days"></i> <span>Calendar</span>
@@ -38,8 +40,9 @@
         <div class="sidebar-item" data-module="profile">
           <i class="fa-solid fa-school"></i> <span>School Profile</span>
         </div>
+        <div class="dsh-label">Teams</div>
         <div class="sidebar-item" data-module="rosters">
-          <i class="fa-solid fa-users"></i> <span>Teams & Rosters</span>
+          <i class="fa-solid fa-users"></i> <span>Teams & Rosters</span><span class="dsh-count">448</span>
         </div>
         <div class="sidebar-item" data-module="individual-orders">
           <i class="fa-solid fa-user-tag"></i> <span>Individual Orders</span>
@@ -53,20 +56,22 @@
         <div class="sidebar-item" data-module="bulk">
           <i class="fa-solid fa-truck-ramp-box"></i> <span>Bulk Coordination</span>
         </div>
+        <div class="dsh-label">Track</div>
         <div class="sidebar-item" data-module="status">
           <i class="fa-solid fa-list-check"></i> <span>Order Status Tracking</span>
         </div>
         <div class="sidebar-item" data-module="retakes">
-          <i class="fa-solid fa-rotate-left"></i> <span>Retake Requests</span>
+          <i class="fa-solid fa-rotate-left"></i> <span>Retake Requests</span><span class="dsh-count alert">3</span>
         </div>
         <div class="sidebar-item" data-module="invoices">
-          <i class="fa-solid fa-file-invoice-dollar"></i> <span>Payment & Invoices</span>
+          <i class="fa-solid fa-file-invoice-dollar"></i> <span>Payment & Invoices</span><span class="dsh-count warn">1</span>
         </div>
+        <div class="dsh-label">Connect</div>
         <div class="sidebar-item" data-module="messages">
-          <i class="fa-solid fa-comments"></i> <span>Messages</span>
+          <i class="fa-solid fa-comments"></i> <span>Messages</span><span class="dsh-count">2</span>
         </div>
         <div class="sidebar-item" data-module="notifications">
-          <i class="fa-solid fa-bell"></i> <span>Notifications</span>
+          <i class="fa-solid fa-bell"></i> <span>Notifications</span><span class="dsh-count alert">4</span>
         </div>
         <div class="sidebar-item" data-module="downloads">
           <i class="fa-solid fa-cloud-arrow-down"></i> <span>Downloads & Galleries</span>
@@ -76,7 +81,7 @@
         </div>
       </div>
 
-      <div style="padding: 1rem; border-top: 1px solid rgba(255,255,255,0.1); display:flex; flex-direction:column; gap:0.5rem;">
+      <div class="dsh-side-foot">
         <a href="admin.html" class="btn btn-sm btn-secondary" style="width: 100%;"><i class="fa-solid fa-user-shield"></i> Studio Admin Portal</a>
         <a href="login.html" class="btn btn-sm btn-outline" style="width: 100%;"><i class="fa-solid fa-right-from-bracket"></i> Log Out</a>
       </div>
@@ -86,21 +91,22 @@
     <main class="dashboard-main">
 
       <!-- Topbar -->
-      <header class="dashboard-topbar">
-        <div class="flex-align gap-2">
-          <button class="icon-btn sidebar-toggle-btn" style="display: none;"><i class="fa-solid fa-bars"></i></button>
+      <header class="dashboard-topbar dsh-topbar">
+        <div class="flex-align gap-2 dsh-topbar-left">
+          <button class="icon-btn sidebar-toggle-btn"><i class="fa-solid fa-bars"></i></button>
           <div>
             <h2 class="dash-page-title" style="font-size: 1.25rem;">Overview</h2>
-            <span style="font-size: 0.8rem; color: var(--text-muted);">Oakridge High Athletics Portal — Fall 2026-2027</span>
+            <span class="dsh-subtitle">Oakridge High Athletics Portal — Fall 2026-2027</span>
           </div>
         </div>
 
         <div class="nav-actions">
           <button class="icon-btn theme-toggle"><i class="fa-solid fa-sun"></i></button>
           <button class="icon-btn dir-toggle"><span class="dir-toggle-label">RTL</span></button>
-          <div class="flex-align gap-2" style="background: var(--bg-surface-elevated); padding: 0.4rem 0.85rem; border-radius: var(--radius-full); border: 1px solid var(--border-subtle);">
-            <div style="width: 28px; height: 28px; border-radius: var(--radius-full); background: var(--color-crimson); color: white; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 0.8rem;">MV</div>
-            <span style="font-size: 0.85rem; font-weight: 700;">Marcus Vance (AD)</span>
+          <button class="icon-btn dsh-bell" onclick="showToast('4 updates: proofs ready, Fall Day 2 tomorrow, bulk ETA Oct 18, invoice due Oct 20.', 'info')" title="Notifications" aria-label="Notifications"><i class="fa-solid fa-bell"></i><span class="dsh-dot"></span></button>
+          <div class="dsh-user">
+            <div class="dsh-avatar">MV</div>
+            <span>Marcus Vance (AD)</span>
           </div>
         </div>
       </header>
@@ -110,52 +116,52 @@
 
         <!-- MODULE 1: OVERVIEW -->
         <div id="module-overview" class="dash-module">
-          <div class="grid-4" style="margin-bottom: 2rem;">
-            <div class="card-glass flex-align gap-2" style="padding: 1.25rem;">
-              <div style="width: 45px; height: 45px; border-radius: var(--radius-md); background: rgba(59, 130, 246, 0.15); color: #3B82F6; display: flex; align-items: center; justify-content: center; font-size: 1.3rem;"><i class="fa-solid fa-calendar-day"></i></div>
-              <div><span style="font-size: 0.75rem; color: var(--text-muted); font-weight: 700; text-transform: uppercase;">Upcoming Photo Days</span><div style="font-family: var(--font-heading); font-weight: 800; font-size: 1.5rem;">2 Dates</div></div>
+          <div class="grid-4 dsh-stats">
+            <div class="card-glass dsh-stat">
+              <span class="dsh-stat-icon blue"><i class="fa-solid fa-calendar-day"></i></span>
+              <div><span class="dsh-stat-label">Upcoming Photo Days</span><div class="dsh-stat-val">2 Dates</div></div>
             </div>
-            <div class="card-glass flex-align gap-2" style="padding: 1.25rem;">
-              <div style="width: 45px; height: 45px; border-radius: var(--radius-md); background: rgba(245, 158, 11, 0.15); color: #F59E0B; display: flex; align-items: center; justify-content: center; font-size: 1.3rem;"><i class="fa-solid fa-clock"></i></div>
-              <div><span style="font-size: 0.75rem; color: var(--text-muted); font-weight: 700; text-transform: uppercase;">Today's Schedule</span><div style="font-family: var(--font-heading); font-weight: 800; font-size: 1.5rem;">4 Teams</div></div>
+            <div class="card-glass dsh-stat">
+              <span class="dsh-stat-icon amber"><i class="fa-solid fa-clock"></i></span>
+              <div><span class="dsh-stat-label">Today's Schedule</span><div class="dsh-stat-val">4 Teams</div></div>
             </div>
-            <div class="card-glass flex-align gap-2" style="padding: 1.25rem;">
-              <div style="width: 45px; height: 45px; border-radius: var(--radius-md); background: rgba(16, 185, 129, 0.15); color: #10B981; display: flex; align-items: center; justify-content: center; font-size: 1.3rem;"><i class="fa-solid fa-circle-check"></i></div>
-              <div><span style="font-size: 0.75rem; color: var(--text-muted); font-weight: 700; text-transform: uppercase;">Teams Completed</span><div style="font-family: var(--font-heading); font-weight: 800; font-size: 1.5rem;">14 / 18</div></div>
+            <div class="card-glass dsh-stat">
+              <span class="dsh-stat-icon green"><i class="fa-solid fa-circle-check"></i></span>
+              <div><span class="dsh-stat-label">Teams Completed</span><div class="dsh-stat-val">14 / 18</div></div>
             </div>
-            <div class="card-glass flex-align gap-2" style="padding: 1.25rem;">
-              <div style="width: 45px; height: 45px; border-radius: var(--radius-md); background: rgba(139, 92, 246, 0.15); color: #8B5CF6; display: flex; align-items: center; justify-content: center; font-size: 1.3rem;"><i class="fa-solid fa-box"></i></div>
-              <div><span style="font-size: 0.75rem; color: var(--text-muted); font-weight: 700; text-transform: uppercase;">Pending Orders</span><div style="font-family: var(--font-heading); font-weight: 800; font-size: 1.5rem;">32 Orders</div></div>
+            <div class="card-glass dsh-stat">
+              <span class="dsh-stat-icon violet"><i class="fa-solid fa-box"></i></span>
+              <div><span class="dsh-stat-label">Pending Orders</span><div class="dsh-stat-val">32 Orders</div></div>
             </div>
           </div>
 
-          <div class="grid-3" style="margin-bottom: 2rem;">
-            <div class="card-glass" style="padding: 1.25rem;">
-              <span style="font-size: 0.8rem; color: var(--text-muted); font-weight: 700;">INDIVIDUAL PACKAGE ORDERS</span>
-              <div style="font-family: var(--font-heading); font-size: 2rem; font-weight: 800; color: var(--color-gold); margin: 0.25rem 0;">412 Packets</div>
+          <div class="grid-3 dsh-panels">
+            <div class="card-glass dsh-progress">
+              <span class="dsh-progress-label">INDIVIDUAL PACKAGE ORDERS</span>
+              <div class="dsh-progress-val gold">412 Packets</div>
               <span class="badge badge-completed">92% Parent Participation</span>
-              <div style="margin-top:1rem; background: var(--bg-surface-elevated); border-radius: var(--radius-full); height: 8px; overflow:hidden;"><div style="width:92%; height:100%; background: var(--color-gold);"></div></div>
+              <div class="dsh-bar"><div class="dsh-fill gold" style="width:92%;"></div></div>
             </div>
-            <div class="card-glass" style="padding: 1.25rem;">
-              <span style="font-size: 0.8rem; color: var(--text-muted); font-weight: 700;">TEAM PACKAGES ORDERED</span>
-              <div style="font-family: var(--font-heading); font-size: 2rem; font-weight: 800; color: #8B5CF6; margin: 0.25rem 0;">18 Teams</div>
+            <div class="card-glass dsh-progress">
+              <span class="dsh-progress-label">TEAM PACKAGES ORDERED</span>
+              <div class="dsh-progress-val violet">18 Teams</div>
               <span class="badge badge-processing">14 Approved / 4 Pending</span>
-              <div style="margin-top:1rem; background: var(--bg-surface-elevated); border-radius: var(--radius-full); height: 8px; overflow:hidden;"><div style="width:78%; height:100%; background: #8B5CF6;"></div></div>
+              <div class="dsh-bar"><div class="dsh-fill violet" style="width:78%;"></div></div>
             </div>
-            <div class="card-glass" style="padding: 1.25rem;">
-              <span style="font-size: 0.8rem; color: var(--text-muted); font-weight: 700;">BULK ORDER DISPATCH</span>
-              <div style="font-family: var(--font-heading); font-size: 2rem; font-weight: 800; color: #10B981; margin: 0.25rem 0;">Delivery Oct 18</div>
+            <div class="card-glass dsh-progress">
+              <span class="dsh-progress-label">BULK ORDER DISPATCH</span>
+              <div class="dsh-progress-val green">Delivery Oct 18</div>
               <span class="badge badge-delivered">Carrier: FedEx Express</span>
-              <div style="margin-top:1rem; background: var(--bg-surface-elevated); border-radius: var(--radius-full); height: 8px; overflow:hidden;"><div style="width:65%; height:100%; background: #10B981;"></div></div>
+              <div class="dsh-bar"><div class="dsh-fill green" style="width:65%;"></div></div>
             </div>
           </div>
 
-          <div class="card-glass" style="padding: 1.5rem;">
-            <div class="flex-between" style="margin-bottom: 1.5rem; flex-wrap: wrap; gap: 1rem;">
-              <h3 style="font-size: 1.2rem;"><i class="fa-solid fa-list-check" style="color: var(--color-gold);"></i> Recent Team Photo Status</h3>
-              <div class="flex-align gap-2">
-                <input type="text" class="form-control" placeholder="Search team or sport..." data-table-search="table-orders" style="width: 220px; padding: 0.5rem 0.85rem; font-size: 0.85rem;">
-                <select class="form-control" data-status-filter="table-orders" style="width: 160px; padding: 0.5rem 0.85rem; font-size: 0.85rem;">
+          <div class="card-glass dsh-table-card">
+            <div class="dsh-card-head">
+              <h3><i class="fa-solid fa-list-check"></i> Recent Team Photo Status</h3>
+              <div class="dsh-filters">
+                <input type="text" class="form-control" placeholder="Search team or sport..." data-table-search="table-orders">
+                <select class="form-control" data-status-filter="table-orders">
                   <option value="all">All Statuses</option>
                   <option value="scheduled">Scheduled</option>
                   <option value="in progress">In Progress</option>
@@ -240,14 +246,14 @@
               <div style="padding:0.75rem;border:1px solid var(--border-subtle);border-radius:8px;opacity:0.4;">28</div>
               <div style="padding:0.75rem;border:1px solid var(--border-subtle);border-radius:8px;opacity:0.4;">29</div>
               <div style="padding:0.75rem;border:1px solid var(--border-subtle);border-radius:8px;opacity:0.4;">30</div>
-              <div style="padding:0.75rem;border:2px solid #10B981;border-radius:8px;background:rgba(16,185,129,0.1);"><strong>01</strong><div style="font-size:0.7rem;margin-top:0.25rem;">📸 Fall Day 1</div></div>
+              <div style="padding:0.75rem;border:2px solid #10B981;border-radius:8px;background:rgba(16,185,129,0.1);"><strong>01</strong><div style="font-size:0.7rem;margin-top:0.25rem;"><i class="fa-solid fa-camera"></i> Fall Day 1</div></div>
               <div style="padding:0.75rem;border:1px solid var(--border-subtle);border-radius:8px;"><strong>02</strong><div style="font-size:0.7rem;">Processing</div></div>
               <div style="padding:0.75rem;border:1px solid var(--border-subtle);border-radius:8px;"><strong>03</strong></div>
               <div style="padding:0.75rem;border:1px solid var(--border-subtle);border-radius:8px;"><strong>04</strong></div>
               <div style="padding:0.75rem;border:1px solid var(--border-subtle);border-radius:8px;"><strong>05</strong></div>
               <div style="padding:0.75rem;border:1px solid var(--border-subtle);border-radius:8px;"><strong>06</strong></div>
               <div style="padding:0.75rem;border:1px solid var(--border-subtle);border-radius:8px;"><strong>07</strong><div style="font-size:0.7rem;">Proofs due</div></div>
-              <div style="padding:0.75rem;border:2px solid var(--color-gold);border-radius:8px;background:rgba(198,164,90,0.1);"><strong>08</strong><div style="font-size:0.7rem;">📸 Fall Day 2</div></div>
+              <div style="padding:0.75rem;border:2px solid var(--color-gold);border-radius:8px;background:rgba(198,164,90,0.1);"><strong>08</strong><div style="font-size:0.7rem;"><i class="fa-solid fa-camera"></i> Fall Day 2</div></div>
               <div style="padding:0.75rem;border:1px solid var(--border-subtle);border-radius:8px;"><strong>09</strong></div>
               <div style="padding:0.75rem;border:1px solid var(--border-subtle);border-radius:8px;"><strong>10</strong></div>
               <div style="padding:0.75rem;border:1px solid var(--border-subtle);border-radius:8px;"><strong>11</strong></div>
@@ -257,11 +263,11 @@
               <div style="padding:0.75rem;border:1px solid var(--border-subtle);border-radius:8px;"><strong>15</strong></div>
               <div style="padding:0.75rem;border:1px solid var(--border-subtle);border-radius:8px;"><strong>16</strong></div>
               <div style="padding:0.75rem;border:1px solid var(--border-subtle);border-radius:8px;"><strong>17</strong></div>
-              <div style="padding:0.75rem;border:2px solid #3B82F6;border-radius:8px;background:rgba(59,130,246,0.1);"><strong>18</strong><div style="font-size:0.7rem;">🚚 Bulk delivery</div></div>
+              <div style="padding:0.75rem;border:2px solid #3B82F6;border-radius:8px;background:rgba(59,130,246,0.1);"><strong>18</strong><div style="font-size:0.7rem;"><i class="fa-solid fa-truck-fast"></i> Bulk delivery</div></div>
               <div style="padding:0.75rem;border:1px solid var(--border-subtle);border-radius:8px;"><strong>19</strong></div>
               <div style="padding:0.75rem;border:1px solid var(--border-subtle);border-radius:8px;"><strong>20</strong></div>
               <div style="padding:0.75rem;border:1px solid var(--border-subtle);border-radius:8px;"><strong>21</strong></div>
-              <div style="padding:0.75rem;border:2px solid #8B5CF6;border-radius:8px;background:rgba(139,92,246,0.1);"><strong>22</strong><div style="font-size:0.7rem;">🔁 Retake day</div></div>
+              <div style="padding:0.75rem;border:2px solid #8B5CF6;border-radius:8px;background:rgba(139,92,246,0.1);"><strong>22</strong><div style="font-size:0.7rem;"><i class="fa-solid fa-rotate-left"></i> Retake day</div></div>
               <div style="padding:0.75rem;border:1px solid var(--border-subtle);border-radius:8px;"><strong>23</strong></div>
               <div style="padding:0.75rem;border:1px solid var(--border-subtle);border-radius:8px;"><strong>24</strong></div>
               <div style="padding:0.75rem;border:1px solid var(--border-subtle);border-radius:8px;"><strong>25</strong></div>
@@ -442,7 +448,7 @@
                 <div><div class="flex-between" style="font-size:0.8rem;margin-bottom:0.25rem;"><span>Sorting & packing</span><span>45%</span></div><div style="background:var(--bg-surface-elevated);height:8px;border-radius:99px;"><div style="width:45%;height:100%;background:#3B82F6;border-radius:99px;"></div></div></div>
               </div>
               <div style="margin-top:1rem;padding:1rem;background:var(--bg-surface-elevated);border-radius:10px;font-size:0.85rem;">
-                <strong>🚚 FedEx Express — Tracking #784912556301</strong><br>Estimated delivery: <strong>Oct 18, 2026 by 3 PM</strong> → Main Office
+                <strong><i class="fa-solid fa-truck-fast" style="color: var(--color-gold);"></i> FedEx Express — Tracking #784912556301</strong><br>Estimated delivery: <strong>Oct 18, 2026 by 3 PM</strong> → Main Office
               </div>
             </div>
             <div class="card-glass" style="padding:1.5rem;">
@@ -490,7 +496,7 @@
             <div style="margin-top:1.5rem;padding:1.25rem;background:var(--bg-surface-elevated);border-radius:12px;">
               <strong style="font-size:0.9rem;">Sample timeline — #TEAM-203 Varsity Basketball:</strong>
               <div style="display:flex;gap:0.5rem;margin-top:0.75rem;flex-wrap:wrap;font-size:0.75rem;">
-                <span class="badge badge-completed">✓ Shoot done</span> → <span class="badge badge-completed">✓ Proofs sent</span> → <span class="badge badge-completed">✓ Approved</span> → <span class="badge badge-processing">● Printing</span> → <span class="badge badge-scheduled">○ Shipping</span> → <span class="badge badge-scheduled">○ Delivered</span>
+                <span class="badge badge-completed"><i class="fa-solid fa-check"></i> Shoot done</span> → <span class="badge badge-completed"><i class="fa-solid fa-check"></i> Proofs sent</span> → <span class="badge badge-completed"><i class="fa-solid fa-check"></i> Approved</span> → <span class="badge badge-processing"><i class="fa-solid fa-spinner"></i> Printing</span> → <span class="badge badge-scheduled"><i class="fa-regular fa-circle"></i> Shipping</span> → <span class="badge badge-scheduled"><i class="fa-regular fa-circle"></i> Delivered</span>
               </div>
             </div>
           </div>
@@ -518,7 +524,7 @@
                 <div style="padding:1rem;background:var(--bg-surface-elevated);border-radius:10px;"><div class="flex-between"><strong>Jada Smith — JV Cheer</strong><span class="badge badge-processing">Processing</span></div><div style="font-size:0.8rem;color:var(--text-muted);margin-top:0.25rem;">Blink in team photo → composite fix in progress</div></div>
                 <div style="padding:1rem;background:var(--bg-surface-elevated);border-radius:10px;"><div class="flex-between"><strong>Leo Park — Cross Country</strong><span class="badge badge-completed">Completed</span></div><div style="font-size:0.8rem;color:var(--text-muted);margin-top:0.25rem;">Re-shoot done Oct 03, proofs ready</div></div>
               </div>
-              <div style="margin-top:1rem;padding:1rem;border:1px dashed var(--color-gold);border-radius:10px;font-size:0.85rem;">📅 <strong>Guaranteed makeup day:</strong> Oct 22, 3:30–5:00 PM, Aux Gym. No extra fee.</div>
+              <div style="margin-top:1rem;padding:1rem;border:1px dashed var(--color-gold);border-radius:10px;font-size:0.85rem;"><i class="fa-solid fa-calendar-day" style="color: var(--color-gold);"></i> <strong>Guaranteed makeup day:</strong> Oct 22, 3:30–5:00 PM, Aux Gym. No extra fee.</div>
             </div>
           </div>
         </div>
@@ -538,7 +544,7 @@
               <tr><td>#INV-882</td><td>Gym banners x3 + plaques</td><td>Oct 04</td><td>$1,095</td><td><span class="badge badge-progress">Due Oct 20</span></td><td><button class="btn btn-sm btn-gold" onclick="showToast('Redirecting to secure checkout...','info')">Pay Now</button></td></tr>
               <tr><td>#INV-879</td><td>Yearbook PSPA sync (included free)</td><td>Sep 28</td><td>$0.00</td><td><span class="badge badge-delivered">Waived</span></td><td><button class="btn btn-sm btn-outline" onclick="showToast('No charge','info')">View</button></td></tr>
             </tbody></table></div>
-            <p style="font-size:0.8rem;color:var(--text-muted);margin-top:1rem;">💡 School pays $0 upfront option available — 100% parent direct-pay. Current plan: Hybrid (school covers banners, parents cover packets).</p>
+            <p style="font-size:0.8rem;color:var(--text-muted);margin-top:1rem;"><i class="fa-solid fa-circle-info" style="color: var(--color-gold);"></i> School pays $0 upfront option available — 100% parent direct-pay. Current plan: Hybrid (school covers banners, parents cover packets).</p>
           </div>
         </div>
 
@@ -560,10 +566,10 @@
           <div class="card-glass" style="padding:1.5rem;max-width:800px;margin:0 auto;">
             <div class="flex-between" style="margin-bottom:1rem;"><h3><i class="fa-solid fa-bell" style="color:var(--color-gold);"></i> Notifications</h3><button class="btn btn-sm btn-outline" onclick="showToast('All marked as read','info')">Mark all read</button></div>
             <div style="display:flex;flex-direction:column;gap:0.75rem;font-size:0.9rem;">
-              <div style="padding:1rem;background:rgba(16,185,129,0.08);border:1px solid rgba(16,185,129,0.3);border-radius:10px;">✅ <strong>Proofs ready:</strong> Cross Country color correction complete — approve by Oct 10.</div>
-              <div style="padding:1rem;background:rgba(198,164,90,0.08);border:1px solid rgba(198,164,90,0.3);border-radius:10px;">📸 <strong>Reminder:</strong> Fall Day 2 tomorrow (Oct 08) — 4 teams, Main Gym A, 3:15 PM.</div>
-              <div style="padding:1rem;background:rgba(59,130,246,0.08);border:1px solid rgba(59,130,246,0.3);border-radius:10px;">🚚 <strong>Shipment:</strong> Bulk order #BULK-FALL26 left the lab — ETA Oct 18.</div>
-              <div style="padding:1rem;background:var(--bg-surface-elevated);border-radius:10px;opacity:0.7;">📄 <strong>Invoice:</strong> #INV-882 ($1,095) due Oct 20.</div>
+              <div style="padding:1rem;background:rgba(16,185,129,0.08);border:1px solid rgba(16,185,129,0.3);border-radius:10px;"><i class="fa-solid fa-circle-check" style="color:#10B981;"></i> <strong>Proofs ready:</strong> Cross Country color correction complete — approve by Oct 10.</div>
+              <div style="padding:1rem;background:rgba(198,164,90,0.08);border:1px solid rgba(198,164,90,0.3);border-radius:10px;"><i class="fa-solid fa-camera" style="color:var(--color-gold);"></i> <strong>Reminder:</strong> Fall Day 2 tomorrow (Oct 08) — 4 teams, Main Gym A, 3:15 PM.</div>
+              <div style="padding:1rem;background:rgba(59,130,246,0.08);border:1px solid rgba(59,130,246,0.3);border-radius:10px;"><i class="fa-solid fa-truck-fast" style="color:#3B82F6;"></i> <strong>Shipment:</strong> Bulk order #BULK-FALL26 left the lab — ETA Oct 18.</div>
+              <div style="padding:1rem;background:var(--bg-surface-elevated);border-radius:10px;opacity:0.7;"><i class="fa-solid fa-file-invoice-dollar" style="color:var(--text-muted);"></i> <strong>Invoice:</strong> #INV-882 ($1,095) due Oct 20.</div>
             </div>
           </div>
         </div>

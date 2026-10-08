@@ -13,6 +13,11 @@ function initAdminSidebar() {
   const modules = document.querySelectorAll('.dash-module');
   const title = document.querySelector('.dash-page-title');
   const sidebar = document.querySelector('.dashboard-sidebar');
+  const overlay = document.querySelector('.dash-overlay');
+  const syncOverlay = () => {
+    if (!overlay || !sidebar) return;
+    overlay.classList.toggle('show', sidebar.classList.contains('active'));
+  };
   items.forEach((item) => {
     item.addEventListener('click', () => {
       const name = item.getAttribute('data-module');
@@ -22,11 +27,13 @@ function initAdminSidebar() {
       const target = document.getElementById('admin-' + name);
       if (target) target.style.display = 'block';
       if (title) title.textContent = item.querySelector('span')?.textContent || 'Admin';
-      if (window.innerWidth < 992 && sidebar) sidebar.classList.remove('active');
+      if (window.innerWidth < 1025 && sidebar) sidebar.classList.remove('active');
+      syncOverlay();
     });
   });
   const toggles = document.querySelectorAll('.sidebar-toggle-btn');
-  toggles.forEach((b) => b.addEventListener('click', () => sidebar?.classList.toggle('active')));
+  toggles.forEach((b) => b.addEventListener('click', () => { sidebar?.classList.toggle('active'); syncOverlay(); }));
+  if (overlay) overlay.addEventListener('click', () => { sidebar?.classList.remove('active'); syncOverlay(); });
 }
 
 function initAdminSearchFilter() {

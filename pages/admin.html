@@ -8,9 +8,10 @@
   <link rel="stylesheet" href="../css/styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
-<body style="background: var(--bg-main);">
+<body class="page-admin" style="background: var(--bg-main);">
 <div class="dashboard-layout">
-  <aside class="dashboard-sidebar">
+  <div class="dash-overlay"></div>
+  <aside class="dashboard-sidebar adm-sidebar">
     <div class="sidebar-header">
       <a href="../index.html" class="brand-logo" style="font-size:1.1rem;">
         <div class="logo-badge" style="width:32px;height:32px;font-size:0.9rem;background:var(--color-gold);color:#111;"><i class="fa-solid fa-user-shield"></i></div>
@@ -22,36 +23,40 @@
       <span class="badge badge-processing" style="font-size:0.65rem;">ADMIN</span>
     </div>
     <div class="sidebar-menu">
+      <div class="adm-label">Manage</div>
       <div class="sidebar-item active" data-module="overview"><i class="fa-solid fa-gauge-high"></i><span>Studio Overview</span></div>
-      <div class="sidebar-item" data-module="schools"><i class="fa-solid fa-school"></i><span>Schools & Clients</span></div>
-      <div class="sidebar-item" data-module="schedule"><i class="fa-solid fa-calendar-day"></i><span>Photo Day Schedule</span></div>
-      <div class="sidebar-item" data-module="orders"><i class="fa-solid fa-boxes-stacked"></i><span>All Orders</span></div>
+      <div class="sidebar-item" data-module="schools"><i class="fa-solid fa-school"></i><span>Schools & Clients</span><span class="adm-count">45</span></div>
+      <div class="sidebar-item" data-module="schedule"><i class="fa-solid fa-calendar-day"></i><span>Photo Day Schedule</span><span class="adm-count warn">4</span></div>
+      <div class="sidebar-item" data-module="orders"><i class="fa-solid fa-boxes-stacked"></i><span>All Orders</span><span class="adm-count">3.8k</span></div>
+      <div class="adm-label">Operations</div>
       <div class="sidebar-item" data-module="bulk"><i class="fa-solid fa-truck-ramp-box"></i><span>Bulk Coordination</span></div>
-      <div class="sidebar-item" data-module="yearbook"><i class="fa-solid fa-book-open"></i><span>Yearbook PSPA</span></div>
+      <div class="sidebar-item" data-module="yearbook"><i class="fa-solid fa-book-open"></i><span>Yearbook PSPA</span><span class="adm-count warn">3</span></div>
       <div class="sidebar-item" data-module="crew"><i class="fa-solid fa-camera"></i><span>Photographers & Crew</span></div>
-      <div class="sidebar-item" data-module="retakes"><i class="fa-solid fa-rotate-left"></i><span>Retake Approvals</span></div>
+      <div class="sidebar-item" data-module="retakes"><i class="fa-solid fa-rotate-left"></i><span>Retake Approvals</span><span class="adm-count alert">12</span></div>
+      <div class="adm-label">Studio</div>
       <div class="sidebar-item" data-module="payments"><i class="fa-solid fa-sack-dollar"></i><span>Revenue & Invoices</span></div>
-      <div class="sidebar-item" data-module="messages"><i class="fa-solid fa-comments"></i><span>Messages</span></div>
+      <div class="sidebar-item" data-module="messages"><i class="fa-solid fa-comments"></i><span>Messages</span><span class="adm-count">3</span></div>
       <div class="sidebar-item" data-module="settings"><i class="fa-solid fa-gear"></i><span>Studio Settings</span></div>
     </div>
-    <div style="padding:1rem;border-top:1px solid rgba(255,255,255,0.1);display:flex;flex-direction:column;gap:0.5rem;">
-      <a href="dashboard.html" class="btn btn-sm btn-outline" style="width:100%;"><i class="fa-solid fa-grip"></i> View School Portal</a>
+    <div class="adm-side-foot">
+      <a href="dashboard.html" class="btn btn-sm btn-outline" style="width:100%;"><i class="fa-solid fa-chalkboard-user"></i> View School Portal</a>
       <a href="login.html" class="btn btn-sm btn-secondary" style="width:100%;"><i class="fa-solid fa-right-from-bracket"></i> Log Out</a>
     </div>
   </aside>
 
   <main class="dashboard-main">
-    <header class="dashboard-topbar">
-      <div class="flex-align gap-2">
-        <button class="icon-btn sidebar-toggle-btn" style="display:none;"><i class="fa-solid fa-bars"></i></button>
-        <div><h2 class="dash-page-title" style="font-size:1.25rem;">Studio Overview</h2><span style="font-size:0.8rem;color:var(--text-muted);">Fall Season 2026-2027 — All school clients</span></div>
+    <header class="dashboard-topbar adm-topbar">
+      <div class="flex-align gap-2 adm-topbar-left">
+        <button class="icon-btn sidebar-toggle-btn"><i class="fa-solid fa-bars"></i></button>
+        <div><h2 class="dash-page-title" style="font-size:1.25rem;">Studio Overview</h2><span class="adm-subtitle">Fall Season 2026-2027 — All school clients</span></div>
       </div>
       <div class="nav-actions">
         <button class="icon-btn theme-toggle"><i class="fa-solid fa-sun"></i></button>
         <button class="icon-btn dir-toggle"><span class="dir-toggle-label">RTL</span></button>
-        <div class="flex-align gap-2" style="background:var(--bg-surface-elevated);padding:0.4rem 0.85rem;border-radius:99px;border:1px solid var(--border-subtle);">
-          <div style="width:28px;height:28px;border-radius:99px;background:var(--color-gold);color:#111;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:0.8rem;">SA</div>
-          <span style="font-size:0.85rem;font-weight:700;">Studio Admin</span>
+        <button class="icon-btn adm-bell" onclick="showToast('3 unread alerts: 12 retakes, 4 unassigned shoots, $9,840 overdue.', 'warning')" title="Notifications" aria-label="Notifications"><i class="fa-solid fa-bell"></i><span class="adm-dot"></span></button>
+        <div class="adm-user">
+          <div class="adm-avatar">SA</div>
+          <span>Studio Admin</span>
         </div>
       </div>
     </header>
@@ -59,33 +64,33 @@
     <div class="dashboard-body">
       <!-- OVERVIEW -->
       <div id="admin-overview" class="dash-module">
-        <div class="grid-4" style="margin-bottom:1.5rem;">
-          <div class="card-glass" style="padding:1.25rem;"><span style="font-size:0.75rem;color:var(--text-muted);font-weight:700;">TOTAL REVENUE (FALL)</span><div style="font-size:2rem;font-weight:800;color:var(--color-gold);">$84,250</div><span class="badge badge-completed">+18% vs last season</span></div>
-          <div class="card-glass" style="padding:1.25rem;"><span style="font-size:0.75rem;color:var(--text-muted);font-weight:700;">ACTIVE SCHOOLS</span><div style="font-size:2rem;font-weight:800;">45</div><span class="badge badge-scheduled">6 pending onboarding</span></div>
-          <div class="card-glass" style="padding:1.25rem;"><span style="font-size:0.75rem;color:var(--text-muted);font-weight:700;">ORDERS (IND + TEAM)</span><div style="font-size:2rem;font-weight:800;">3,842</div><span class="badge badge-processing">214 in lab now</span></div>
-          <div class="card-glass" style="padding:1.25rem;"><span style="font-size:0.75rem;color:var(--text-muted);font-weight:700;">PHOTO DAYS THIS MONTH</span><div style="font-size:2rem;font-weight:800;">28</div><span class="badge badge-approval">4 need crew</span></div>
+        <div class="grid-4 adm-stats">
+          <div class="card-glass adm-stat"><span class="adm-stat-icon"><i class="fa-solid fa-sack-dollar"></i></span><div><span class="adm-stat-label">TOTAL REVENUE (FALL)</span><div class="adm-stat-val gold">$84,250</div><span class="badge badge-completed">+18% vs last season</span></div></div>
+          <div class="card-glass adm-stat"><span class="adm-stat-icon crimson"><i class="fa-solid fa-school"></i></span><div><span class="adm-stat-label">ACTIVE SCHOOLS</span><div class="adm-stat-val">45</div><span class="badge badge-scheduled">6 pending onboarding</span></div></div>
+          <div class="card-glass adm-stat"><span class="adm-stat-icon violet"><i class="fa-solid fa-boxes-stacked"></i></span><div><span class="adm-stat-label">ORDERS (IND + TEAM)</span><div class="adm-stat-val">3,842</div><span class="badge badge-processing">214 in lab now</span></div></div>
+          <div class="card-glass adm-stat"><span class="adm-stat-icon green"><i class="fa-solid fa-calendar-day"></i></span><div><span class="adm-stat-label">PHOTO DAYS THIS MONTH</span><div class="adm-stat-val">28</div><span class="badge badge-approval">4 need crew</span></div></div>
         </div>
-        <div class="grid-2" style="margin-bottom:1.5rem;">
-          <div class="card-glass" style="padding:1.5rem;">
-            <h3 style="margin-bottom:1rem;"><i class="fa-solid fa-chart-line" style="color:var(--color-gold);"></i> Revenue by Package</h3>
-            <div style="display:flex;flex-direction:column;gap:0.75rem;font-size:0.85rem;">
-              <div><div class="flex-between" style="margin-bottom:0.25rem;"><span>Individual packets (2,940 × avg $54)</span><strong>$58,800</strong></div><div style="background:var(--bg-surface-elevated);height:10px;border-radius:99px;"><div style="width:70%;height:100%;background:var(--color-gold);border-radius:99px;"></div></div></div>
-              <div><div class="flex-between" style="margin-bottom:0.25rem;"><span>Team packages & banners (310 teams)</span><strong>$18,450</strong></div><div style="background:var(--bg-surface-elevated);height:10px;border-radius:99px;"><div style="width:45%;height:100%;background:#8B5CF6;border-radius:99px;"></div></div></div>
-              <div><div class="flex-between" style="margin-bottom:0.25rem;"><span>Yearbook add-ons & rush fees</span><strong>$7,000</strong></div><div style="background:var(--bg-surface-elevated);height:10px;border-radius:99px;"><div style="width:22%;height:100%;background:#10B981;border-radius:99px;"></div></div></div>
+        <div class="grid-2 adm-panels">
+          <div class="card-glass adm-panel">
+            <div class="adm-panel-head"><h3><i class="fa-solid fa-chart-line"></i> Revenue by Package</h3><span class="badge badge-approval">Fall 2026</span></div>
+            <div class="adm-bars">
+              <div><div class="flex-between adm-bar-row"><span>Individual packets (2,940 × avg $54)</span><strong>$58,800</strong></div><div class="adm-bar"><div class="adm-fill gold" style="width:70%;"></div></div></div>
+              <div><div class="flex-between adm-bar-row"><span>Team packages & banners (310 teams)</span><strong>$18,450</strong></div><div class="adm-bar"><div class="adm-fill violet" style="width:45%;"></div></div></div>
+              <div><div class="flex-between adm-bar-row"><span>Yearbook add-ons & rush fees</span><strong>$7,000</strong></div><div class="adm-bar"><div class="adm-fill green" style="width:22%;"></div></div></div>
             </div>
           </div>
-          <div class="card-glass" style="padding:1.5rem;">
-            <h3 style="margin-bottom:1rem;"><i class="fa-solid fa-triangle-exclamation" style="color:#F59E0B;"></i> Needs Attention (7)</h3>
-            <div style="display:flex;flex-direction:column;gap:0.6rem;font-size:0.88rem;">
-              <div style="padding:0.75rem;background:rgba(182,61,74,0.1);border-radius:8px;">🔁 <strong>12 retake requests</strong> awaiting approval <button class="btn btn-sm btn-gold" data-open-crew style="margin-left:0.5rem;" onclick="document.querySelector('[data-module=retakes]').click()">Review</button></div>
-              <div style="padding:0.75rem;background:rgba(245,158,11,0.1);border-radius:8px;">📸 <strong>4 photo days</strong> have no photographer assigned</div>
-              <div style="padding:0.75rem;background:rgba(59,130,246,0.1);border-radius:8px;">💰 <strong>$9,840</strong> in overdue school invoices</div>
-              <div style="padding:0.75rem;background:var(--bg-surface-elevated);border-radius:8px;">📚 <strong>3 schools</strong> PSPA files failed validation</div>
+          <div class="card-glass adm-panel">
+            <div class="adm-panel-head"><h3><i class="fa-solid fa-triangle-exclamation"></i> Needs Attention (7)</h3><button class="btn btn-sm btn-outline" onclick="document.querySelector('[data-module=retakes]').click()">Review All</button></div>
+            <div class="adm-alerts">
+              <div class="adm-alert red"><i class="fa-solid fa-rotate-left"></i><div><strong>12 retake requests</strong> awaiting approval</div><button class="btn btn-sm btn-gold" onclick="document.querySelector('[data-module=retakes]').click()">Review</button></div>
+              <div class="adm-alert amber"><i class="fa-solid fa-camera"></i><div><strong>4 photo days</strong> have no photographer assigned</div></div>
+              <div class="adm-alert blue"><i class="fa-solid fa-sack-dollar"></i><div><strong>$9,840</strong> in overdue school invoices</div></div>
+              <div class="adm-alert neutral"><i class="fa-solid fa-book-open"></i><div><strong>3 schools</strong> PSPA files failed validation</div></div>
             </div>
           </div>
         </div>
-        <div class="card-glass" style="padding:1.5rem;">
-          <h3 style="margin-bottom:1rem;"><i class="fa-solid fa-list-check" style="color:var(--color-gold);"></i> Latest Orders Across All Schools</h3>
+        <div class="card-glass adm-panel">
+          <div class="adm-panel-head"><h3><i class="fa-solid fa-list-check"></i> Latest Orders Across All Schools</h3><button class="btn btn-sm btn-outline" onclick="document.querySelector('[data-module=orders]').click()">View All <i class="fa-solid fa-arrow-right"></i></button></div>
           <div class="table-responsive"><table id="admin-table-latest" class="data-table"><thead><tr><th>Order #</th><th>School</th><th>Type</th><th>Amount</th><th>Status</th></tr></thead>
           <tbody>
             <tr><td>#IND-8841</td><td>Oakridge High</td><td>Individual — Varsity Champion</td><td>$59</td><td><span class="badge badge-processing">Processing</span></td></tr>
@@ -188,10 +193,10 @@
           <div class="flex-between" style="margin-bottom:1rem;flex-wrap:wrap;gap:1rem;"><h3><i class="fa-solid fa-camera" style="color:var(--color-gold);"></i> Photographers & Crew (8)</h3><button class="btn btn-sm btn-gold" onclick="showToast('Crew invite sent!','success')"><i class="fa-solid fa-plus"></i> Add Photographer</button></div>
           <div class="table-responsive"><table class="data-table"><thead><tr><th>Crew</th><th>Role</th><th>Shoots (Oct)</th><th>Rating</th><th>Status</th></tr></thead>
           <tbody>
-            <tr><td><strong>Elena Rostova</strong></td><td>Lead — Portraits</td><td>12</td><td>⭐ 4.9</td><td><span class="badge badge-completed">On Shoot</span></td></tr>
-            <tr><td><strong>Marcus Sterling</strong></td><td>Lead — Teams</td><td>10</td><td>⭐ 4.8</td><td><span class="badge badge-completed">On Shoot</span></td></tr>
-            <tr><td><strong>James Keller</strong></td><td>Action / Sports</td><td>8</td><td>⭐ 4.7</td><td><span class="badge badge-scheduled">Available</span></td></tr>
-            <tr><td><strong>Ana Diaz</strong></td><td>Assistant / Lighting</td><td>9</td><td>⭐ 4.9</td><td><span class="badge badge-processing">Editing</span></td></tr>
+            <tr><td><strong>Elena Rostova</strong></td><td>Lead — Portraits</td><td>12</td><td><i class="fa-solid fa-star" style="color: var(--color-gold);"></i> 4.9</td><td><span class="badge badge-completed">On Shoot</span></td></tr>
+            <tr><td><strong>Marcus Sterling</strong></td><td>Lead — Teams</td><td>10</td><td><i class="fa-solid fa-star" style="color: var(--color-gold);"></i> 4.8</td><td><span class="badge badge-completed">On Shoot</span></td></tr>
+            <tr><td><strong>James Keller</strong></td><td>Action / Sports</td><td>8</td><td><i class="fa-solid fa-star" style="color: var(--color-gold);"></i> 4.7</td><td><span class="badge badge-scheduled">Available</span></td></tr>
+            <tr><td><strong>Ana Diaz</strong></td><td>Assistant / Lighting</td><td>9</td><td><i class="fa-solid fa-star" style="color: var(--color-gold);"></i> 4.9</td><td><span class="badge badge-processing">Editing</span></td></tr>
           </tbody></table></div>
         </div>
       </div>
@@ -235,7 +240,7 @@
             <div style="display:flex;flex-direction:column;gap:0.6rem;margin-top:1rem;font-size:0.88rem;">
               <div style="padding:0.85rem;background:var(--bg-surface-elevated);border-radius:10px;"><strong>Oakridge (Marcus):</strong> Can we add a 4:30 slot for JV soccer?<br><button class="btn btn-sm btn-gold" style="margin-top:0.5rem;" onclick="showToast('Reply sent!','success')">Reply</button></div>
               <div style="padding:0.85rem;background:var(--bg-surface-elevated);border-radius:10px;"><strong>Westview (Baker):</strong> Banner proof looks cropped — please check.<br><button class="btn btn-sm btn-outline" style="margin-top:0.5rem;" onclick="showToast('Reply sent!','success')">Reply</button></div>
-              <div style="padding:0.85rem;background:var(--bg-surface-elevated);border-radius:10px;"><strong>St. Jude (Sarah):</strong> PSPA file imported perfectly, thank you! 🎉</div>
+              <div style="padding:0.85rem;background:var(--bg-surface-elevated);border-radius:10px;"><strong>St. Jude (Sarah):</strong> PSPA file imported perfectly, thank you! <i class="fa-solid fa-circle-check" style="color: #10B981;"></i></div>
             </div>
           </div>
           <div class="card-glass" style="padding:1.5rem;">

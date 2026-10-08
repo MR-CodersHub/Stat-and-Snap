@@ -9,65 +9,155 @@
   <link rel="stylesheet" href="../css/styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
-<body style="background: var(--color-navy); color: #FFFFFF;">
+<body class="page-soon" style="background: var(--color-navy); color: #FFFFFF;">
 
-  <div class="hero-section" style="min-height: 100vh; padding: 3rem 1.5rem;">
+  <!-- Minimal Topbar (brand + toggle pills) -->
+  <header class="minimal-topbar soon-topbar">
+    <div class="container flex-between">
+      <a href="../index.html" class="brand-logo">
+        <div class="logo-badge"><i class="fa-solid fa-camera-retro"></i></div>
+        <span class="brand-text">
+          <span>STAT & <span class="gold-accent">SNAP</span></span>
+          <small class="brand-tagline">You Play. We Capture.</small>
+        </span>
+      </a>
+      <div class="minimal-toggles">
+        <button class="icon-btn theme-toggle" title="Toggle Light/Dark Theme"><i class="fa-solid fa-sun"></i></button>
+        <button class="icon-btn dir-toggle" title="Toggle RTL/LTR"><span class="dir-toggle-label" style="font-size: 0.75rem; font-weight: 800;">RTL</span></button>
+      </div>
+    </div>
+  </header>
+
+  <div class="hero-section soon-hero" style="min-height: 100vh; padding: 3rem 1.5rem;">
     <div class="hero-bg-overlay" style="background-image: url('https://images.unsplash.com/photo-1546519638-68e109498ffc?q=80&w=1600&auto=format&fit=crop');"></div>
     <div class="hero-gradient"></div>
     
-    <div class="container hero-content text-center" style="max-width: 850px;">
-      
-      <div style="margin-bottom: 2rem;">
-        <a href="../index.html" class="brand-logo" style="justify-content: center; font-size: 2rem;">
-          <div class="logo-badge" style="width: 50px; height: 50px; font-size: 1.5rem;"><i class="fa-solid fa-camera-retro"></i></div>
-          <span class="brand-text" style="align-items: center; text-align: center;">
-            <span>STAT & <span class="gold-accent">SNAP</span></span>
-            <small class="brand-tagline">You Play. We Capture.</small>
-          </span>
-        </a>
+    <div class="container hero-content soon-wrap">
+
+      <div class="soon-grid">
+        <!-- LEFT: vector art + timing -->
+        <div class="soon-left">
+          <div class="soon-art" aria-hidden="true">
+            <svg viewBox="0 0 420 260" role="img" aria-label="Camera upgrade illustration">
+          <defs>
+            <linearGradient id="soonGold" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#E9C97E"></stop>
+              <stop offset="1" stop-color="#C6A45A"></stop>
+            </linearGradient>
+            <linearGradient id="soonBody" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#1B2942"></stop>
+              <stop offset="1" stop-color="#0C1526"></stop>
+            </linearGradient>
+            <radialGradient id="soonGlow" cx="0.5" cy="0.5" r="0.5">
+              <stop offset="0" stop-color="#C6A45A" stop-opacity="0.35"></stop>
+              <stop offset="1" stop-color="#C6A45A" stop-opacity="0"></stop>
+            </radialGradient>
+          </defs>
+          <ellipse cx="210" cy="128" rx="190" ry="110" fill="url(#soonGlow)"></ellipse>
+          <!-- back photo card -->
+          <g transform="rotate(-8 320 90)">
+            <rect x="272" y="46" width="96" height="88" rx="10" fill="#14213A" stroke="#C6A45A" stroke-opacity="0.5"></rect>
+            <rect x="282" y="56" width="76" height="44" rx="6" fill="#2A3D5E"></rect>
+            <circle cx="298" cy="68" r="7" fill="#C6A45A" opacity="0.85"></circle>
+            <path d="M282 100 L306 80 L320 92 L332 84 L358 100 Z" fill="#3B5B8C"></path>
+          </g>
+          <!-- front photo card -->
+          <g transform="rotate(7 100 180)">
+            <rect x="52" y="136" width="96" height="88" rx="10" fill="#14213A" stroke="#C6A45A" stroke-opacity="0.5"></rect>
+            <rect x="62" y="146" width="76" height="44" rx="6" fill="#2A3D5E"></rect>
+            <path d="M62 190 L86 168 L102 180 L116 170 L138 190 Z" fill="#3B5B8C"></path>
+            <circle cx="124" cy="158" r="7" fill="#E9C97E" opacity="0.9"></circle>
+          </g>
+          <!-- camera body -->
+          <rect x="120" y="86" width="180" height="118" rx="18" fill="url(#soonBody)" stroke="url(#soonGold)" stroke-width="2.5"></rect>
+          <rect x="168" y="72" width="84" height="26" rx="8" fill="#0C1526" stroke="url(#soonGold)" stroke-width="2"></rect>
+          <circle cx="264" cy="98" r="5" fill="#B63D4A"></circle>
+          <circle cx="210" cy="145" r="38" fill="#050B16" stroke="url(#soonGold)" stroke-width="3"></circle>
+          <circle cx="210" cy="145" r="26" fill="#12233E" stroke="#3B5B8C" stroke-width="2"></circle>
+          <circle cx="210" cy="145" r="12" fill="#0A1425"></circle>
+          <circle cx="205" cy="140" r="4" fill="#E9C97E" opacity="0.9"></circle>
+          <rect x="136" y="168" width="52" height="10" rx="5" fill="#C6A45A" opacity="0.7"></rect>
+          <circle cx="282" cy="168" r="7" fill="none" stroke="#C6A45A" stroke-width="2" opacity="0.8"></circle>
+          <!-- flash sparkles -->
+          <g stroke="#E9C97E" stroke-width="3" stroke-linecap="round">
+            <line x1="110" y1="52" x2="98" y2="34"></line>
+            <line x1="140" y1="44" x2="134" y2="24"></line>
+            <line x1="310" y1="150" x2="326" y2="142"></line>
+            <line x1="314" y1="182" x2="332" y2="182"></line>
+          </g>
+          <g fill="#E9C97E">
+            <circle cx="90" cy="90" r="4"></circle>
+            <circle cx="336" cy="70" r="5"></circle>
+            <circle cx="350" cy="120" r="3.5"></circle>
+          </g>
+          <g fill="none" stroke="#B63D4A" stroke-width="2.5">
+            <path d="M70 210 l4 9 10 1-7 7 2 10-9-5-9 5 2-10-7-7 10-1z"></path>
+          </g>
+          <g fill="none" stroke="#10B981" stroke-width="2.5">
+            <circle cx="352" cy="208" r="9"></circle>
+            <path d="M348 208 l3 3 6-6"></path>
+          </g>
+          </svg>
+          </div>
+
+          <!-- Countdown Timer Component -->
+          <div class="soon-count">
+            <div class="card-glass text-center soon-cell soon-gold">
+              <div id="days" class="soon-num gold">14</div>
+              <span class="soon-label">Days</span>
+            </div>
+
+            <div class="card-glass text-center soon-cell soon-crimson">
+              <div id="hours" class="soon-num crimson">08</div>
+              <span class="soon-label">Hours</span>
+            </div>
+
+            <div class="card-glass text-center soon-cell soon-green">
+              <div id="minutes" class="soon-num green">42</div>
+              <span class="soon-label">Minutes</span>
+            </div>
+
+            <div class="card-glass text-center soon-cell soon-gold">
+              <div id="seconds" class="soon-num gold">19</div>
+              <span class="soon-label">Seconds</span>
+            </div>
+          </div>
+
+          <div class="soon-progress">
+            <div class="soon-progress-row"><span>Upgrade progress</span><strong>82% complete</strong></div>
+            <div class="soon-bar"><div class="soon-fill" style="width: 82%;"></div></div>
+          </div>
+        </div>
+
+        <!-- RIGHT: contents -->
+        <div class="soon-right">
+          <span class="section-tag evergreen soon-tag"><i class="fa-solid fa-hourglass-half"></i> Portal Upgrade In Progress</span>
+          <h1 class="hero-title soon-title">Winter Sports Season Launch <span class="highlight">Coming Soon</span></h1>
+          <p class="hero-desc soon-sub">
+            We are upgrading our school client portal with AI image tagging, instant parent SMS galleries, and automated yearbook indexing.
+          </p>
+
+          <div class="soon-feats">
+            <span><i class="fa-solid fa-wand-magic-sparkles"></i> AI image tagging</span>
+            <span><i class="fa-solid fa-comment-sms"></i> Instant SMS galleries</span>
+            <span><i class="fa-solid fa-book-open"></i> Auto yearbook index</span>
+          </div>
+
+          <!-- Launch Notification Form -->
+          <div class="card-glass soon-notify">
+            <h3>Be The First To Access The New Portal</h3>
+            <p>Enter your email to receive early registration access for your school district.</p>
+
+            <form data-validate data-success="You are on the VIP launch notification list!" class="soon-form">
+              <input type="email" class="form-control" placeholder="Enter school email address..." required>
+              <button type="submit" class="btn btn-gold">Notify Me</button>
+            </form>
+            <span class="soon-note"><i class="fa-solid fa-lock"></i> One email at launch · no spam, ever</span>
+          </div>
+        </div>
       </div>
 
-      <span class="section-tag evergreen" style="margin-bottom: 1.5rem;"><i class="fa-solid fa-hourglass-half"></i> Portal Upgrade In Progress</span>
-      <h1 class="hero-title" style="font-size: 3.5rem;">Winter Sports Season Launch <span class="highlight">Coming Soon</span></h1>
-      <p class="hero-desc" style="margin: 0 auto 3rem auto;">
-        We are upgrading our school client portal with AI image tagging, instant parent SMS galleries, and automated yearbook indexing.
-      </p>
-
-      <!-- Countdown Timer Component -->
-      <div class="grid-4 gap-3" style="max-width: 650px; margin: 0 auto 3.5rem auto;">
-        <div class="card-glass text-center" style="padding: 1.5rem; background: rgba(17, 28, 45, 0.85); border-color: var(--color-gold);">
-          <div id="days" style="font-family: var(--font-heading); font-size: 3rem; font-weight: 800; color: var(--color-gold);">14</div>
-          <span style="font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-muted);">Days</span>
-        </div>
-
-        <div class="card-glass text-center" style="padding: 1.5rem; background: rgba(17, 28, 45, 0.85); border-color: var(--color-crimson);">
-          <div id="hours" style="font-family: var(--font-heading); font-size: 3rem; font-weight: 800; color: var(--color-crimson);">08</div>
-          <span style="font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-muted);">Hours</span>
-        </div>
-
-        <div class="card-glass text-center" style="padding: 1.5rem; background: rgba(17, 28, 45, 0.85); border-color: var(--color-evergreen-light);">
-          <div id="minutes" style="font-family: var(--font-heading); font-size: 3rem; font-weight: 800; color: #10B981;">42</div>
-          <span style="font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-muted);">Minutes</span>
-        </div>
-
-        <div class="card-glass text-center" style="padding: 1.5rem; background: rgba(17, 28, 45, 0.85); border-color: var(--color-gold);">
-          <div id="seconds" style="font-family: var(--font-heading); font-size: 3rem; font-weight: 800; color: var(--color-gold);">19</div>
-          <span style="font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-muted);">Seconds</span>
-        </div>
-      </div>
-
-      <!-- Launch Notification Form -->
-      <div class="card-glass" style="max-width: 540px; margin: 0 auto; padding: 2rem; border-color: var(--border-gold);">
-        <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem;">Be The First To Access The New Portal</h3>
-        <p style="font-size: 0.88rem; color: var(--text-muted); margin-bottom: 1.5rem;">Enter your email to receive early registration access for your school district.</p>
-        
-        <form data-validate data-success="You are on the VIP launch notification list!" class="flex-center gap-2" style="flex-wrap: wrap;">
-          <input type="email" class="form-control" placeholder="Enter school email address..." required style="max-width: 330px;">
-          <button type="submit" class="btn btn-gold">Notify Me</button>
-        </form>
-      </div>
-
-      <div class="flex-center gap-3" style="margin-top: 3rem;">
+      <div class="flex-center gap-3 soon-cta" style="flex-wrap: wrap;">
         <a href="../index.html" class="btn btn-outline"><i class="fa-solid fa-arrow-left"></i> Return To Main Website</a>
         <a href="contact.html" class="btn btn-secondary"><i class="fa-solid fa-envelope"></i> Contact Studio Support</a>
       </div>

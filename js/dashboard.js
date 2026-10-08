@@ -11,14 +11,23 @@ document.addEventListener('DOMContentLoaded', () => {
 
 /* Sidebar Toggle for Mobile */
 function initDashboardSidebar() {
-  const toggleBtn = document.querySelector('.sidebar-toggle-btn');
+  const toggles = document.querySelectorAll('.sidebar-toggle-btn');
   const sidebar = document.querySelector('.dashboard-sidebar');
+  const overlay = document.querySelector('.dash-overlay');
+  const syncOverlay = () => {
+    if (!overlay || !sidebar) return;
+    overlay.classList.toggle('show', sidebar.classList.contains('active'));
+  };
 
-  if (toggleBtn && sidebar) {
-    toggleBtn.addEventListener('click', () => {
-      sidebar.classList.toggle('active');
+  if (toggles && sidebar) {
+    toggles.forEach((toggleBtn) => {
+      toggleBtn.addEventListener('click', () => {
+        sidebar.classList.toggle('active');
+        syncOverlay();
+      });
     });
   }
+  if (overlay) overlay.addEventListener('click', () => { sidebar?.classList.remove('active'); syncOverlay(); });
 }
 
 /* Dashboard Module Switching */
@@ -43,6 +52,11 @@ function initDashboardTabs() {
       if (pageTitle) {
         const text = item.querySelector('span')?.textContent || 'Dashboard';
         pageTitle.textContent = text;
+      }
+
+      if (window.innerWidth < 1025) {
+        document.querySelector('.dashboard-sidebar')?.classList.remove('active');
+        document.querySelector('.dash-overlay')?.classList.remove('show');
       }
     });
   });

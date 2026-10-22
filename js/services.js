@@ -377,14 +377,6 @@ function renderService() {
       '<div class="accordion-item' + (i === 0 ? " active" : "") + '"><div class="accordion-header"><span>' + escS(f.q) + '</span>'
       + '<i class="fa-solid fa-chevron-down accordion-icon"></i></div><div class="accordion-body">' + escS(f.a) + '</div></div>'
     ).join("");
-    faq.querySelectorAll(".accordion-header").forEach((header) => {
-      header.addEventListener("click", () => {
-        const item = header.closest(".accordion-item");
-        const wasActive = item.classList.contains("active");
-        faq.querySelectorAll(".accordion-item").forEach((el) => el.classList.remove("active"));
-        if (!wasActive) item.classList.add("active");
-      });
-    });
   }
 
   const rel = document.getElementById("relatedServices");

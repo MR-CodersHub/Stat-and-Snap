@@ -120,25 +120,27 @@ function initMobileDrawer() {
 }
 
 /* ==========================================================================
-   3. Accordion Handler
+   3. Accordion Handler (Event Delegation for static and dynamic accordions)
    ========================================================================== */
 function initAccordions() {
-  const headers = document.querySelectorAll('.accordion-header');
-  headers.forEach(header => {
-    header.addEventListener('click', () => {
-      const item = header.closest('.accordion-item');
-      const isAlreadyActive = item.classList.contains('active');
+  document.addEventListener('click', (e) => {
+    const header = e.target.closest('.accordion-header');
+    if (!header) return;
 
-      // Close all neighboring items in same accordion container
-      const parent = item.closest('.accordion-container');
-      if (parent) {
-        parent.querySelectorAll('.accordion-item').forEach(el => el.classList.remove('active'));
-      }
+    const item = header.closest('.accordion-item');
+    if (!item) return;
 
-      if (!isAlreadyActive) {
-        item.classList.add('active');
-      }
-    });
+    const isAlreadyActive = item.classList.contains('active');
+
+    // Close all neighboring items in same accordion container
+    const parent = item.closest('.accordion-container') || item.parentElement;
+    if (parent) {
+      parent.querySelectorAll('.accordion-item').forEach(el => el.classList.remove('active'));
+    }
+
+    if (!isAlreadyActive) {
+      item.classList.add('active');
+    }
   });
 }
 
@@ -284,20 +286,31 @@ function showToast(message, type = 'info') {  let container = document.querySele
    ========================================================================== */
 function initScrollAnimations() {
   const animatedElements = document.querySelectorAll('.card-glass, .process-step, .pricing-card, .blog-card, .portfolio-card');
+  if (!animatedElements.length) return;
+
+  const reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (reduceMotion || !('IntersectionObserver' in window)) {
+    animatedElements.forEach(el => {
+      el.style.opacity = '1';
+      el.style.transform = 'none';
+    });
+    return;
+  }
 
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         entry.target.style.opacity = '1';
         entry.target.style.transform = 'translateY(0)';
+        observer.unobserve(entry.target);
       }
     });
-  }, { threshold: 0.1 });
+  }, { threshold: 0.05, rootMargin: '60px 0px 60px 0px' });
 
   animatedElements.forEach(el => {
     el.style.opacity = '0';
     el.style.transform = 'translateY(20px)';
-    el.style.transition = 'all 0.5s cubic-bezier(0.16, 1, 0.3, 1)';
+    el.style.transition = 'opacity 0.45s cubic-bezier(0.16, 1, 0.3, 1), transform 0.45s cubic-bezier(0.16, 1, 0.3, 1)';
     observer.observe(el);
   });
 }

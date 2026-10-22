@@ -331,16 +331,20 @@
 
         <!-- MODULE: TEAMS & ROSTERS -->
         <div id="module-rosters" class="dash-module" style="display: none;">
-          <div class="card-glass" style="padding: 2rem;">
-            <div class="flex-between" style="margin-bottom: 1.5rem;flex-wrap:wrap;gap:1rem;">
-              <h3><i class="fa-solid fa-users" style="color: var(--color-gold);"></i> Team Roster Manager</h3>
-              <div class="flex-align gap-2">
-                <input class="form-control" placeholder="Search athlete..." data-table-search="table-rosters" style="width:200px;padding:0.5rem 0.85rem;font-size:0.85rem;">
-                <button class="btn btn-sm btn-primary" onclick="showToast('CSV Roster Uploaded Successfully!', 'success')"><i class="fa-solid fa-file-csv"></i> Upload CSV</button>
-                <button class="btn btn-sm btn-gold" onclick="showToast('Add-athlete form opened', 'info')"><i class="fa-solid fa-plus"></i> Add Athlete</button>
+          <div class="card-glass dsh-roster-card">
+            <div class="dsh-roster-header">
+              <div class="dsh-roster-title-wrap">
+                <h3><i class="fa-solid fa-users" style="color: var(--color-gold);"></i> Team Roster Manager</h3>
+                <p class="dsh-roster-sub">Verify student ID numbers and jersey numbers for PSPA yearbook synchronization (448 athletes across 18 teams).</p>
+              </div>
+              <div class="dsh-roster-actions">
+                <input class="form-control dsh-roster-search" placeholder="Search athlete or sport..." data-table-search="table-rosters">
+                <div class="dsh-roster-btn-group">
+                  <button class="btn btn-sm btn-primary dsh-roster-cta" onclick="showToast('CSV Roster Uploaded Successfully!', 'success')"><i class="fa-solid fa-file-csv"></i> <span>Upload CSV</span></button>
+                  <button class="btn btn-sm btn-outline dsh-roster-cta" onclick="showToast('Add-athlete form opened', 'info')"><i class="fa-solid fa-plus"></i> <span>Add Athlete</span></button>
+                </div>
               </div>
             </div>
-            <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1.5rem;">Verify student ID numbers and jersey numbers for PSPA yearbook synchronization. 448 athletes across 18 teams.</p>
             <div class="table-responsive">
               <table id="table-rosters" class="data-table">
                 <thead><tr><th>Student ID</th><th>Athlete Name</th><th>Jersey #</th><th>Sport</th><th>Grade</th><th>Photo</th><th>Action</th></tr></thead>
@@ -385,10 +389,15 @@
 
         <!-- MODULE: TEAM ORDERS -->
         <div id="module-team-orders" class="dash-module" style="display: none;">
-          <div class="card-glass" style="padding:1.5rem;">
-            <div class="flex-between" style="margin-bottom:1.5rem;flex-wrap:wrap;gap:1rem;">
-              <h3><i class="fa-solid fa-boxes-stacked" style="color:var(--color-gold);"></i> Team Package Orders (Bulk Prints, Banners, Plaques)</h3>
-              <button class="btn btn-sm btn-gold" onclick="showToast('New team package order started','info')"><i class="fa-solid fa-plus"></i> Order Team Package</button>
+          <div class="card-glass dsh-team-orders-card">
+            <div class="dsh-order-tracking-header">
+              <div class="dsh-order-tracking-title-wrap">
+                <h3><i class="fa-solid fa-boxes-stacked" style="color:var(--color-gold);"></i> Team Package Orders</h3>
+                <p class="dsh-order-tracking-sub">Bulk team prints, gymnasium vinyl banners, and custom coach plaques.</p>
+              </div>
+              <div class="dsh-order-tracking-cta-wrap">
+                <button class="btn btn-sm btn-primary dsh-order-cta" onclick="showToast('New team package order started','info')"><i class="fa-solid fa-plus"></i> <span>Order Team Package</span></button>
+              </div>
             </div>
             <div class="table-responsive"><table id="table-team-orders" class="data-table">
               <thead><tr><th>Order #</th><th>Team</th><th>Items</th><th>Qty</th><th>Total</th><th>Status</th><th>Action</th></tr></thead>
@@ -476,12 +485,23 @@
 
         <!-- MODULE: ORDER STATUS TRACKING -->
         <div id="module-status" class="dash-module" style="display: none;">
-          <div class="card-glass" style="padding:1.5rem;">
-            <div class="flex-between" style="margin-bottom:1.5rem;flex-wrap:wrap;gap:1rem;">
-              <h3><i class="fa-solid fa-truck-fast" style="color:var(--color-gold);"></i> Unified Order Status Tracking</h3>
-              <div class="flex-align gap-2">
-                <input class="form-control" placeholder="Search order #..." data-table-search="table-status" style="width:200px;padding:0.5rem 0.85rem;font-size:0.85rem;">
-                <select class="form-control" data-status-filter="table-status" style="width:160px;padding:0.5rem 0.85rem;font-size:0.85rem;"><option value="all">All Statuses</option><option value="scheduled">Scheduled</option><option value="processing">Processing</option><option value="completed">Completed</option><option value="delivered">Delivered</option><option value="awaiting approval">Awaiting Approval</option></select>
+          <div class="card-glass dsh-status-card">
+            <div class="dsh-order-tracking-header">
+              <div class="dsh-order-tracking-title-wrap">
+                <h3><i class="fa-solid fa-truck-fast" style="color:var(--color-gold);"></i> Unified Order Status Tracking</h3>
+                <p class="dsh-order-tracking-sub">Live production, lab printing, and shipment delivery tracking across all teams.</p>
+              </div>
+              <div class="dsh-order-tracking-actions">
+                <input class="form-control dsh-order-search" placeholder="Search order # or team..." data-table-search="table-status">
+                <select class="form-control dsh-order-filter" data-status-filter="table-status">
+                  <option value="all">All Statuses</option>
+                  <option value="scheduled">Scheduled</option>
+                  <option value="processing">Processing</option>
+                  <option value="completed">Completed</option>
+                  <option value="delivered">Delivered</option>
+                  <option value="awaiting approval">Awaiting Approval</option>
+                </select>
+                <button class="btn btn-sm btn-primary dsh-order-cta" onclick="showToast('Tracking data refreshed!', 'success')"><i class="fa-solid fa-rotate"></i> <span>Refresh</span></button>
               </div>
             </div>
             <div class="table-responsive"><table id="table-status" class="data-table">

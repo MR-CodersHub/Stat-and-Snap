@@ -838,10 +838,11 @@ ul, ol {
   color: var(--color-gold);
 }
 
-/* Nav profile icon (account portal, right near theme toggle) */
+/* Nav profile icon — click toggles the account menu; it must never navigate */
 .nav-actions .nav-profile .icon-btn {
   text-decoration: none;
   color: var(--color-gold);
+  cursor: pointer;
 }
 .nav-actions .nav-profile .dropdown-menu {
   left: auto;
@@ -852,6 +853,20 @@ ul, ol {
   left: 0;
   right: auto;
 }
+/* Account menu opens on click only — Services/Blog nav menus keep hover */
+.nav-actions .nav-profile:hover .dropdown-menu {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+}
+.nav-actions .nav-profile.is-open .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+.nav-actions .nav-profile.is-open .dropdown-item { animation: dropIn 0.35s both; }
+.nav-actions .nav-profile.is-open .dropdown-item:nth-child(2) { animation-delay: 0.05s; }
+.nav-actions .nav-profile.is-open .dropdown-item:nth-child(3) { animation-delay: 0.1s; }
 
 /* Minimal corners (login / signup / 404 / maintenance — logo left, toggle pills right, no header bar) */
 .minimal-topbar {
@@ -2301,6 +2316,12 @@ ul, ol {
   .data-table th, .data-table td { padding: 0.65rem 0.75rem; font-size: 0.85rem; }
 }
 
+/* ---- 640px: header CTA no longer fits beside the brand + icon actions ----
+   The mobile drawer already repeats the same full-width "Book Photo Day" CTA. */
+@media (max-width: 640px) {
+  .nav-actions .btn { display: none; }
+}
+
 /* ---- 480px: large phones ---- */
 @media (max-width: 480px) {
   .container { padding: 0 1.1rem; }
@@ -2320,8 +2341,7 @@ ul, ol {
   .pricing-price { font-size: 2.4rem; }
   .btn-lg { padding: 0.95rem 1.5rem; font-size: 0.95rem; }
   .flex-align.gap-3 { flex-wrap: wrap; }
-  /* Crowded navbar: drawer already holds Login (full-navbar pages only) */
-  .nav-actions .btn { display: none; }
+  /* Crowded navbar: RTL toggle is redundant on small phones (chromeless pages re-show it below) */
   .nav-actions .dir-toggle { display: none; }
   /* Chromeless pages have room — keep their RTL toggle visible */
   .page-login .dir-toggle,
@@ -3163,11 +3183,11 @@ ul, ol {
 .page-services .svc-trust i { color: var(--color-gold-light); margin-right: 0.35rem; }
 .page-services .svc-hero-card .svc-hero-panel { padding: 0.85rem; overflow: hidden; }
 .page-services .svc-hero-panel-head { display: flex; align-items: center; justify-content: space-between; padding: 0.35rem 0.35rem 0.8rem; }
-.page-services .svc-hero-panel-no { font-size: 0.78rem; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; color: var(--color-gold-light); }
+.page-services .svc-hero-panel-no { font-size: 0.78rem; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; color: var(--color-gold-text); }
 .page-services .svc-hero-panel img { width: 100%; height: 220px; object-fit: cover; border-radius: var(--radius-md); display: block; }
 .page-services .svc-hero-panel-body { padding: 1rem 0.4rem 0.4rem; display: flex; flex-direction: column; gap: 0.3rem; }
-.page-services .svc-hero-panel-body strong { font-family: var(--font-heading); font-size: 1.1rem; color: #FFFFFF; }
-.page-services .svc-hero-panel-body span { font-size: 0.82rem; color: #CBD5E1; }
+.page-services .svc-hero-panel-body strong { font-family: var(--font-heading); font-size: 1.1rem; color: var(--text-main); }
+.page-services .svc-hero-panel-body span { font-size: 0.82rem; color: var(--text-muted); }
 .page-services .svc-hero-panel-body .btn { margin-top: 0.6rem; align-self: flex-start; }
 .page-services .svc-hero-stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; margin-top: 3rem; background: rgba(10, 17, 29, 0.55); border: 1px solid var(--border-gold); border-radius: var(--radius-lg); padding: 1.5rem 2rem; backdrop-filter: blur(8px); }
 .page-services .svc-hero-stats div { text-align: center; }
@@ -3211,7 +3231,9 @@ ul, ol {
 
 .page-services .svc-table-card { padding: 1rem; overflow: hidden; }
 .page-services .svc-table { min-width: 640px; }
-.page-services .svc-col-hot { position: relative; color: var(--color-gold); }
+.page-services .svc-col-hot { position: relative; color: var(--color-gold-text); }
+/* Keep the "Popular" pill inside the scrollable table so it is never clipped by .table-responsive */
+.page-services .svc-col-hot .pricing-badge { position: static; display: inline-block; margin-top: 0.45rem; line-height: 1; }
 .page-services .svc-matrix-cta { display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 1.75rem; }
 .page-services .svc-scroll-hint { display: inline-flex; align-items: center; gap: 0.4rem; font-size: 0.82rem; color: var(--color-gold); font-weight: 700; }
 

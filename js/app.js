@@ -6,6 +6,7 @@
 document.addEventListener('DOMContentLoaded', () => {
   initThemeAndDirection();
   initNavbar();
+  initProfileMenu();
   initMobileDrawer();
   initAccordions();
   initTabs();
@@ -87,6 +88,42 @@ function initNavbar() {
       navbar.classList.add('scrolled');
     } else {
       navbar.classList.remove('scrolled');
+    }
+  });
+}
+
+/* Account menu: clicking the profile icon opens/closes the dropdown.
+   The toggle is a <button>, so it can never redirect to the dashboard. */
+function initProfileMenu() {
+  const wrap = document.querySelector('.nav-profile');
+  if (!wrap) return;
+
+  const toggle = wrap.querySelector('.nav-dropdown-toggle');
+  const menu = wrap.querySelector('.dropdown-menu');
+  if (!toggle || !menu) return;
+
+  const isOpen = () => wrap.classList.contains('is-open');
+
+  const setOpen = (open) => {
+    wrap.classList.toggle('is-open', open);
+    toggle.setAttribute('aria-expanded', String(open));
+  };
+
+  toggle.addEventListener('click', (e) => {
+    e.preventDefault();
+    setOpen(!isOpen());
+  });
+
+  // Click anywhere outside closes it
+  document.addEventListener('click', (e) => {
+    if (!wrap.contains(e.target)) setOpen(false);
+  });
+
+  // Escape closes it and returns focus to the icon
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && isOpen()) {
+      setOpen(false);
+      toggle.focus();
     }
   });
 }
